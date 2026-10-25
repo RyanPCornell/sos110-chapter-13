@@ -451,6 +451,127 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
   padding:clamp(.4rem,1vh,.6rem) clamp(.7rem,1.1vw,.95rem); font-size:clamp(.72rem,1vw,.86rem); line-height:1.45; color:#2b2823;}
 .pq-quote b{color:var(--accent);}
 
+/* ── Chapter 13 live energy balance (ch13_scale.py) ── */
+.c13ws [hidden]{display:none!important;}
+.c13ws .ws-wrap{position:absolute; inset:0; display:flex; flex-direction:column; padding:clamp(.9rem,2.2vh,1.7rem) clamp(4.2rem,6vw,5.6rem) clamp(3rem,6.6vh,3.8rem);}
+.c13ws .ws-head .heading{margin-bottom:.1rem; font-size:clamp(1.3rem,2.3vw,2.2rem);}
+.c13ws .ws-sub{margin:.1rem 0 clamp(.4rem,1vh,.7rem); max-width:62rem; font:italic 400 clamp(.78rem,1.08vw,.95rem)/1.5 'Merriweather',serif; color:#4a4436;}
+.c13ws .ws-body{flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,1.62fr) minmax(19rem,1fr); gap:clamp(.8rem,1.6vw,1.4rem);}
+.c13ws .ws-stage{min-height:0; display:flex; flex-direction:column; gap:.35rem; align-items:center;}
+.c13ws .ws-stage > *{align-self:stretch;} .c13ws .ws-stage > .ws-svg{align-self:center;}
+.c13ws .ws-svg{flex:none; width:100%; display:block; border-radius:12px; outline:1px solid rgba(138,106,47,.55); outline-offset:-1px;
+  box-shadow:0 0 0 5px #fbf5e6, 0 0 0 6px rgba(59,50,34,.55), 0 14px 28px -18px rgba(60,45,20,.6); touch-action:none; user-select:none; -webkit-user-select:none; background:#fbf5e6;}
+.c13ws .ws-cap{min-height:1.3rem; font:italic 400 clamp(.72rem,.98vw,.86rem)/1.4 'Merriweather',serif; color:#5a5448; padding:0 .3rem; transition:color .2s;}
+.c13ws .ws-cap.flash{color:#a24a2c; font-weight:700;}
+.c13ws .ws-key{display:flex; flex-wrap:wrap; align-items:center; gap:.3rem 1.1rem; padding:.15rem .3rem 0; border-top:1px solid #e3dac8;}
+.c13ws .ws-ki{display:flex; align-items:center; gap:.45rem;}
+.c13ws .ws-ki svg{flex:none; overflow:visible;}
+.c13ws .ws-ki span{display:flex; flex-direction:column; line-height:1.25;}
+.c13ws .ws-ki b{font:800 clamp(.64rem,.82vw,.74rem) 'Inter',sans-serif; color:#2b2823;}
+.c13ws .ws-ki small{font:italic 400 clamp(.6rem,.76vw,.68rem) 'Merriweather',serif; color:#7a7262;}
+.c13ws .ws-kn{margin-left:auto; font:italic 400 clamp(.6rem,.76vw,.68rem) 'Merriweather',serif; color:#8a8374;}
+.c13ws .ws-card{min-height:0; overflow:auto; display:flex; flex-direction:column; gap:clamp(.35rem,.9vh,.6rem); background:#fbf8f1; border:1px solid rgba(36,33,29,.2);
+  border-radius:12px; padding:clamp(.6rem,1.3vh,.9rem) clamp(.75rem,1.2vw,1.05rem); box-shadow:0 10px 22px -18px rgba(40,32,24,.55); outline:1px solid rgba(138,106,47,.42); outline-offset:-5px;}
+.c13ws .ws-tabs{display:flex; gap:.4rem;}
+.c13ws .ws-tab{flex:1; display:flex; align-items:center; gap:.45rem; font:800 clamp(.74rem,.98vw,.86rem) 'Inter',sans-serif; letter-spacing:.02em; color:#3b3222;
+  background:transparent; border:1.5px solid rgba(59,50,34,.28); border-radius:999px; padding:.36rem .7rem; cursor:pointer; transition:background .15s, color .15s, border-color .15s;}
+.c13ws .ws-tab span{display:grid; place-items:center; width:1.35rem; height:1.35rem; border-radius:50%; border:1.2px solid currentColor; font:900 .72rem 'Merriweather',serif;}
+.c13ws .ws-tab i{margin-left:auto; font-style:normal; font-size:.72rem; font-weight:700; opacity:.85;}
+.c13ws .ws-tab.done i::after{content:'locked';} .c13ws .ws-tab.rev i::after{content:'revealed';}
+.c13ws .ws-tab.on{background:#3b3222; border-color:#3b3222; color:#fffaf0;}
+.c13ws .ws-qk{font:800 clamp(.6rem,.78vw,.7rem) 'Inter',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#8a6a2f; margin-top:.15rem;}
+.c13ws .ws-q{font:400 clamp(.92rem,1.32vw,1.16rem)/1.42 'Merriweather',serif; color:#24211d;}
+.c13ws .ws-q b{font-weight:900; color:var(--accent);}
+.c13ws .ws-how{margin:0; font-size:clamp(.7rem,.92vw,.8rem); line-height:1.45; color:#5a5448;}
+.c13ws .ws-edit{display:flex; flex-direction:column; gap:clamp(.35rem,.8vh,.55rem);}
+.c13ws .ws-rack{display:flex; flex-direction:column; border-top:1px solid #e3dac8;}
+.c13ws .ws-ri{display:grid; grid-template-columns:1fr auto 2.2rem auto; align-items:center; gap:.4rem; padding:.22rem 0; border-bottom:1px solid #e3dac8;}
+.c13ws .ws-rn{font:700 clamp(.74rem,.96vw,.86rem) 'Inter',sans-serif; color:#2b2823;}
+.c13ws .ws-rn small{margin-left:.45rem; font:italic 400 .9em 'Merriweather',serif; color:#8a8374;}
+.c13ws .ws-rb{width:1.7rem; height:1.7rem; border-radius:50%; border:1.3px solid rgba(59,50,34,.35); background:#fffaf0; color:#3b3222; font:800 1rem/1 'Inter',sans-serif; cursor:pointer;}
+.c13ws .ws-rb:hover:not(:disabled){background:#3b3222; color:#fffaf0;} .c13ws .ws-rb:disabled{opacity:.35; cursor:default;}
+.c13ws .ws-rc{text-align:center; font:900 clamp(.86rem,1.1vw,1rem) 'Merriweather',serif; color:#24211d;}
+.c13ws .ws-tally{display:flex; align-items:baseline; gap:.35rem; flex-wrap:wrap;}
+.c13ws .ws-tl{font:800 clamp(.58rem,.76vw,.68rem) 'Inter',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:#8a6a2f; margin-right:.2rem;}
+.c13ws .ws-tally b{font:900 clamp(1.5rem,2.4vw,2.1rem)/1 'Merriweather',serif; color:#24211d;}
+.c13ws .ws-tu{font:700 clamp(.8rem,1vw,.92rem) 'Inter',sans-serif; color:#3b3222;}
+.c13ws .ws-tk{flex-basis:100%; font:italic 400 clamp(.68rem,.88vw,.78rem) 'Merriweather',serif; color:#7a7262;}
+.c13ws .ws-act,.c13ws .ws-cb{display:flex; gap:.45rem; flex-wrap:wrap;}
+.c13ws .ws-lock{flex:1; font:800 clamp(.76rem,1vw,.88rem) 'Inter',sans-serif; color:#fffaf0; background:var(--accent); border:1.5px solid var(--accent); border-radius:999px; padding:.5rem 1rem; cursor:pointer;}
+.c13ws .ws-lock:disabled{opacity:.45; cursor:default;}
+.c13ws .ws-ghost{font:700 clamp(.72rem,.94vw,.84rem) 'Inter',sans-serif; color:#3b3222; background:transparent; border:1.5px solid rgba(59,50,34,.3); border-radius:999px; padding:.46rem .9rem; cursor:pointer;}
+.c13ws .ws-ghost:disabled{opacity:.4; cursor:default;}
+.c13ws .ws-me{font:italic 400 clamp(.7rem,.92vw,.8rem)/1.45 'Merriweather',serif; color:#5a5448;}
+.c13ws .ws-me a{color:var(--accent); font-weight:700;}
+.c13ws .ws-res{display:flex; flex-direction:column; gap:.4rem; animation:wsIn .5s ease both;}
+@keyframes wsIn{from{opacity:0; transform:translateY(6px);}}
+.c13ws .ws-rv{font-size:clamp(.76rem,1vw,.9rem); line-height:1.5; color:#2b2823;}
+.c13ws .ws-rv b{font-weight:800;} .c13ws .ws-rv b.ok{color:#3f6f3a;} .c13ws .ws-rv b.lo,.c13ws .ws-rv b.hi{color:#a24a2c;}
+.c13ws .ws-sw{display:inline-flex; align-self:flex-start; border:1.5px solid rgba(59,50,34,.3); border-radius:999px; overflow:hidden;}
+.c13ws .ws-sw button{font:700 .74rem 'Inter',sans-serif; color:#3b3222; background:transparent; border:0; padding:.32rem .8rem; cursor:pointer;}
+.c13ws .ws-sw button.on{background:#3b3222; color:#fffaf0;}
+.c13ws .ws-chart{background:#fffdf7; border:1px solid #e3dac8; border-radius:8px; padding:.2rem .3rem 0;}
+.c13ws .ws-hsvg{display:block; width:100%; height:auto;}
+.c13ws .ws-hb{transform-box:fill-box; transform-origin:bottom; animation:wsGrow .6s cubic-bezier(.2,.8,.3,1) both; animation-delay:var(--d);}
+@keyframes wsGrow{from{transform:scaleY(0);}}
+.c13ws .ws-ax{font:600 10px 'Inter',sans-serif; fill:#5e5340;} .c13ws .ws-ax.i{font:italic 400 10.5px 'Merriweather',serif; fill:#7a7262;} .c13ws .ws-ax.b{font-weight:800; fill:#3b3222;}
+.c13ws .ws-ans{font:800 10.5px 'Inter',sans-serif; fill:#8a6a2f;}
+.c13ws .ws-you{font:800 9px 'Inter',sans-serif; fill:#fffaf0;}
+.c13ws .ws-stat{font:italic 400 clamp(.68rem,.88vw,.78rem) 'Merriweather',serif; color:#5a5448;}
+.c13ws .ws-stat b{font-style:normal; font-weight:900; color:#24211d;}
+.c13ws .ws-ctl{display:flex; flex-direction:column; gap:.45rem; border-top:1px solid #e3dac8; padding-top:.5rem; margin-top:auto;}
+.c13ws .ws-cnt{font-size:clamp(.76rem,1vw,.9rem); color:#2b2823;} .c13ws .ws-cnt b{font:900 1.15em 'Merriweather',serif;}
+.c13ws .ws-reset{margin-left:auto;}
+.c13ws .ws-src{margin:.4rem 0 0; font:italic 400 clamp(.54rem,.72vw,.64rem)/1.4 'Merriweather',serif; color:#8a8374;}
+/* scene type */
+.c13ws .ws-tag{font:800 11px 'Inter',sans-serif; letter-spacing:.16em; fill:#8a6a2f;}
+.c13ws .ws-tag.sm{font-size:9.5px;}
+.c13ws .ws-it{font:italic 400 12.5px 'Merriweather',Georgia,serif; fill:#5e5340;}
+.c13ws .ws-big{font:900 21px 'Merriweather',Georgia,serif; fill:#3b3222;}
+.c13ws .ws-cn{font:900 15px 'Merriweather',Georgia,serif; fill:#24211d;}
+.c13ws .ws-kwh{font:800 12px 'Inter',sans-serif; letter-spacing:.04em; fill:#a24a2c;}
+.c13ws .ws-dl{font:800 9.5px 'Inter',sans-serif; letter-spacing:.14em; fill:#5e5340;} .c13ws .ws-dl.c{fill:#a24a2c;}
+.c13ws .ws-plq{font:800 7.5px 'Inter',sans-serif; letter-spacing:.14em; fill:#4a3512;}
+.c13ws .ws-pt{font:900 8px 'Inter',sans-serif; letter-spacing:.1em; fill:#a24a2c;} .c13ws .ws-pt2{font:italic 400 7px 'Merriweather',serif; fill:#5e5340;}
+.c13ws .ws-bl{font:900 7.5px 'Inter',sans-serif; letter-spacing:.12em; fill:#3f2c0c;} .c13ws .ws-bl2{font:700 7px 'Inter',sans-serif; fill:#4a3512;}
+.c13ws .ws-can1{font:900 7.6px 'Inter',sans-serif; letter-spacing:.06em; fill:#fbe3dc;} .c13ws .ws-can2{font:700 5.6px 'Inter',sans-serif; letter-spacing:.06em; fill:#f4c8bf;}
+.c13ws .ws-bay{cursor:grab;}
+.c13ws .ws-piece{cursor:pointer;}
+.c13ws .ws-flyg{pointer-events:none; filter:drop-shadow(0 8px 6px rgba(40,30,15,.35));}
+.c13ws .ws-pan.ws-hot .ws-pile{filter:drop-shadow(0 0 6px rgba(184,137,47,.9));}
+.c13ws.ws-host .ws-stage .ws-cap{font-size:clamp(.82rem,1.1vw,1rem);}
+@media(max-width:900px){ .c13ws .ws-wrap{position:static; padding:1rem 1rem 4rem;} .c13ws .ws-body{grid-template-columns:1fr;} .c13ws .ws-svg{height:auto!important; width:100%!important;} }
+
+/* ── From Wood to Fossil Fuels (ch13_history.py) ── */
+.hs-slide .pq-platebox{aspect-ratio:560/640;}
+.hs-line{justify-content:flex-start;}
+.hs-why .hs-two{display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin-top:.2rem;}
+.hs-why .hs-two p{margin:0; font-size:clamp(.66rem,.9vw,.78rem); line-height:1.42; color:#3a362f;}
+.hs-why .hs-two b{font:900 1.02em 'Merriweather',serif; color:var(--accent);}
+.hs-veh{margin-top:clamp(.3rem,.9vh,.6rem); display:flex; align-items:center; gap:1rem; background:#24211d; color:#efe7d8; border-radius:12px;
+  padding:clamp(.55rem,1.4vh,.85rem) clamp(.9rem,1.5vw,1.3rem); outline:1px solid rgba(201,163,92,.5); outline-offset:-6px; box-shadow:0 10px 24px -16px rgba(40,32,24,.7);}
+.hs-veh b{font:900 clamp(.9rem,1.25vw,1.08rem) 'Merriweather',serif; color:#e3b464;}
+.hs-veh p{margin:.15rem 0 0; font-size:clamp(.7rem,.96vw,.84rem); line-height:1.4; color:#d6cbb6;}
+.hs-vehgo{flex:none; display:inline-flex; align-items:center; gap:.45rem; font:700 clamp(.76rem,1.05vw,.9rem) 'Inter',sans-serif; color:#24211d; background:#e3b464;
+  border:0; border-radius:999px; padding:.5rem 1.05rem .5rem .85rem; cursor:pointer;}
+.hs-vehgo:hover{background:#f0c77c;}
+.hs-vehgo i{display:inline-block; width:0; height:0; border-left:8px solid #24211d; border-top:5px solid transparent; border-bottom:5px solid transparent;}
+/* pop-up type */
+.hs-ax{font:600 12px 'Inter',sans-serif; fill:#5e5340;} .hs-ax.i{font:italic 400 12px 'Merriweather',serif; fill:#8a7d60;}
+.hs-unit{font:italic 400 13px 'Merriweather',Georgia,serif; fill:#8a7d60;}
+.hs-year{font:900 64px 'Merriweather',Georgia,serif; fill:#3b3222; text-anchor:middle;}
+.hs-tot{font:600 13px 'Inter',sans-serif; fill:#8a6a2f; text-anchor:middle;}
+.hs-rn{font:700 14px 'Inter',sans-serif; fill:#3b3222;}
+.hs-rv{font:900 17px 'Merriweather',Georgia,serif; fill:#24211d;}
+.hs-dot{cursor:pointer; transition:r .2s;}
+.hs-lv{font:900 22px 'Merriweather',Georgia,serif; fill:#24211d;}
+.hs-cn{font:900 52px 'Merriweather',Georgia,serif; fill:#7a5634;}
+.hs-cs{font:italic 400 15px 'Merriweather',Georgia,serif; fill:#5e5340;}
+.hs-ls{font:600 13.5px 'Inter',sans-serif; fill:#5e5340;} .hs-ls.i{font:italic 400 13px 'Merriweather',serif; fill:#8a7d60;}
+.hs-ls.b{font:900 15px 'Merriweather',Georgia,serif; fill:#24211d;} .hs-ls.b.r{fill:#a8483f;}
+.hs-hull{font:900 6px 'Inter',sans-serif; letter-spacing:.3px; fill:#e9eef3;}
+.hsv-w *{vector-effect:non-scaling-stroke;}
+
 /* ── Pedal Power (ch13_pedal.py) ── */
 .pdl-card{background:#fbf8f1; border:1px solid rgba(36,33,29,.2); outline:1px solid rgba(138,106,47,.42); outline-offset:-6px; border-radius:12px;
   padding:clamp(.7rem,1.8vh,1.2rem) clamp(.9rem,1.6vw,1.4rem); box-shadow:0 10px 24px -16px rgba(40,32,24,.55);}
@@ -720,6 +841,128 @@ body{background:#1d1b18;}
 }
 
 
+/* announcements / upcoming assignments */
+.slide[data-type="announce"]{background:linear-gradient(160deg,#f7faf8,#eaf1ed);}
+.an-head{margin-bottom:clamp(.8rem,2vh,1.4rem);}
+.an-head .heading{margin-bottom:.35rem;}
+.an-sub{font-size:clamp(.88rem,1.4vw,1.05rem); color:var(--muted); max-width:72ch; line-height:1.45;}
+.an-list{display:flex; flex-direction:column; gap:clamp(.55rem,1.5vh,.95rem); width:100%;}
+.an-row{display:flex; align-items:center; gap:clamp(.8rem,1.8vw,1.4rem);
+  background:var(--paper); border:1px solid var(--line); border-left:5px solid var(--accent,var(--green));
+  border-radius:14px; box-shadow:0 4px 14px rgba(20,40,30,.07);
+  padding:clamp(.75rem,1.9vh,1.15rem) clamp(1rem,2.2vw,1.6rem);}
+.an-num{flex:none; width:2.3rem; height:2.3rem; border-radius:50%; background:var(--accent,var(--forest-mid));
+  color:#fff; font-family:'Merriweather',serif; font-weight:800; font-size:clamp(.95rem,1.6vw,1.15rem);
+  display:flex; align-items:center; justify-content:center;}
+.an-main{flex:1; min-width:0;}
+.an-name{font-family:'Merriweather',serif; font-weight:700; color:var(--forest);
+  font-size:clamp(1rem,1.75vw,1.3rem); line-height:1.25;}
+.an-detail{font-size:clamp(.78rem,1.25vw,.95rem); color:var(--muted); line-height:1.4; margin-top:.22rem;}
+.an-due{flex:none; min-width:clamp(112px,13vw,168px); text-align:center;
+  background:var(--pale); border:1.5px solid var(--line); border-radius:11px;
+  padding:.45rem .8rem;}
+.an-due-lbl{display:block; font-size:clamp(.6rem,.95vw,.72rem); font-weight:800; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted);}
+.an-due-val{display:block; font-family:'Merriweather',serif; font-weight:800; color:var(--forest);
+  font-size:clamp(.9rem,1.5vw,1.12rem); line-height:1.2; margin-top:.1rem;}
+.an-due.tba{background:repeating-linear-gradient(135deg,#fbfaf6,#fbfaf6 7px,#f4f1e6 7px,#f4f1e6 14px);
+  border:1.5px dashed var(--gold);}
+.an-due.tba .an-due-val{color:var(--gold); letter-spacing:.04em;}
+.an-note{margin-top:clamp(.7rem,1.8vh,1.2rem); padding:.65rem .95rem; background:var(--pale);
+  border-left:3px solid var(--accent,var(--green)); border-radius:0 8px 8px 0;
+  font-size:clamp(.78rem,1.2vw,.92rem); color:#3a4a43; font-style:italic;}
+@media (max-width:820px){
+  .an-row{flex-wrap:wrap; gap:.6rem;}
+  .an-main{flex:1 1 60%;}
+  .an-due{min-width:0; margin-left:3.1rem;}
+}
+/* live attendance — host bar (only rendered on the ?host copy) */
+.an-att{display:flex; align-items:center; gap:.7rem; flex-wrap:wrap;
+  margin-top:clamp(.6rem,1.6vh,1.1rem);}
+.an-att[hidden]{display:none;}
+.an-att-btn{font-family:inherit; font-weight:800; color:#fff; border:none; cursor:pointer;
+  background:var(--accent,var(--forest-mid)); border-radius:11px; padding:.6rem 1.4rem;
+  font-size:clamp(.85rem,1.4vw,1rem); transition:filter .15s;}
+.an-att-btn:hover{filter:brightness(1.1);}
+.an-att-btn[hidden]{display:none;}
+.an-att-btn.go{background:#A4373A;}
+.an-att-cancel{font-family:inherit; font-weight:600; color:var(--muted); background:#fff;
+  border:1.5px solid var(--line); border-radius:11px; padding:.6rem 1rem; cursor:pointer;
+  font-size:clamp(.78rem,1.2vw,.9rem);}
+.an-att-cancel:hover{border-color:var(--accent); color:var(--accent);}
+.an-att-cancel[hidden]{display:none;}
+.an-att-sel{font-family:inherit; font-size:clamp(.8rem,1.28vw,.94rem); font-weight:700;
+  color:var(--forest); background:#fff; border:2px solid var(--line); border-radius:11px;
+  padding:.55rem .7rem; cursor:pointer;}
+.an-att-sel:focus{outline:none; border-color:var(--accent,var(--forest-mid));}
+.an-att-sel:disabled{opacity:.55; cursor:not-allowed;}
+.an-att-status{font-size:clamp(.78rem,1.2vw,.92rem); color:var(--muted);}
+.an-att-status em{font-style:normal; font-weight:800; color:var(--forest);}
+.an-att-status strong{font-family:'Merriweather',serif; color:var(--forest); font-size:1.15em;}
+.an-att-status.warn{color:#A4373A; font-weight:700; font-style:italic;}
+/* live attendance — student pop-up (appended to <body>, shows over any slide) */
+.at-modal{position:fixed; inset:0; z-index:120; display:flex; align-items:center;
+  justify-content:center; padding:1.2rem; background:rgba(16,28,23,.55);
+  backdrop-filter:blur(3px); animation:at-fade .22s ease;}
+.at-modal[hidden]{display:none;}
+@keyframes at-fade{from{opacity:0;}}
+.at-box{background:#fff; border-radius:18px; box-shadow:0 24px 60px rgba(0,0,0,.35);
+  width:min(470px,100%); max-height:92vh; overflow-y:auto;
+  padding:clamp(1.2rem,3.4vw,1.9rem); animation:at-rise .26s cubic-bezier(.22,.61,.36,1);}
+@keyframes at-rise{from{transform:translateY(16px) scale(.97); opacity:0;}}
+.at-title{font-family:'Merriweather',serif; font-weight:800; color:var(--forest);
+  font-size:clamp(1.15rem,2.4vw,1.5rem); line-height:1.2;}
+.at-chapter{font-size:clamp(.8rem,1.3vw,.94rem); color:var(--muted); margin-top:.25rem;}
+.at-section{display:inline-block; margin-top:.45rem; padding:.2em .7em; border-radius:20px;
+  background:var(--pale); border:1px solid var(--line); font-size:clamp(.72rem,1.15vw,.84rem);
+  font-weight:800; color:var(--forest);}
+.at-section[hidden]{display:none;}
+.at-field{display:block; margin-top:.9rem;}
+.at-two{display:grid; grid-template-columns:1fr 1fr; gap:.6rem;}
+@media (max-width:400px){ .at-two{grid-template-columns:1fr;} }
+.at-lbl{display:block; font-size:clamp(.7rem,1.1vw,.8rem); font-weight:800; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:.25rem;}
+.at-input{width:100%; font-family:inherit; font-size:clamp(.92rem,1.5vw,1.05rem);
+  padding:.62rem .8rem; border:2px solid var(--line); border-radius:11px; color:var(--ink);
+  background:#fff;}
+.at-input:focus{outline:none; border-color:var(--accent,var(--forest-mid));}
+.at-input.bad{border-color:#A4373A; background:#fdf6f6;}
+.at-submit{width:100%; margin-top:1.1rem; font-family:inherit; font-weight:800; color:#fff;
+  border:none; cursor:pointer; background:var(--forest-mid); border-radius:12px;
+  padding:.78rem 1rem; font-size:clamp(.98rem,1.6vw,1.12rem); transition:filter .15s;}
+.at-submit:hover:not(:disabled){filter:brightness(1.1);}
+.at-submit:disabled{background:#bcc7c2; cursor:default;}
+.at-msg{margin-top:.7rem; font-size:clamp(.78rem,1.25vw,.9rem); line-height:1.4; min-height:1.2em;}
+.at-msg.err{color:#A4373A; font-weight:700;}
+.at-msg.ok{color:#2D6A4F; font-weight:700;}
+.at-done{text-align:center; padding:.4rem 0 .2rem;}
+.at-done-tick{font-size:2.6rem; line-height:1;}
+.at-done-txt{font-family:'Merriweather',serif; font-weight:800; color:#2D6A4F;
+  font-size:clamp(1.05rem,2vw,1.3rem); margin-top:.4rem;}
+.at-done-sub{font-size:clamp(.8rem,1.28vw,.94rem); color:var(--muted); margin-top:.35rem; line-height:1.45;}
+.at-close{margin-top:1rem; font-family:inherit; font-weight:700; color:var(--muted); background:#fff;
+  border:1.5px solid var(--line); border-radius:11px; padding:.5rem 1.2rem; cursor:pointer;}
+.at-close:hover{border-color:var(--accent); color:var(--accent);}
+.at-codein{text-transform:uppercase; letter-spacing:.06em; font-weight:700;}
+.at-codein::placeholder{text-transform:none; letter-spacing:0; font-weight:400;}
+.at-hint{font-size:clamp(.7rem,1.1vw,.8rem); color:var(--muted); font-style:italic; margin-top:.3rem;}
+/* daily code on the ?host copy: small, top-right, on every slide; click for full screen */
+.at-codepill{position:fixed; top:.25rem; right:.6rem; z-index:60; display:flex; align-items:baseline; gap:.45rem;
+  padding:.16rem .75rem .2rem; border-radius:999px; border:1px solid rgba(42,46,51,.18); cursor:pointer;
+  background:rgba(251,249,244,.86); backdrop-filter:blur(3px); box-shadow:0 4px 12px -8px rgba(0,0,0,.35);
+  font-family:'Inter',system-ui,sans-serif; opacity:.9; transition:opacity .15s;}
+.at-codepill:hover{opacity:1;}
+.at-codepill span{font-size:.64rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#7a8189;}
+.at-codepill b{font-size:1.15rem; font-weight:900; letter-spacing:.06em; color:#22262b;}
+.at-codebig{position:fixed; inset:0; z-index:130; background:rgba(20,24,28,.88); display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:.8rem; color:#fff; text-align:center; cursor:pointer; padding:1rem;
+  font-family:'Inter',system-ui,sans-serif;}
+.at-codebig[hidden]{display:none;}
+.at-codebig span{font-size:clamp(.9rem,1.6vw,1.2rem); font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#b3c0c8;}
+.at-codebig b{font-size:clamp(3rem,11vw,9rem); font-weight:900; letter-spacing:.06em; line-height:1;}
+.at-codebig em{font-family:'Merriweather',serif; font-size:clamp(.85rem,1.4vw,1.05rem); color:#dcd5cb;}
+
+
 /* guess-the-number live-distribution slide */
 .slide.guess{background:linear-gradient(160deg,#f4f8f6,#e9f1ee);}
 .gu-root{position:absolute; inset:0; display:flex; flex-direction:column;
@@ -873,6 +1116,925 @@ body{background:#1d1b18;}
     <div class="obj-grid"><div class="obj-item"><span class="obj-num">1</span><span class="obj-text">Discuss how and why humans developed energy technologies throughout history</span></div><div class="obj-item"><span class="obj-num">2</span><span class="obj-text">Explain how economic forces and government policy drove the rise of fossil fuels</span></div><div class="obj-item"><span class="obj-num">3</span><span class="obj-text">Describe how coal, oil, and natural gas are extracted and their environmental impacts</span></div><div class="obj-item"><span class="obj-num">4</span><span class="obj-text">Identify the social, economic, and geopolitical costs of fossil fuel dependence</span></div><div class="obj-item"><span class="obj-num">5</span><span class="obj-text">Discuss carbon taxes, cap-and-trade, and carbon capture as policy responses</span></div></div>
   </div>
 </section>
+<section class="slide" data-type="announce" style="--accent:#5a4a3a" data-at-id="ch13-attendance" data-at-chapter="SOS 110, Chapter 13: Fossil Fuels" data-at-code="1">
+  <div class="slide-inner col">
+    <div class="an-head">
+      <div class="eyebrow">Announcements</div>
+      <h2 class="heading">Upcoming Assignments</h2>
+      <p class="an-sub">Here's what's on deck. Check Canvas for full instructions and submission links.</p>
+    </div>
+    <div class="an-list"><div class="an-row"><span class="an-num">1</span><div class="an-main"><div class="an-name">InQuizitive: Chapters 12 and 13</div><div class="an-detail">Norton adaptive practice: Food, and Fossil Fuels.</div></div><div class="an-due"><span class="an-due-lbl">Due</span><span class="an-due-val">Sunday</span></div></div><div class="an-row"><span class="an-num">2</span><div class="an-main"><div class="an-name">Topic Selection and Outline</div><div class="an-detail">Choose your topic and submit your outline.</div></div><div class="an-due"><span class="an-due-lbl">Due</span><span class="an-due-val">See Canvas</span></div></div></div>
+    
+    <div class="an-att" data-at-bar hidden><button class="an-att-btn" type="button" data-at-open>Attendance</button><select class="an-att-sel" data-at-section aria-label="Class section"><option value="MWF0905">MWF 9:05 am</option><option value="MWF1220">MWF 12:20 pm</option><option value="TTH1200">TTh 12:00 pm</option></select><button class="an-att-btn go" type="button" data-at-finalize hidden>Submit Attendance</button><button class="an-att-cancel" type="button" data-at-cancel hidden>Cancel</button><button class="an-att-cancel" type="button" data-at-clear hidden>Clear last roll call</button><span class="an-att-status" data-at-status></span></div>
+  </div>
+  <div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div>
+</section>
+<section class="slide c13ws" data-type="content" style="--accent:#5a4a3a"><script type="application/json" data-ws-cfg>{"id": "ch13-wood-scale", "wkl": 1.8522, "cap": 120, "capn": 12, "qs": [{"k": "g", "tab": "Gasoline", "fuel": "gas", "fuelKwh": 33.7, "ans": 18.2, "mix": [0, 3, 3], "q": "How much seasoned firewood holds as much energy as <b>one gallon of gasoline<\/b>?", "name": "1 U.S. gallon of gasoline", "weigh": "weighs about 6.2 lb", "note": "about three times the weight of the gasoline itself"}, {"k": "c", "tab": "Coal", "fuel": "coal", "fuelKwh": 21.9, "ans": 11.8, "mix": [0, 2, 2], "q": "How much seasoned firewood holds as much energy as <b>6 pounds of coal<\/b>, about what that gallon of gasoline weighs?", "name": "6 lb of house coal", "weigh": "about the weight of the gallon", "note": "about twice the weight of the coal"}]}</script><div class="ws-wrap"><div class="ws-head"><div class="eyebrow">Introduction  ·  Live</div><h2 class="heading">How Much Wood Would It Take?</h2><p class="ws-sub">Build a woodpile that holds the same energy as the fuel on the left. Lock in your answer on your laptop. The balance stays pinned until the instructor reveals it.</p></div><div class="ws-body"><div class="ws-stage" data-stage><svg class="ws-svg" viewBox="40 -12 880 652" role="img" data-ws-svg aria-label="A brass energy balance. The left pan holds the fuel; drag wood from the crate onto the right pan."></svg><div class="ws-cap" data-cap aria-live="polite"></div><div class="ws-key" data-key></div></div><div class="ws-card"><div class="ws-tabs" role="tablist" aria-label="Question"><button class="ws-tab on" type="button" data-tab="0" role="tab"><span>1</span>Gasoline<i></i></button><button class="ws-tab" type="button" data-tab="1" role="tab"><span>2</span>Coal<i></i></button></div><div class="ws-qk" data-qk>Question 1 of 2</div><div class="ws-q" data-qt></div><div class="ws-edit" data-edit><p class="ws-how">Drag wood from the crate onto the right-hand pan, or use the buttons below. Click a piece on the pan to take it off.</p><div class="ws-rack"><div class="ws-ri" data-ri="kin"><span class="ws-rn">Kindling bundle<small>1 lb</small></span><button type="button" class="ws-rb" data-rm="kin" aria-label="Take one kindling bundle off the pan">&#8722;</button><b class="ws-rc" data-rc="kin">0</b><button type="button" class="ws-rb" data-ad="kin" aria-label="Add one kindling bundle to the pan">+</button></div><div class="ws-ri" data-ri="spl"><span class="ws-rn">Split log<small>5 lb</small></span><button type="button" class="ws-rb" data-rm="spl" aria-label="Take one split log off the pan">&#8722;</button><b class="ws-rc" data-rc="spl">0</b><button type="button" class="ws-rb" data-ad="spl" aria-label="Add one split log to the pan">+</button></div><div class="ws-ri" data-ri="rnd"><span class="ws-rn">Log round<small>20 lb</small></span><button type="button" class="ws-rb" data-rm="rnd" aria-label="Take one log round off the pan">&#8722;</button><b class="ws-rc" data-rc="rnd">0</b><button type="button" class="ws-rb" data-ad="rnd" aria-label="Add one log round to the pan">+</button></div></div><div class="ws-tally" aria-live="polite"><span class="ws-tl" data-tl>Your woodpile</span><b data-lb>0</b><span class="ws-tu">lb</span><span class="ws-tk" data-kg></span></div><div class="ws-act"><button type="button" class="ws-ghost" data-empty>Empty the pan</button><button type="button" class="ws-lock" data-lock>Lock in my answer</button></div></div><div class="ws-me" data-me></div><div class="ws-res" data-res hidden></div><div class="ws-ctl" data-ctl hidden><div class="ws-cnt" data-cnt></div><div class="ws-cb"><button type="button" class="ws-lock" data-rev>Reveal gasoline</button><button type="button" class="ws-ghost" data-hide>Hide answers</button><button type="button" class="ws-ghost ws-reset" data-reset>Reset</button></div></div></div></div><p class="ws-src" data-src>Answer key: Forest Research (UK) fuel values and the U.S. EPA. The numbers appear with the reveal, so the balance cannot be worked out ahead of time.</p></div><div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div><script>(function(){
+  var SEC=document.currentScript.closest('section'); if(!SEC||SEC.__ws) return; SEC.__ws=1;
+  if(!window.__deckLiveReady){ window.__deckLiveReady=new Promise(function(r){ window.__deckLiveResolve=r; }); }
+  var C=JSON.parse(SEC.querySelector('[data-ws-cfg]').textContent), ID=C.id, KEY='c13ws:'+ID, QS=C.qs, WKL=C.wkl;
+  var SRC_FULL="Lower heating values. Seasoned firewood (20% moisture) 14.7 MJ/kg and house coal 27&#8211;31 MJ/kg: Forest Research (UK), &#8220;Typical calorific values of fuels.&#8221; Gasoline 33.7 kWh per gallon: U.S. EPA, fueleconomy.gov; a gallon weighs about 6.2 lb (DOE Alternative Fuels Data Center: 6.0&#8211;6.5 lb). Piece weights are typical for seasoned oak cut to 16 inches: an 8-inch round about 20 lb, a quarter split about 5 lb.", SRC_HID="Answer key: Forest Research (UK) fuel values and the U.S. EPA. The numbers appear with the reveal, so the balance cannot be worked out ahead of time.";
+  var NS='http://www.w3.org/2000/svg', INK='#3b3222', GOLD='#8a6a2f', PAPER='#fbf5e6';
+  var $=function(s){ return SEC.querySelector(s); }, $$=function(s){ return [].slice.call(SEC.querySelectorAll(s)); };
+  function E(t,a,p){ var e=document.createElementNS(NS,t); if(a) for(var k in a) e.setAttribute(k,a[k]); if(p) p.appendChild(e); return e; }
+  function G(html,p,a){ var g=E('g',a||null,p); g.innerHTML=html; return g; }
+  function f(n){ return (+n).toFixed(1); }
+  function cl(x,a,b){ return Math.max(a,Math.min(b,x)); }
+  function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
+  function rng(s){ return function(){ s|=0; s=s+0x6D2B79F5|0; var t=Math.imul(s^s>>>15,1|s); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  function eout(t){ t=cl(t,0,1); return 1-Math.pow(1-t,3); }
+
+  /* ── geometry: 960 x 600, the pivot, the arms, the pans ─────────────────────────────────────────────────────────── */
+  var PV=[480,150], ARM=270, CH=212, RX=118, MAXA=8, K=6.5, DV=[1.22,-0.89];
+  var LB={kin:1, spl:5, rnd:20}, NAME={kin:'kindling bundle', spl:'split log', rnd:'log round'};
+  var BAY={kin:[612,690], spl:[690,786], rnd:[786,888]}, CRATE_Y=496;
+
+  /* ── wood and fuel, drawn to one scale (6.5 px per inch) ────────────────────────────────────────────────────────── */
+  function pts(a){ return a.map(function(p){ return f(p[0])+','+f(p[1]); }).join(' '); }
+  function ringPath(cx,cy,r,R,n){ var d=''; var ph=R()*6, a2=1+Math.floor(R()*3);
+    for(var i=0;i<=n;i++){ var t=i/n*Math.PI*2, rr=r*(1+.045*Math.sin(a2*t+ph)+.02*Math.sin(5*t+ph*2)); d+=(i?'L':'M')+f(cx+Math.cos(t)*rr)+','+f(cy+Math.sin(t)*rr); }
+    return d+'Z'; }
+  function bbox(list){ var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9; list.forEach(function(p){ x0=Math.min(x0,p[0]); y0=Math.min(y0,p[1]); x1=Math.max(x1,p[0]); y1=Math.max(y1,p[1]); }); return [x0,y0,x1,y1]; }
+  function wrapArt(s,b){ /* move the art so its bottom-centre sits on (0,0) */
+    var tx=-(b[0]+b[2])/2, ty=-b[3]; return {s:'<g transform="translate('+f(tx)+','+f(ty)+')">'+s+'</g>', w:b[2]-b[0], h:b[3]-b[1]}; }
+  function extrudeSides(poly,V,kinds,colors,sw){ /* visible side faces of an extruded convex polygon (oblique view) */
+    var cx=0,cy=0; poly.forEach(function(p){ cx+=p[0]; cy+=p[1]; }); cx/=poly.length; cy/=poly.length;
+    var s='';
+    for(var i=0;i<poly.length-1;i++){ var a=poly[i], b=poly[i+1], ex=b[0]-a[0], ey=b[1]-a[1], nx=ey, ny=-ex;
+      var mx=(a[0]+b[0])/2-cx, my=(a[1]+b[1])/2-cy; if(nx*mx+ny*my<0){ nx=-nx; ny=-ny; }
+      if(nx*V[0]+ny*V[1]<=0) continue;
+      s+='<polygon points="'+pts([a,b,[b[0]+V[0],b[1]+V[1]],[a[0]+V[0],a[1]+V[1]]])+'" fill="'+colors[kinds[i]]+'" stroke="'+INK+'" stroke-width="'+(sw||.55)+'" stroke-linejoin="round"/>';
+    }
+    return s; }
+  function artRound(seed){
+    var R=rng(seed), r=4*K*(.94+R()*.12), V=[16*DV[0],16*DV[1]], c=[-V[0]/2,-r], L=Math.hypot(V[0],V[1]), n=[-V[1]/L*r, V[0]/L*r];
+    var F1=[c[0]+n[0],c[1]+n[1]], F2=[c[0]-n[0],c[1]-n[1]], B1=[F1[0]+V[0],F1[1]+V[1]], B2=[F2[0]+V[0],F2[1]+V[1]], s='';
+    s+='<circle cx="'+f(c[0]+V[0])+'" cy="'+f(c[1]+V[1])+'" r="'+f(r)+'" fill="#5b3f27" stroke="'+INK+'" stroke-width=".7"/>';
+    s+='<polygon points="'+pts([F1,B1,B2,F2])+'" fill="url(#wsBark)"/>';
+    for(var i=0;i<8;i++){ var u=-.88+1.76*i/7+(R()-.5)*.12, a=[c[0]+n[0]*u, c[1]+n[1]*u], w=(R()-.5)*1.6;
+      s+='<path d="M'+f(a[0])+','+f(a[1])+' q'+f(V[0]/2+w)+','+f(V[1]/2-w)+' '+f(V[0])+','+f(V[1])+'" stroke="#2f2012" stroke-width="'+f(.6+R()*.6)+'" opacity=".55" fill="none"/>'; }
+    var top=(F1[1]<F2[1])? [F1,B1] : [F2,B2], inn=(F1[1]<F2[1])? -.62 : .62;
+    s+='<path d="M'+f(top[0][0]-n[0]*inn*.18)+','+f(top[0][1]-n[1]*inn*.18)+' L'+f(top[1][0]-n[0]*inn*.18)+','+f(top[1][1]-n[1]*inn*.18)+'" stroke="#a8875f" stroke-width="'+f(r*.28)+'" stroke-linecap="round" opacity=".45"/>';
+        s+='<path d="M'+f(F1[0])+','+f(F1[1])+' L'+f(B1[0])+','+f(B1[1])+' M'+f(F2[0])+','+f(F2[1])+' L'+f(B2[0])+','+f(B2[1])+'" stroke="'+INK+'" stroke-width=".8"/>';
+    s+='<circle cx="'+f(c[0])+'" cy="'+f(c[1])+'" r="'+f(r)+'" fill="url(#wsEnd)" stroke="#4a3220" stroke-width="3.1"/>';
+    s+='<circle cx="'+f(c[0])+'" cy="'+f(c[1])+'" r="'+f(r-3.3)+'" fill="none" stroke="#efdcb2" stroke-width="2" opacity=".7"/>';
+    var p=[c[0]+(R()-.5)*4, c[1]+(R()-.5)*4];
+    for(var j=1;j<=7;j++) s+='<path d="'+ringPath(p[0],p[1],j/7.7*(r-5),R,30)+'" fill="none" stroke="#a5743d" stroke-width=".7" opacity="'+f(.45+R()*.3)+'"/>';
+    for(var q=0;q<1+Math.floor(R()*2);q++){ var t=R()*Math.PI*2, ln=r*(.55+R()*.3), m1=[p[0]+Math.cos(t+.08)*ln*.5, p[1]+Math.sin(t+.08)*ln*.5];
+      s+='<path d="M'+f(p[0])+','+f(p[1])+' L'+f(m1[0])+','+f(m1[1])+' L'+f(p[0]+Math.cos(t)*ln)+','+f(p[1]+Math.sin(t)*ln)+'" stroke="#5e3b1c" stroke-width="1" fill="none"/>'; }
+    s+='<circle cx="'+f(p[0])+'" cy="'+f(p[1])+'" r="1.7" fill="#7a4a24"/>';
+    return wrapArt(s, bbox([[c[0]-r,c[1]-r],[c[0]+r,c[1]+r],[c[0]+V[0]+r,c[1]+V[1]-r]]));
+  }
+  function artSplit(seed){
+    var R=rng(seed), m=R()<.5?1:-1, rad=4*K*(.95+R()*.1), V=[16*DV[0],16*DV[1]], poly=[[0,0]], kinds=['f'];
+    for(var i=0;i<=8;i++){ var t=i/8*Math.PI/2; poly.push([m*rad*Math.cos(t), -rad*Math.sin(t)]); if(i<8) kinds.push('b'); }
+    kinds.push('f'); poly.push([0,0]);
+    var s=extrudeSides(poly,V,kinds,{f:'url(#wsSplit)',b:'url(#wsBark)'});
+    s+='<polygon points="'+pts(poly)+'" fill="url(#wsEnd)" stroke="'+INK+'" stroke-width=".8" stroke-linejoin="round"/>';
+    function arc(r0){ var a0=[m*r0,0], a1=[0,-r0]; return 'M'+f(a0[0])+','+f(a0[1])+' A'+f(r0)+','+f(r0)+' 0 0 '+(m>0?0:1)+' '+f(a1[0])+','+f(a1[1]); }
+    for(var j=1;j<=6;j++) s+='<path d="'+arc(j/6.8*(rad-3))+'" fill="none" stroke="#a5743d" stroke-width=".7" opacity="'+f(.45+R()*.3)+'"/>';
+    s+='<path d="'+arc(rad-3.4)+'" fill="none" stroke="#efdcb2" stroke-width="2" opacity=".7"/>';
+    s+='<path d="'+arc(rad-1.1)+'" fill="none" stroke="#4a3220" stroke-width="2.6"/>';
+    var tc=R()*Math.PI/2; s+='<path d="M0,0 L'+f(m*Math.cos(tc)*rad*.62)+','+f(-Math.sin(tc)*rad*.62)+'" stroke="#5e3b1c" stroke-width=".9"/>';
+    var all=poly.concat(poly.map(function(p){ return [p[0]+V[0],p[1]+V[1]]; }));
+    return wrapArt(s, bbox(all));
+  }
+  function artKindling(seed){
+    var R=rng(seed), V=[12*DV[0],12*DV[1]], h=.46*K, off=[[0,0],[6.4,.6],[-6.2,.4],[3.2,-5.4],[-3.3,-5.6],[3.1,5.6],[-3,5.4]];
+    var sticks=off.map(function(o){ var a=(R()-.5)*.6, hx=h*(.85+R()*.3), hy=h*(.85+R()*.3); var ca=Math.cos(a), sa=Math.sin(a);
+      var sq=[[-hx,-hy],[hx,-hy],[hx,hy],[-hx,hy]].map(function(q){ return [o[0]+q[0]*ca-q[1]*sa, o[1]+q[0]*sa+q[1]*ca]; }); sq.push(sq[0]); return {o:o, sq:sq}; });
+    sticks.sort(function(a,b){ return (a.o[0]*V[0]+a.o[1]*V[1])-(b.o[0]*V[0]+b.o[1]*V[1]); });
+    var s='', all=[];
+    sticks.forEach(function(k){ s+=extrudeSides(k.sq,V,['s','s','s','s'],{s:'url(#wsSplit)'},.4); k.sq.forEach(function(p){ all.push(p,[p[0]+V[0],p[1]+V[1]]); }); });
+    [.32,.7].forEach(function(t){ var c=[V[0]*t, V[1]*t];
+      s+='<path d="M'+f(c[0]-12)+','+f(c[1]-4)+' Q'+f(c[0]-2)+','+f(c[1]-15)+' '+f(c[0]+12)+','+f(c[1]-8)+'" stroke="#8a6a3a" stroke-width="2" fill="none"/>'
+        +'<path d="M'+f(c[0]-12)+','+f(c[1]-4)+' Q'+f(c[0]-2)+','+f(c[1]-15)+' '+f(c[0]+12)+','+f(c[1]-8)+'" stroke="#c9a873" stroke-width=".7" fill="none"/>'; });
+    sticks.forEach(function(k){ s+='<polygon points="'+pts(k.sq)+'" fill="url(#wsEnd)" stroke="'+INK+'" stroke-width=".55"/>';
+      s+='<circle cx="'+f(k.o[0]+(R()-.5)*2)+'" cy="'+f(k.o[1]+(R()-.5)*2)+'" r="'+f(h*.55)+'" fill="none" stroke="#a5743d" stroke-width=".5" opacity=".6"/>'; });
+    return wrapArt(s, bbox(all));
+  }
+  function artFor(kind,seed){ return kind==='rnd'? artRound(seed) : kind==='spl'? artSplit(seed) : artKindling(seed); }
+  function lump(R,cx,cy,sz){
+    var n=7+Math.floor(R()*3), v=[], pk=[cx-sz*.18+(R()-.5)*sz*.2, cy-sz*.22+(R()-.5)*sz*.2], s='';
+    for(var i=0;i<n;i++){ var t=i/n*Math.PI*2+(R()-.5)*.5, rr=sz*(.72+R()*.36); v.push([cx+Math.cos(t)*rr, cy+Math.sin(t)*rr*.78]); }
+    for(var j=0;j<n;j++){ var a=v[j], b=v[(j+1)%n], mx=(a[0]+b[0])/2-pk[0], my=(a[1]+b[1])/2-pk[1], ln=Math.hypot(mx,my)||1;
+      var lit=cl((-.62*mx-.78*my)/ln,-1,1), c=Math.round(20+(lit+1)*34), bl=Math.round(c+8+(lit>0?lit*22:0));
+      s+='<polygon points="'+pts([pk,a,b])+'" fill="rgb('+c+','+(c+2)+','+bl+')" stroke="#0c0b0c" stroke-width=".55" stroke-linejoin="round"/>';
+      if(lit>.75) s+='<path d="M'+f(pk[0]+(a[0]-pk[0])*.3)+','+f(pk[1]+(a[1]-pk[1])*.3)+' L'+f(pk[0]+(b[0]-pk[0])*.55)+','+f(pk[1]+(b[1]-pk[1])*.55)+'" stroke="#e8eef8" stroke-width=".8" opacity=".55"/>'; }
+    return s;
+  }
+  function artCoal(){
+    var R=rng(13), s='', rows=[[5,0],[4,-15],[3,-29],[1,-41]];
+    rows.slice().reverse().forEach(function(rw,ri){ var nrow=rw[0], y=rw[1];
+      for(var i=0;i<nrow;i++){ var x=(i-(nrow-1)/2)*25+(R()-.5)*5; s+=lump(R,x,y-11+(R()-.5)*3,10.5+R()*3); } });
+    return {s:s, w:130, h:56};
+  }
+  var CAN=(function(){
+    var s='';
+    s+='<ellipse cx="0" cy="1" rx="40" ry="4" fill="#3b3222" opacity=".18"/>';
+    s+='<path d="M-28,-50 C-28,-68 -2,-68 -2,-50" fill="none" stroke="#8f1f1a" stroke-width="8.5" stroke-linecap="round"/>';
+    s+='<path d="M-28,-50 C-28,-68 -2,-68 -2,-50" fill="none" stroke="url(#wsRed)" stroke-width="6" stroke-linecap="round"/>';
+    s+='<path d="M-24,-55 C-22,-63 -8,-63 -6,-56" fill="none" stroke="#f3b2a8" stroke-width="1.2" opacity=".6"/>';
+    s+='<path d="M14,-50 L22,-60 L31,-53 L25,-45 Z" fill="#a8241d" stroke="'+INK+'" stroke-width=".8"/>';
+    s+='<path d="M26,-56 C32,-66 38,-72 46,-75" fill="none" stroke="#7a5a12" stroke-width="7" stroke-linecap="round"/>';
+    s+='<path d="M26,-56 C32,-66 38,-72 46,-75" fill="none" stroke="#e9bd2e" stroke-width="5" stroke-linecap="round"/>';
+    for(var i=0;i<4;i++) s+='<path d="M'+f(29+i*4.2)+','+f(-60-i*3.6)+' l2.6,2.4" stroke="#a9861c" stroke-width=".9"/>';
+    s+='<rect x="44" y="-79" width="6" height="7" rx="1.5" transform="rotate(-25 47 -75)" fill="#3a3a3a"/>';
+    s+='<path d="M-36,-40 L-30,-51 H18 L36,-41 Z" fill="#d8443a" stroke="'+INK+'" stroke-width=".9" stroke-linejoin="round"/>';
+    s+='<rect x="-36" y="-42" width="72" height="42" rx="6" fill="url(#wsRed)" stroke="'+INK+'" stroke-width="1"/>';
+    s+='<rect x="-26" y="-34" width="48" height="24" rx="3" fill="#a8261f" stroke="#7c1a15" stroke-width=".7"/>';
+    s+='<text x="-2" y="-24.5" text-anchor="middle" class="ws-can1">GASOLINE</text><text x="-2" y="-15" text-anchor="middle" class="ws-can2">1 GAL &#183; 3.8 L</text>';
+    s+='<rect x="25" y="-34" width="7" height="9" fill="#f2cf3a" stroke="#3a3222" stroke-width=".5"/><path d="M28.5,-32.5 l2.4,4.6 h-4.8 Z" fill="#2b2723"/>';
+    s+='<rect x="-34" y="-40" width="7" height="38" rx="3" fill="#ffffff" opacity=".16"/>';
+    return {s:s, w:86, h:80};
+  })();
+
+  /* ── build the scene once ──────────────────────────────────────────────────────────────────────────────────────── */
+  var svg=SEC.querySelector('[data-ws-svg]'), L={};
+  function defs(){
+    var d=E('defs',null,svg);
+    d.innerHTML=''
+      +'<linearGradient id="wsBrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dc95"/><stop offset=".35" stop-color="#d4ac55"/><stop offset=".7" stop-color="#a9822f"/><stop offset="1" stop-color="#7a5a1e"/></linearGradient>'
+      +'<linearGradient id="wsBrassV" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a6524"/><stop offset=".3" stop-color="#e7c877"/><stop offset=".55" stop-color="#c79d45"/><stop offset="1" stop-color="#7c5b1f"/></linearGradient>'
+      +'<linearGradient id="wsDish" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6c471"/><stop offset="1" stop-color="#8f6b27"/></linearGradient>'
+      +'<radialGradient id="wsDishIn" cx=".45" cy=".35" r=".8"><stop offset="0" stop-color="#f4dfa2"/><stop offset="1" stop-color="#b38a3a"/></radialGradient>'
+      +'<linearGradient id="wsWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a3f24"/><stop offset="1" stop-color="#4a2414"/></linearGradient>'
+      +'<linearGradient id="wsTable" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b98a5a"/><stop offset=".25" stop-color="#9c6d42"/><stop offset="1" stop-color="#6f4a2c"/></linearGradient>'
+      +'<linearGradient id="wsBark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a5a3c"/><stop offset=".55" stop-color="#5a3f28"/><stop offset="1" stop-color="#3f2b1a"/></linearGradient>'
+      +'<linearGradient id="wsSplit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0bd84"/><stop offset="1" stop-color="#b98c52"/></linearGradient>'
+      +'<radialGradient id="wsEnd" cx=".42" cy=".4" r=".75"><stop offset="0" stop-color="#f1d9a6"/><stop offset=".7" stop-color="#dcb57a"/><stop offset="1" stop-color="#c89a5e"/></radialGradient>'
+      +'<linearGradient id="wsRed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2493c"/><stop offset=".55" stop-color="#c3302a"/><stop offset="1" stop-color="#8f1f1a"/></linearGradient>'
+      +'<linearGradient id="wsIvory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#efe4c8"/></linearGradient>'
+      +'<radialGradient id="wsGlow"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/></radialGradient>'
+      +'<radialGradient id="wsVig" cx=".5" cy=".42" r=".75"><stop offset=".55" stop-color="#fbf5e6" stop-opacity="0"/><stop offset="1" stop-color="#d9c9a6" stop-opacity=".55"/></radialGradient>'
+      +'<filter id="wsGrain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .36  0 0 0 0 .29  0 0 0 0 .18  0 0 0 .06 0"/></filter>'
+      +'<filter id="wsSoft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>';
+  }
+  function chain(p,a,b,n,op){ var s=''; for(var i=0;i<n;i++){ var u=(i+.5)/n, x=a[0]+(b[0]-a[0])*u, y=a[1]+(b[1]-a[1])*u, ang=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;
+      s+='<ellipse cx="'+f(x)+'" cy="'+f(y)+'" rx="'+(i%2?2.1:4.1)+'" ry="'+(i%2?1.2:2)+'" transform="rotate('+f(ang)+' '+f(x)+' '+f(y)+')" fill="none" stroke="#8a6524" stroke-width="1.15" opacity="'+op+'"/>'; }
+    return G(s,p); }
+  function pan(side){
+    var g=E('g',{'class':'ws-pan'},svg), o={g:g};
+    chain(g,[0,6],[0,CH-12],30,.45);
+    E('ellipse',{cx:0,cy:CH,rx:RX,ry:11,fill:'url(#wsDishIn)',stroke:'#7a5a1e','stroke-width':1},g);
+    o.shadow=E('ellipse',{cx:0,cy:CH+3,rx:0,ry:6,fill:'#3b2412',opacity:.28,filter:'url(#wsSoft)'},g);
+    o.pile=E('g',{'class':'ws-pile'},g);
+    chain(g,[-2,6],[-RX+8,CH-2],34,1); chain(g,[2,6],[RX-8,CH-2],34,1);
+    G('<path d="M'+(-RX)+','+CH+' A'+RX+',11 0 0 0 '+RX+','+CH+' C'+(RX-8)+','+(CH+14)+' '+(RX-20)+','+(CH+17)+' '+(RX-34)+','+(CH+17)+' H'+(-RX+34)+' C'+(-RX+20)+','+(CH+17)+' '+(-RX+8)+','+(CH+14)+' '+(-RX)+','+CH+' Z" fill="url(#wsDish)" stroke="#6a4c18" stroke-width="1"/>'
+      +'<path d="M'+(-RX+6)+','+(CH+3)+' A'+(RX-6)+',9 0 0 0 '+(RX-6)+','+(CH+3)+'" fill="none" stroke="#fff3c6" stroke-width="1.1" opacity=".55"/>'
+      +'<path d="M-6,0 C-6,-6 6,-6 6,0 L4,8 M-4,8 H4" fill="none" stroke="#6a4c18" stroke-width="2"/>',g);
+    o.side=side; return o;
+  }
+  function build(){
+    defs();
+    E('rect',{x:-60,y:-60,width:1080,height:760,fill:PAPER},svg);
+    E('rect',{x:40,y:-12,width:880,height:652,fill:'url(#wsVig)'},svg);
+    G('<text x="62" y="30" class="ws-tag">ENERGY BALANCE</text><text x="62" y="49" class="ws-it">Each side tips by the energy it holds, not by its weight.</text>',svg);
+    L.rlab=G('',svg); L.llab=G('',svg);
+    /* table, plinth, column */
+    G('<rect x="0" y="556" width="960" height="90" fill="url(#wsTable)"/><path d="M0,556 H960" stroke="#5a3a22" stroke-width="1.4"/><path d="M0,561 H960" stroke="#d6aa78" stroke-width=".8" opacity=".6"/>'
+      +'<path d="M0,574 C200,570 420,580 640,572 S900,578 960,574 M0,588 C220,584 520,594 760,586 M0,606 C260,600 560,612 960,604 M0,624 C300,618 620,630 960,622" stroke="#5e3d24" stroke-width=".8" opacity=".35" fill="none"/>'
+      +'<ellipse cx="480" cy="557" rx="118" ry="6" fill="#3b2412" opacity=".28" filter="url(#wsSoft)"/>'
+      +'<path d="M404,556 V522 Q404,514 412,514 H548 Q556,514 556,522 V556 Z" fill="url(#wsWood)" stroke="'+INK+'" stroke-width="1.2"/>'
+      +'<rect x="398" y="508" width="164" height="9" rx="3" fill="url(#wsBrass)" stroke="#6a4c18" stroke-width=".8"/>'
+      +'<rect x="438" y="526" width="84" height="20" rx="2" fill="url(#wsBrass)" stroke="#6a4c18" stroke-width=".7"/><text x="480" y="539.5" text-anchor="middle" class="ws-plq">ENERGY &#183; kWh</text>'
+      +'<rect x="471" y="176" width="18" height="334" fill="url(#wsBrassV)" stroke="#6a4c18" stroke-width=".8"/>'
+      +'<path d="M475,182 V504 M480,182 V504 M485,182 V504" stroke="#6a4c18" stroke-width=".5" opacity=".45"/>'
+      +'<rect x="462" y="486" width="36" height="24" rx="3" fill="url(#wsBrassV)" stroke="#6a4c18" stroke-width=".8"/>'
+      +'<rect x="464" y="300" width="32" height="9" rx="2" fill="url(#wsBrassV)" stroke="#6a4c18" stroke-width=".7"/>'
+      +'<path d="M460,176 H500 L494,160 H466 Z" fill="url(#wsBrassV)" stroke="#6a4c18" stroke-width=".9"/>',svg);
+    /* the dial above the pivot */
+    var dial='', R0=86, R1=130, A=19*Math.PI/180;
+    function pp(r,a){ return [PV[0]+Math.sin(a)*r, PV[1]-Math.cos(a)*r]; }
+    var p1=pp(R1,-A), p2=pp(R1,A), p3=pp(R0,A), p4=pp(R0,-A);
+    dial+='<path d="M'+f(p1[0])+','+f(p1[1])+' A'+R1+','+R1+' 0 0 1 '+f(p2[0])+','+f(p2[1])+' L'+f(p3[0])+','+f(p3[1])+' A'+R0+','+R0+' 0 0 0 '+f(p4[0])+','+f(p4[1])+' Z" fill="url(#wsIvory)" stroke="'+GOLD+'" stroke-width="1.3"/>';
+    var i1=pp(R1-4,-A+.02), i2=pp(R1-4,A-.02); dial+='<path d="M'+f(i1[0])+','+f(i1[1])+' A'+(R1-4)+','+(R1-4)+' 0 0 1 '+f(i2[0])+','+f(i2[1])+'" fill="none" stroke="'+GOLD+'" stroke-width=".5"/>';
+    for(var d=-16;d<=16;d+=2){ var a=d*Math.PI/180, mj=d%8===0, q1=pp(R1-6,a), q2=pp(R1-(d===0?30:mj?22:14),a);
+      dial+='<path d="M'+f(q1[0])+','+f(q1[1])+' L'+f(q2[0])+','+f(q2[1])+'" stroke="'+(d===0?'#a24a2c':INK)+'" stroke-width="'+(d===0?1.8:mj?1.1:.65)+'"/>'; }
+    var lw=pp(R0+9,-12.5*Math.PI/180), rw=pp(R0+9,12.5*Math.PI/180), top=pp(R1+9,0);
+    dial+='<text x="'+f(lw[0])+'" y="'+f(lw[1])+'" text-anchor="middle" class="ws-dl" transform="rotate(-12.5 '+f(lw[0])+' '+f(lw[1])+')">FUEL</text>';
+    dial+='<text x="'+f(rw[0])+'" y="'+f(rw[1])+'" text-anchor="middle" class="ws-dl" transform="rotate(12.5 '+f(rw[0])+' '+f(rw[1])+')">WOOD</text>';
+    dial+='<text x="'+f(top[0])+'" y="'+f(top[1])+'" text-anchor="middle" class="ws-dl c">LEVEL</text>';
+    L.glow=E('circle',{cx:PV[0],cy:PV[1]-108,r:58,fill:'url(#wsGlow)',opacity:0},svg);
+    G(dial,svg);
+    /* the beam, its pointer, the pans */
+    L.beam=E('g',null,svg);
+    G('<path d="M'+(-ARM-14)+',-3 L-44,-7.5 Q0,-15 44,-7.5 L'+(ARM+14)+',-3 L'+(ARM+14)+',3 L44,7.5 Q0,14 -44,7.5 L'+(-ARM-14)+',3 Z" fill="url(#wsBrass)" stroke="#6a4c18" stroke-width="1"/>'
+      +'<path d="M-40,-4 Q0,-10 40,-4" stroke="#fff4c8" stroke-width="1" opacity=".6" fill="none"/>'
+      +'<circle cx="'+(-ARM-16)+'" cy="0" r="6" fill="url(#wsBrass)" stroke="#6a4c18" stroke-width=".9"/><circle cx="'+(ARM+16)+'" cy="0" r="6" fill="url(#wsBrass)" stroke="#6a4c18" stroke-width=".9"/>'
+      +'<path d="M'+(-ARM)+',4 v6 M'+ARM+',4 v6" stroke="#6a4c18" stroke-width="2.2"/>'
+      +'<path d="M0,-6 L-2.2,-112 L0,-122 L2.2,-112 Z" fill="#2b2723"/><circle cx="0" cy="0" r="9" fill="url(#wsBrassV)" stroke="#6a4c18" stroke-width="1"/><circle cx="0" cy="0" r="2.6" fill="#3b3222"/>',
+      L.beam);
+    L.pans=[pan('L'),pan('R')];
+    /* the locking pin and its tag */
+    L.pin=G('<path d="M432,150 H492" stroke="#5e4518" stroke-width="5.4" stroke-linecap="round"/><path d="M432,150 H492" stroke="url(#wsBrassV)" stroke-width="3.6" stroke-linecap="round"/>'
+      +'<circle cx="428" cy="150" r="6.5" fill="none" stroke="#6a4c18" stroke-width="2.6"/>'
+      +'<path d="M426,156 L420,178" stroke="#7a6a4a" stroke-width=".9"/>'
+      +'<g transform="rotate(-8 412 192)"><path d="M396,178 H428 V204 H396 L390,191 Z" fill="#f3e6c4" stroke="'+INK+'" stroke-width=".9"/><circle cx="398" cy="191" r="1.8" fill="none" stroke="'+INK+'" stroke-width=".7"/>'
+      +'<text x="413" y="189" text-anchor="middle" class="ws-pt">LOCKED</text><text x="413" y="199" text-anchor="middle" class="ws-pt2">until reveal</text></g>',svg);
+    /* the specimen card under the fuel */
+    L.card=G('',svg);
+    /* the wood crate under the right pan */
+    var cr='<rect x="606" y="'+CRATE_Y+'" width="288" height="60" rx="3" fill="#a77748" stroke="'+INK+'" stroke-width="1.1"/>';
+    for(var y=CRATE_Y+14;y<552;y+=15) cr+='<path d="M608,'+y+' H892" stroke="#7a5230" stroke-width="1.1"/>';
+    cr+='<path d="M606,'+CRATE_Y+' H894" stroke="#d2a776" stroke-width="1.6"/>';
+    [690,786].forEach(function(x){ cr+='<path d="M'+x+','+CRATE_Y+' V556" stroke="#6e4a2b" stroke-width="2.4"/>'; });
+    L.crateBack=G('',svg);
+    L.crateItems=E('g',null,svg);
+    G(cr,svg);
+    L.bays={};
+    [['kin','KINDLING','1 lb'],['spl','SPLIT','5 lb'],['rnd','ROUND','20 lb']].forEach(function(b){ var x0=BAY[b[0]][0], x1=BAY[b[0]][1], cx=(x0+x1)/2;
+      G('<rect x="'+f(cx-30)+'" y="'+(CRATE_Y+30)+'" width="60" height="20" rx="2.5" fill="url(#wsBrass)" stroke="#6a4c18" stroke-width=".7"/>'
+        +'<text x="'+f(cx)+'" y="'+(CRATE_Y+39.5)+'" text-anchor="middle" class="ws-bl">'+b[1]+'</text><text x="'+f(cx)+'" y="'+(CRATE_Y+47.5)+'" text-anchor="middle" class="ws-bl2">'+b[2]+'</text>',svg);
+      L.bays[b[0]]=E('rect',{x:x0,y:CRATE_Y-44,width:x1-x0,height:104,fill:'transparent','data-bay':b[0],'class':'ws-bay'},svg); });
+    /* crate stock (static art, decorative: the crate never runs out) */
+    var stock=[['kin',624,CRATE_Y+6,11],['kin',650,CRATE_Y+6,12],['kin',637,CRATE_Y-16,13],['spl',712,CRATE_Y+6,21],['spl',756,CRATE_Y+6,22],['spl',734,CRATE_Y-18,23],
+               ['rnd',816,CRATE_Y+20,31],['rnd',860,CRATE_Y+20,32]];
+    stock.forEach(function(s){ var a=artFor(s[0],s[3]); G(a.s,L.crateItems,{transform:'translate('+s[1]+','+s[2]+')'}); });
+    L.fly=E('g',{'class':'ws-fly'},svg);
+    E('rect',{x:40,y:-12,width:880,height:652,fill:'#000',filter:'url(#wsGrain)','pointer-events':'none'},svg);
+  }
+  build();
+
+  /* the key under the scene: each piece at the same scale, with its size */
+  (function(){ var box=SEC.querySelector('[data-key]'), rows=[['kin',5,'Kindling bundle','7 sticks, 12 in long','1 lb'],['spl',6,'Split log','a quarter of an 8-in round, 16 in','5 lb'],
+      ['rnd',7,'Log round','8 in across, 16 in long','20 lb']], h='';
+    rows.forEach(function(r){ var a=artFor(r[0],r[1]), w=a.w+8, hh=a.h+6;
+      h+='<div class="ws-ki"><svg viewBox="'+f(-w/2)+' '+f(-hh+2)+' '+f(w)+' '+f(hh)+'" style="width:'+f(w*.62)+'px;height:'+f(hh*.62)+'px" aria-hidden="true">'+a.s+'</svg>'
+        +'<span><b>'+r[2]+' &#183; '+r[4]+'</b><small>'+r[3]+'</small></span></div>'; });
+    box.innerHTML=h+'<div class="ws-ki ws-kn">Seasoned oak, about 20% moisture. Drawn to one scale.</div>'; })();
+  /* size the scene to its column without letterboxing */
+  (function(){ var stage=SEC.querySelector('[data-stage]'), cap=SEC.querySelector('[data-cap]'), key=SEC.querySelector('[data-key]'), r=880/652;
+    function fit(){ var W=stage.clientWidth, H=stage.clientHeight-cap.offsetHeight-key.offsetHeight-14; if(W<=0||H<=0) return;
+      var w=Math.min(W, H*r); svg.style.width=Math.floor(w)+'px'; svg.style.height=Math.floor(w/r)+'px'; }
+    if(window.ResizeObserver) new ResizeObserver(fit).observe(stage); window.addEventListener('resize', fit); fit(); })();
+
+  /* ── state ─────────────────────────────────────────────────────────────────────────────────────────────────────── */
+  var st={}, counts={}, HOST=false, backend=null, view=0, mine={run:0,p:{g:[],c:[]},lk:{}};
+  try{ var sv=JSON.parse(ls(KEY)||'null'); if(sv&&sv.p) mine=sv; }catch(e){}
+  mine.p=mine.p||{g:[],c:[]}; mine.lk=mine.lk||{}; mine.p.g=mine.p.g||[]; mine.p.c=mine.p.c||[];
+  var demo={g:[],c:[]};                     /* the host's own pile: a demonstration, never submitted */
+  var uid=1, piles={g:[],c:[]};             /* the drawn piles: [{id, kind, g, seed}] */
+  function save(){ ls(KEY, JSON.stringify(mine)); }
+  function Q(){ return QS[view]; }
+  function rel(){ return +st.released||0; }
+  function revealed(qi){ return rel()>qi; }
+  function kinds(k){ return HOST? demo[k] : mine.p[k]; }
+  function lbOf(arr){ return arr.reduce(function(a,k){ return a+LB[k]; },0); }
+  function locked(k){ return mine.lk[k]!=null; }
+  function editable(){ var q=Q(); return !revealed(view) && (HOST || !locked(q.k)); }
+
+  /* ── pile layout: rows from the dish up, heaviest pieces first ─────────────────────────────────────────────────── */
+  var ORDER={rnd:0,spl:1,kin:2}, W_IN=RX*2-18;
+  function layout(items){
+    var arr=items.slice().sort(function(a,b){ return ORDER[a.kind]-ORDER[b.kind] || a.id-b.id; }), rows=[], row=null;
+    arr.forEach(function(it){ if(!row || row.w+it.a.w+2>W_IN){ row={items:[],w:0,h:0}; rows.push(row); } row.items.push(it); row.w+=it.a.w+2; row.h=Math.max(row.h,it.a.h); });
+    var y=CH+5, out={};
+    rows.forEach(function(rw,ri){ var x=-rw.w/2+(ri%2? 3:-3);
+      rw.items.forEach(function(it){ out[it.id]=[x+it.a.w/2+1, y]; x+=it.a.w+2; }); y-=rw.h*.8; });
+    return out;
+  }
+  function addPiece(kind,arr){ var id=uid++, seed=(id*7919+kind.length*131)>>>0, a=artFor(kind,seed);
+    var g=G(a.s,null,{'class':'ws-piece','data-item':String(id)}); var it={id:id,kind:kind,a:a,g:g}; arr.push(it); return it; }
+  function rebuildPile(k){ var pn=L.pans[1].pile; pn.innerHTML=''; piles[k]=[];
+    kinds(k).forEach(function(kd){ var it=addPiece(kd,piles[k]); pn.appendChild(it.g); });
+    place(k,true); }
+  function place(k,instant){ var pos=layout(piles[k]);
+    var xs=piles[k].filter(function(it){ return Math.abs(pos[it.id][1]-(CH+5))<1; }).map(function(it){ return [pos[it.id][0]-it.a.w/2, pos[it.id][0]+it.a.w/2]; });
+    L.pans[1].shadow.setAttribute('rx', xs.length? f(Math.min(RX-6,(Math.max.apply(null,xs.map(function(x){ return x[1]; }))-Math.min.apply(null,xs.map(function(x){ return x[0]; })))/2+4)) : 0);
+    piles[k].forEach(function(it){ var p=pos[it.id]; it.tx=p[0]; it.ty=p[1];
+      if(instant || it.cur==null){ it.cur=[p[0],p[1]]; }
+      it.g.setAttribute('transform','translate('+f(it.cur[0])+','+f(it.cur[1])+')'); }); labels(); }
+
+  /* ── fuel on the left pan, labels, the specimen card ────────────────────────────────────────────────────────────── */
+  function drawFuel(){
+    var q=Q(), pn=L.pans[0].pile; pn.innerHTML='';
+    var a = q.fuel==='gas'? CAN : artCoal();
+    G(a.s,pn,{transform:'translate(0,'+(CH+3)+')'});
+    var rv=revealed(view);
+    var hc=rv? 84 : 68, y0=544-hc;
+    L.card.innerHTML='<g transform="translate(92,'+y0+')"><path d="M0,0 H240 V'+hc+' H0 Z" fill="#fffaf0" stroke="'+GOLD+'" stroke-width="1"/><path d="M5,5 H235 V'+(hc-5)+' H5 Z" fill="none" stroke="'+GOLD+'" stroke-width=".5"/>'
+      +'<text x="120" y="20" text-anchor="middle" class="ws-tag sm">ON THE LEFT PAN</text>'
+      +'<text x="120" y="40" text-anchor="middle" class="ws-cn">'+q.name+'</text>'
+      +'<text x="120" y="57" text-anchor="middle" class="ws-it">'+q.weigh+'</text>'
+      +(rv? '<text x="120" y="74" text-anchor="middle" class="ws-kwh">holds '+q.fuelKwh+' kWh</text>' : '')+'</g>'
+      +'<path d="M150,544 L140,556 M274,544 L284,556" stroke="'+INK+'" stroke-width="1.6"/>';
+  }
+  function labels(){
+    var lb=lbOf(piles[Q().k].map(function(it){ return it.kind; }));
+    L.rlab.innerHTML='<text x="'+f(PV[0]+ARM)+'" y="72" text-anchor="middle" class="ws-tag">'+(HOST?'WOOD ON THE PAN':(showAns[Q().k]&&revealed(view)?'BALANCED PILE':'YOUR WOOD'))+'</text>'
+      +'<text x="'+f(PV[0]+ARM)+'" y="94" text-anchor="middle" class="ws-big">'+lb+' lb</text>';
+    L.llab.innerHTML='<text x="'+f(PV[0]-ARM)+'" y="72" text-anchor="middle" class="ws-tag">THE FUEL</text>'
+      +'<text x="'+f(PV[0]-ARM)+'" y="94" text-anchor="middle" class="ws-big">'+(Q().fuel==='gas'?'1 gallon':'6 lb')+'</text>';
+  }
+
+  /* ── the beam: a damped spring toward the energy difference ─────────────────────────────────────────────────────── */
+  var A={a:0,v:0,tg:0,pin:0,pinTg:0,glow:0,glowTg:0};
+  function targetFor(lb){ var q=Q(), d=(lb*WKL-q.fuelKwh)/q.fuelKwh; if(Math.abs(lb-q.ans)<=1.5) return 0; return MAXA*Math.tanh(1.7*d); }
+  function hooks(){ var r=A.a*Math.PI/180, c=Math.cos(r), s=Math.sin(r);
+    return [[PV[0]-ARM*c-6*s, PV[1]-ARM*s+6*c],[PV[0]+ARM*c-6*s, PV[1]+ARM*s+6*c]]; }
+  function drawBeam(){ L.beam.setAttribute('transform','translate('+PV[0]+','+PV[1]+') rotate('+f(A.a)+')');
+    var h=hooks(); L.pans[0].g.setAttribute('transform','translate('+f(h[0][0])+','+f(h[0][1])+')'); L.pans[1].g.setAttribute('transform','translate('+f(h[1][0])+','+f(h[1][1])+')');
+    L.pin.setAttribute('transform','translate('+f(-46*A.pin)+','+f(30*A.pin*A.pin)+')'); L.pin.setAttribute('opacity',f(1-A.pin));
+    L.glow.setAttribute('opacity',f(A.glow*.9)); }
+  function jolt(){ if(A.pin<.5) A.v+=9; }
+
+  /* ── flying pieces (crate <-> pan) ─────────────────────────────────────────────────────────────────────────────── */
+  var flyers=[];
+  function toSvg(e){ var p=svg.createSVGPoint(); p.x=e.clientX; p.y=e.clientY; var m=svg.getScreenCTM(); return m? p.matrixTransform(m.inverse()) : {x:0,y:0}; }
+  function panXY(lx,ly){ var h=hooks()[1]; return [h[0]+lx, h[1]+ly]; }
+  function bayXY(kind){ return [(BAY[kind][0]+BAY[kind][1])/2, CRATE_Y+4]; }
+  function fly(kind, from, toFn, done){ var a=artFor(kind,(Math.random()*1e9)>>>0), g=G(a.s,L.fly,{'class':'ws-flyg'});
+    flyers.push({g:g,from:from,to:toFn,t:0,dur:.42,done:done}); kick(); }
+  function stepFly(dt){ flyers=flyers.filter(function(o){ o.t+=dt; var u=eout(o.t/o.dur), to=o.to(), x=o.from[0]+(to[0]-o.from[0])*u, y=o.from[1]+(to[1]-o.from[1])*u-Math.sin(Math.PI*u)*60;
+      o.g.setAttribute('transform','translate('+f(x)+','+f(y)+')'); if(o.t<o.dur) return true; o.g.remove(); if(o.done) o.done(); return false; }); }
+  function addKind(kind, from){
+    var k=Q().k, arr=kinds(k);
+    if(lbOf(arr)+LB[kind]>C.cap || arr.length>=C.capn){ say('The pan is full: '+C.cap+' lb or '+C.capn+' pieces at most.'); return false; }
+    arr.push(kind); if(!HOST) save();
+    var it=addPiece(kind,piles[k]); var pos=layout(piles[k])[it.id]; it.g.style.visibility='hidden'; L.pans[1].pile.appendChild(it.g); place(k,false);
+    fly(kind, from||bayXY(kind), function(){ return panXY(pos[0],pos[1]); }, function(){ it.cur=[pos[0],pos[1]]; it.g.style.visibility=''; place(k,false); jolt(); });
+    refresh(); return true;
+  }
+  function removeId(id, toBay, from){
+    var k=Q().k, arr=kinds(k), i=-1; piles[k].forEach(function(it,j){ if(it.id===id) i=j; }); if(i<0) return;
+    var it=piles[k][i], kind=it.kind, ki=arr.lastIndexOf(kind); if(ki>-1) arr.splice(ki,1); if(!HOST) save();
+    var hp=from || panXY(it.cur[0],it.cur[1]); it.g.remove(); piles[k].splice(i,1); place(k,false);
+    if(toBay!==false) fly(kind, hp, function(){ return bayXY(kind); });
+    refresh();
+  }
+  function removeKind(kind){ var k=Q().k, last=null; piles[k].forEach(function(it){ if(it.kind===kind && (!last||it.id>last.id)) last=it; }); if(last) removeId(last.id); }
+
+  /* ── drag and drop (pointer events on the SVG) ─────────────────────────────────────────────────────────────────── */
+  var drag=null;
+  function overPan(p){ var h=hooks()[1]; return p.x>h[0]-RX-24 && p.x<h[0]+RX+24 && p.y>h[1]+CH-210 && p.y<h[1]+CH+34; }
+  svg.addEventListener('pointerdown', function(e){
+    if(!editable()) { if(e.target.closest('[data-bay],[data-item]')) say(lockMsg()); return; }
+    var bay=e.target.closest('[data-bay]'), item=e.target.closest('[data-item]'); if(!bay && !item) return;
+    e.preventDefault(); var p=toSvg(e), kind, a;
+    if(bay){ kind=bay.getAttribute('data-bay'); drag={from:'crate',kind:kind,x0:p.x,y0:p.y,t0:Date.now(),moved:false}; }
+    else { var id=+item.getAttribute('data-item'), it=null; piles[Q().k].forEach(function(x){ if(x.id===id) it=x; }); if(!it) return;
+      kind=it.kind; drag={from:'pan',id:id,kind:kind,x0:p.x,y0:p.y,t0:Date.now(),moved:false}; }
+    a=artFor(kind,(Math.random()*1e9)>>>0); drag.g=G(a.s,L.fly,{'class':'ws-flyg',style:'display:none'}); drag.h=a.h;
+    try{ svg.setPointerCapture(e.pointerId); }catch(x){}
+  });
+  svg.addEventListener('pointermove', function(e){
+    var p=toSvg(e);
+    if(!drag){ var b=e.target.closest&&e.target.closest('[data-bay],[data-item]'); svg.style.cursor = b&&editable()? 'grab':''; return; }
+    if(!drag.moved && Math.hypot(p.x-drag.x0,p.y-drag.y0)>5){ drag.moved=true; drag.g.style.display='';
+      if(drag.from==='pan'){ var k=Q().k; piles[k].forEach(function(it){ if(it.id===drag.id) it.g.style.visibility='hidden'; }); } }
+    if(drag.moved){ drag.g.setAttribute('transform','translate('+f(p.x)+','+f(p.y+drag.h/2)+')'); svg.style.cursor='grabbing';
+      L.pans[1].g.classList.toggle('ws-hot', overPan(p)); }
+  });
+  function endDrag(e){
+    if(!drag) return; var d=drag, p=toSvg(e); drag=null; d.g.remove(); svg.style.cursor=''; L.pans[1].g.classList.remove('ws-hot');
+    var from=[p.x,p.y+d.h/2];
+    if(!d.moved){ if(d.from==='crate') addKind(d.kind); else removeId(d.id); return; }
+    if(d.from==='crate'){ if(overPan(p)) addKind(d.kind, from); else fly(d.kind, from, function(){ return bayXY(d.kind); }); }
+    else { if(overPan(p)){ var k=Q().k; piles[k].forEach(function(it){ if(it.id===d.id){ it.g.style.visibility=''; } }); place(k,false); }
+           else removeId(d.id, true, from); }
+  }
+  svg.addEventListener('pointerup', endDrag); svg.addEventListener('pointercancel', endDrag);
+
+  /* ── the card ──────────────────────────────────────────────────────────────────────────────────────────────────── */
+  var tabs=$$('[data-tab]'), capEl=$('[data-cap]'), meEl=$('[data-me]'), resEl=$('[data-res]'), editEl=$('[data-edit]'), ctl=$('[data-ctl]');
+  var lockBtn=$('[data-lock]'), emptyBtn=$('[data-empty]'), revBtn=$('[data-rev]'), hideBtn=$('[data-hide]'), resetBtn=$('[data-reset]'), srcEl=$('[data-src]');
+  var sayT=0;
+  function say(t){ capEl.textContent=t; capEl.classList.add('flash'); clearTimeout(sayT); sayT=setTimeout(function(){ capEl.classList.remove('flash'); refresh(); },2600); }
+  function lockMsg(){ return revealed(view)? 'This question has been revealed.' : 'Your answer is locked in.'; }
+  function mixText(arr){ var c={rnd:0,spl:0,kin:0}; arr.forEach(function(k){ c[k]++; }); var o=[];
+    if(c.rnd) o.push(c.rnd+(c.rnd>1?' rounds':' round')); if(c.spl) o.push(c.spl+(c.spl>1?' splits':' split')); if(c.kin) o.push(c.kin+' kindling');
+    return o.join(', ')||'nothing yet'; }
+  function hist(k){ var h={}, n=0, sum=[];
+    if(HOST){ for(var key in counts){ var m=key.match(/^([gc])_(\d+)$/); if(!m||m[1]!==k) continue; var c=+counts[key]||0; if(c<=0) continue; h[m[2]]=(h[m[2]]||0)+c; n+=c; } }
+    else { var F=(st.final||{})[k]||{}; h=F.h||{}; for(var x in h) n+=+h[x]||0; }
+    var keys=Object.keys(h).map(Number).sort(function(a,b){ return a-b; }), half=n/2, acc=0, med=null;
+    keys.forEach(function(v){ var c=+h[v]; if(med==null && acc+c>=half){ med=v; } acc+=c; });
+    return {h:h,n:n,med:med}; }
+  function within(k,q,H){ var w=0; for(var v in H.h) if(Math.abs(+v-q.ans)<=2) w+=+H.h[v]; return H.n? Math.round(w/H.n*100):0; }
+  function chart(q,H,you){
+    var W=420, Hh=168, x0=34, x1=W-14, yb=128, top=18, B=2, MAXB=60, nb=MAXB/B+1, bw=(x1-x0)/nb, cnt=[], mx=1;
+    for(var i=0;i<nb;i++) cnt.push(0);
+    for(var v in H.h){ var b=Math.min(nb-1, Math.floor(+v/B)); cnt[b]+=+H.h[v]; }
+    cnt.forEach(function(c){ mx=Math.max(mx,c); });
+    var s='<svg viewBox="0 0 '+W+' '+Hh+'" class="ws-hsvg" role="img" aria-label="Histogram of the class answers in pounds of wood">';
+    s+='<path d="M'+x0+','+yb+' H'+x1+'" stroke="'+INK+'" stroke-width="1"/>';
+    cnt.forEach(function(c,i){ if(!c) return; var h=(yb-top)*c/mx; s+='<rect class="ws-hb" style="--d:'+f(i*.018)+'s" x="'+f(x0+i*bw+.6)+'" y="'+f(yb-h)+'" width="'+f(bw-1.2)+'" height="'+f(h)+'" fill="#6b5a44"/>'; });
+    for(var t=0;t<=60;t+=10){ var tx=x0+(t/B)*bw; s+='<path d="M'+f(tx)+','+yb+' v4" stroke="'+INK+'" stroke-width=".8"/><text x="'+f(tx)+'" y="'+(yb+15)+'" text-anchor="middle" class="ws-ax">'+(t===60?'60+':t)+'</text>'; }
+    s+='<text x="'+x1+'" y="'+(yb+30)+'" text-anchor="end" class="ws-ax i">pounds of wood</text>';
+    var ax=x0+(q.ans/B)*bw, left=(you!=null && you>=q.ans);
+    s+='<path d="M'+f(ax)+','+(top-6)+' V'+yb+'" stroke="#b8892f" stroke-width="2" stroke-dasharray="4 3"/><text x="'+f(left? ax-5 : ax+5)+'" y="'+(top+2)+'" text-anchor="'+(left?'end':'start')+'" class="ws-ans">actual &#8776; '+Math.round(q.ans)+' lb</text>';
+    if(H.med!=null){ var mxx=x0+(Math.min(H.med,MAXB)/B+.5)*bw; s+='<path d="M'+f(mxx-5)+','+(yb+22)+' L'+f(mxx)+','+(yb+16)+' L'+f(mxx+5)+','+(yb+22)+' Z" fill="'+INK+'"/><text x="'+f(mxx)+'" y="'+(yb+32)+'" text-anchor="middle" class="ws-ax b">median</text>'; }
+    if(you!=null){ var yx=x0+(Math.min(Math.floor(you/B),nb-1)+.5)*bw; s+='<rect x="'+f(yx-15)+'" y="'+(top-2)+'" width="30" height="14" rx="7" fill="#2b2a22"/><text x="'+f(yx)+'" y="'+(top+8)+'" text-anchor="middle" class="ws-you">you</text><path d="M'+f(yx)+','+(top+12)+' V'+(yb-2)+'" stroke="#2b2a22" stroke-width=".8" stroke-dasharray="2 2"/>'; }
+    s+='<text x="'+x1+'" y="'+(top-4)+'" text-anchor="end" class="ws-ax b">n = '+H.n+'</text>';
+    return s+'</svg>'; }
+  function verdict(q,lb){ var d=lb-q.ans;
+    if(Math.abs(d)<=1.5) return '<b class="ok">Balanced.</b> Your '+lb+' lb of wood holds about the same energy as the '+(q.fuel==='gas'?'gasoline':'coal')+'.';
+    return '<b class="'+(d<0?'lo':'hi')+'">'+(d<0?'Not enough wood.':'Too much wood.')+'</b> Your '+lb+' lb holds about '+(lb*WKL).toFixed(1)+' kWh; the '+(q.fuel==='gas'?'gallon of gasoline':'coal')+' holds '+q.fuelKwh+' kWh.'; }
+  function answerLine(q){ var kg=(q.ans*0.4536).toFixed(1), m=q.mix;
+    return 'It takes about <b>'+Math.round(q.ans)+' lb</b> ('+kg+' kg) of seasoned firewood, '+q.note+': '+m[1]+' splits and '+m[2]+' kindling bundles.'; }
+  var showAns={g:false,c:false};
+  function refresh(){
+    var q=Q(), k=q.k, arr=kinds(k), lb=lbOf(arr), rv=revealed(view), lk=locked(k);
+    tabs.forEach(function(t,i){ t.classList.toggle('on',i===view); t.setAttribute('aria-selected',i===view);
+      var qq=QS[i]; t.classList.toggle('done', !HOST && locked(qq.k)); t.classList.toggle('rev', revealed(i)); });
+    $('[data-qk]').textContent='Question '+(view+1)+' of 2';
+    $('[data-qt]').innerHTML=q.q;
+    $('[data-tl]').textContent = HOST? 'Demonstration pile' : 'Your woodpile';
+    $('[data-lb]').textContent=lb; $('[data-kg]').textContent='('+(lb*0.4536).toFixed(1)+' kg) · '+mixText(arr);
+    $$('[data-rc]').forEach(function(e){ var kd=e.getAttribute('data-rc'); e.textContent=arr.filter(function(x){ return x===kd; }).length; });
+    var canEdit=editable();
+    $$('[data-ad],[data-rm]').forEach(function(b){ b.disabled=!canEdit; }); emptyBtn.disabled=!canEdit||!arr.length;
+    lockBtn.hidden=HOST; lockBtn.disabled=HOST||lk||rv||!lb||!backend;
+    lockBtn.textContent = lk? 'Locked in: '+mine.lk[k]+' lb' : 'Lock in my answer';
+    editEl.hidden = rv;
+    if(HOST){ editEl.classList.add('host'); }
+    /* message line */
+    if(HOST){ meEl.innerHTML = rv? '' : 'This is the projector copy. Drag wood here to demonstrate; it is never submitted.'; }
+    else if(rv){ meEl.innerHTML = lk? '' : 'You did not lock in an answer for this question.'; }
+    else if(lk){ meEl.innerHTML = 'Locked in. '+(view===0&&!locked('c')? 'Now try <a href="#" data-go="1">Question 2: coal</a>.' : 'The balance stays pinned until the instructor reveals the answer.'); }
+    else { meEl.innerHTML = lb? 'When you are happy with your pile, lock it in. Answers are anonymous.' : 'Start by dragging a piece of wood onto the right-hand pan.'; }
+    /* results */
+    if(rv){ var H=hist(k), you=HOST? null : (lk? mine.lk[k] : null);
+      var head = HOST? (H.med!=null? 'The class median was <b>'+H.med+' lb</b>. ' : '') : (lk? verdict(q, mine.lk[k])+' ' : '');
+      resEl.hidden=false;
+      resEl.innerHTML='<div class="ws-rv">'+head+answerLine(q)+'</div>'
+        +(!HOST&&lk? '<div class="ws-sw"><button type="button" data-show="0" class="'+(showAns[k]?'':'on')+'">My pile</button><button type="button" data-show="1" class="'+(showAns[k]?'on':'')+'">The balanced pile</button></div>' : '')
+        +'<div class="ws-chart">'+chart(q,H,you)+'</div>'
+        +'<div class="ws-stat">'+(H.n? 'Median guess <b>'+H.med+' lb</b> &#183; '+within(k,q,H)+'% within 2 lb of the actual amount' : 'No answers were locked in.')+'</div>';
+    } else { resEl.hidden=true; resEl.innerHTML=''; }
+    srcEl.innerHTML = rel()>0 ? SRC_FULL : SRC_HID;
+    /* host controls */
+    if(HOST){ ctl.hidden=false; var hg=hist('g'), hc=hist('c');
+      $('[data-cnt]').innerHTML='Answers in: <b>'+hg.n+'</b> gasoline &#183; <b>'+hc.n+'</b> coal';
+      revBtn.textContent = rel()===0? 'Reveal gasoline' : rel()===1? 'Reveal coal' : 'Both revealed'; revBtn.disabled=rel()>=2; hideBtn.disabled=rel()===0; }
+    if(!capEl.classList.contains('flash')){
+      capEl.textContent = rv? (HOST? 'The pin is out. The balance now tips by energy: the side with more kilowatt-hours goes down.' : 'The pin is out: the balance now tips toward whichever side holds more energy.')
+        : HOST? 'Students build their piles on their laptops. Reveal when the count stops climbing.'
+        : lk? 'Your pile is locked in.' : 'Drag pieces from the crate onto the right-hand pan. The beam is pinned level, so it will not give the answer away.';
+    }
+    labels(); drawFuel();
+  }
+
+  /* ── what the balance shows ────────────────────────────────────────────────────────────────────────────────────── */
+  var seq=null;                                   /* the host's median-then-answer sequence */
+  function setPile(k, want, quick){              /* rebuild the drawn pile from a list of kinds, flying pieces in */
+    var pn=L.pans[1].pile; pn.innerHTML=''; piles[k]=[];
+    want.forEach(function(kd){ var it=addPiece(kd,piles[k]); pn.appendChild(it.g); }); place(k,true);
+    if(!quick) piles[k].forEach(function(it,i){ it.g.style.visibility='hidden'; var p=[it.tx,it.ty];
+      setTimeout(function(){ fly(it.kind, bayXY(it.kind), function(){ return panXY(p[0],p[1]); }, function(){ it.g.style.visibility=''; }); }, 90*i); });
+  }
+  function mixFor(lb){ var r=Math.min(5,Math.floor(lb/20)), rem=lb-r*20, s=Math.floor(rem/5), kk=rem-s*5, out=[], i;
+    for(i=0;i<r;i++) out.push('rnd'); for(i=0;i<s;i++) out.push('spl'); for(i=0;i<kk;i++) out.push('kin'); return out; }
+  function ansKinds(q){ var o=[], i; for(i=0;i<q.mix[1];i++) o.push('spl'); for(i=0;i<q.mix[2];i++) o.push('kin'); return o; }
+  function apply(fresh){
+    var q=Q(), k=q.k, rv=revealed(view);
+    clearTimeout(seq); seq=null;
+    if(!rv){ A.pinTg=0; A.tg=0; A.glowTg=0; rebuildPile(k); return; }
+    A.pinTg=1;
+    if(HOST){ var H=hist(k);
+      var med = H.med!=null? H.med : 0;
+      setPile(k, mixFor(med), !fresh); A.tg=targetFor(med); A.glowTg=0;
+      seq=setTimeout(function(){ setPile(k, ansKinds(q), false); A.tg=0; setTimeout(function(){ A.glowTg=1; },900);
+        capEl.textContent='Balanced at about '+Math.round(q.ans)+' lb of seasoned firewood.'; }, fresh? 3600 : 1600);
+      capEl.textContent = H.med!=null? 'The class median pile: '+med+' lb of wood.' : 'No answers yet; here is the balanced pile.';
+      return; }
+    var lb = showAns[k]? Math.round(q.ans) : (locked(k)? mine.lk[k] : 0);
+    var want = showAns[k]? ansKinds(q) : (locked(k)? mine.p[k].slice() : []);
+    setPile(k, want, !fresh);
+    A.tg = showAns[k]? 0 : targetFor(lb); A.glowTg = (showAns[k] || Math.abs(lb-q.ans)<=1.5)? 1 : 0;
+  }
+  function go(i, fresh){ view=i; refresh(); drawFuel(); apply(fresh); kick(); }
+
+  /* ── animation loop: runs only while this slide is on screen ───────────────────────────────────────────────────── */
+  var raf=0, last=0;
+  function frame(now){ raf=0; if(!SEC.classList.contains('active')) return;
+    var dt=Math.min(.05,(now-(last||now))/1000); last=now;
+    A.pin += (A.pinTg-A.pin)*Math.min(1,dt*5);
+    var free = A.pin>.6;
+    var tg = free? A.tg : 0, kS=free? 26 : 140, cS=free? 2.6 : 16;
+    A.v += (-kS*(A.a-tg) - cS*A.v)*dt; A.a += A.v*dt; A.a=cl(A.a,-MAXA-2,MAXA+2);
+    A.glow += (A.glowTg*(Math.abs(A.a)<.6?1:0)-A.glow)*Math.min(1,dt*3);
+    stepFly(dt);
+    piles[Q().k].forEach(function(it){ if(it.cur && (Math.abs(it.cur[0]-it.tx)>.1||Math.abs(it.cur[1]-it.ty)>.1)){ it.cur[0]+=(it.tx-it.cur[0])*Math.min(1,dt*12); it.cur[1]+=(it.ty-it.cur[1])*Math.min(1,dt*12);
+      it.g.setAttribute('transform','translate('+f(it.cur[0])+','+f(it.cur[1])+')'); } });
+    drawBeam();
+    raf=requestAnimationFrame(frame); }
+  function kick(){ if(!raf && SEC.classList.contains('active')){ last=0; raf=requestAnimationFrame(frame); } }
+  new MutationObserver(kick).observe(SEC,{attributes:true,attributeFilter:['class']});
+
+  /* ── events ────────────────────────────────────────────────────────────────────────────────────────────────────── */
+  tabs.forEach(function(t,i){ t.addEventListener('click', function(){ if(i!==view) go(i,false); }); });
+  SEC.addEventListener('click', function(e){ var a=e.target.closest('[data-go]'); if(a){ e.preventDefault(); go(+a.getAttribute('data-go'),false); }
+    var sb=e.target.closest('[data-show]'); if(sb){ var k=Q().k, v=sb.getAttribute('data-show')==='1'; if(showAns[k]!==v){ showAns[k]=v; refresh(); apply(true); kick(); } } });
+  $$('[data-ad]').forEach(function(b){ b.addEventListener('click', function(){ if(editable()) addKind(b.getAttribute('data-ad')); }); });
+  $$('[data-rm]').forEach(function(b){ b.addEventListener('click', function(){ if(editable()) removeKind(b.getAttribute('data-rm')); }); });
+  emptyBtn.addEventListener('click', function(){ if(!editable()) return; var k=Q().k; piles[k].slice().forEach(function(it,i){ setTimeout(function(){ removeId(it.id); }, i*60); }); });
+  lockBtn.addEventListener('click', function(){
+    var q=Q(), k=q.k, lb=lbOf(mine.p[k]); if(HOST||!backend||locked(k)||revealed(view)||!lb) return;
+    mine.lk[k]=lb; mine.run=st.run||0; save(); backend.bump('polls', ID, k+'_'+lb);
+    refresh(); if(view===0 && !locked('c')) setTimeout(function(){ if(view===0 && !revealed(0)) say('Locked in. Question 2 is coal: switch tabs above.'); }, 400);
+  });
+  function setRel(r){ if(!backend||!HOST) return; r=cl(r,0,2); backend.mergeDoc('polls', ID, {released:r, final:finals()}); }
+  function finals(){ var o={}; ['g','c'].forEach(function(k){ var H=hist(k); o[k]={h:H.h, n:H.n, m:H.med==null?-1:H.med}; }); return o; }
+  revBtn.addEventListener('click', function(){ setRel(rel()+1); });
+  hideBtn.addEventListener('click', function(){ setRel(0); });
+  resetBtn.addEventListener('click', function(){
+    if(!backend||!confirm('Clear every answer to both questions and pin the balance again?')) return;
+    backend.setDoc('polls', ID, {counts:{}, released:0, final:{}, run:Date.now()}); demo={g:[],c:[]};
+  });
+  SEC.__deckNext=function(){ if(!HOST || rel()>=2) return false; setRel(rel()+1); return true; };
+
+  /* ── live backend ──────────────────────────────────────────────────────────────────────────────────────────────── */
+  var lastRel=-1, pubT=0, lastPub='';
+  function publish(){ if(!HOST||!backend||rel()===0) return; clearTimeout(pubT);
+    pubT=setTimeout(function(){ var fv=finals(), sig=JSON.stringify(fv); if(sig!==lastPub){ lastPub=sig; backend.mergeDoc('polls', ID, {final:fv}); } }, 1200); }
+  function onDoc(d){
+    st=d||{}; if(HOST) counts=st.counts||{};
+    if(!HOST && st.run && mine.run!==st.run){   /* the host reset: an answer from an older run no longer counts */
+      if(mine.lk.g!=null || mine.lk.c!=null) mine={run:st.run,p:{g:[],c:[]},lk:{}}; else mine.run=st.run; save(); }
+    var r=rel();
+    if(r!==lastRel){ var first=lastRel<0; var before=lastRel; lastRel=r;
+      if(!first && r>before){ go(r-1, true); return; }       /* a new reveal: jump every screen to it and swing */
+      refresh(); apply(false); kick(); return; }
+    publish(); refresh();
+    if(HOST && revealed(view) && !seq){ /* new answers arriving after a reveal: keep the median pile in step */ }
+  }
+  refresh(); rebuildPile('g'); drawBeam();
+  window.__deckLiveReady.then(function(Lv){
+    backend=Lv.backend; HOST=!!Lv.HOST; SEC.classList.toggle('ws-host', HOST);
+    if(HOST){ editEl.classList.add('host'); backend.subscribeDoc('polls', ID, onDoc); }
+    else (backend.subscribeMain||backend.subscribeDoc)('polls', ID, onDoc);
+    refresh(); rebuildPile(Q().k);
+  });
+})();</script></section>
+<section class="slide pq-slide hs-slide" data-type="content" style="--accent:#7a5a34"><div class="pq-wrap"><div class="pq-head"><div class="eyebrow">Introduction  ·  A Short History of Fossil Fuels</div><h2 class="heading">From Wood to Fossil Fuels: Dense, Reliable Energy</h2><p class="pq-lead">For most of history, people burned wood and relied on muscle, wind and water. Coal, then oil and natural gas, took over because they pack far more energy into every pound and can be stored, shipped and burned whenever they are needed.</p></div><div class="pq-body"><div class="pq-platebox" title="Watch 250 years"><div class="bleed-media cp-draw pk-draw pq-plate"><svg class="cp-svg" viewBox="0 0 560 640" role="img" aria-label="A stacked area chart of where U.S. energy came from, 1775 to 2025: almost all wood until the 1850s, coal passing wood in 1885, petroleum passing coal in 1950, and fossil fuels at 82% in 2025; below it, the energy in one pound of seasoned firewood (1.85 kWh), house coal (3.7 kWh) and gasoline (5.4 kWh)"><defs><filter id="phsr" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter><filter id="phsw" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="3" seed="13"/><feDisplacementMap in="SourceGraphic" scale="10"/><feGaussianBlur stdDeviation=".8"/></filter><filter id="phsg" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .36  0 0 0 0 .29  0 0 0 0 .18  0 0 0 .085 0"/></filter><pattern id="phsh" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><path d="M0 0 V5" stroke="#3b3222" stroke-width=".8" opacity=".3"/></pattern><pattern id="phshx" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><path d="M0 0 V7" stroke="#3b3222" stroke-width=".7" opacity=".22"/></pattern><pattern id="phsd" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#3b3222" opacity=".35"/><circle cx="6.5" cy="6" r=".7" fill="#3b3222" opacity=".3"/></pattern><clipPath id="phsc"><rect x="26" y="26" width="508" height="588" rx="9"/></clipPath><marker id="phsm3b3222" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#3b3222"/></marker><marker id="phsma8483f" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#a8483f"/></marker><marker id="phsm3f6f3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#3f6f3a"/></marker><marker id="phsm2f5f84" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#2f5f84"/></marker><marker id="phsm7a5a3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#7a5a3a"/></marker><marker id="phsmc0582a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#c0582a"/></marker><marker id="phsm8a6a2f" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#8a6a2f"/></marker><marker id="phsm4f7a3a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#4f7a3a"/></marker><marker id="phsm6f9fc2" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M1,1.2 L9,5 L1,8.8 L3,5 Z" fill="#6f9fc2"/></marker></defs><rect width="560" height="640" fill="#fbf5e6"/><g clip-path="url(#phsc)"><g filter="url(#phsw)"><rect x="26" y="26" width="508" height="588" fill="#f2ead8" opacity=".5"/></g><text x="280.0" y="56.0" text-anchor="middle" class="pk-tag">WHERE U.S. ENERGY CAME FROM, 1775&#8211;2025</text><path d="M148,66 H412" stroke="#8a6a2f" stroke-width=".8"/><text x="280.0" y="84.0" text-anchor="middle" class="pk-sm">share of all the energy Americans used</text><g filter="url(#phsw)"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,119.2 L200.4,133.5 L208.8,137.2 L217.2,143.1 L225.6,163.0 L234.0,179.9 L242.4,203.5 L250.8,227.2 L259.2,256.1 L267.6,269.9 L276.0,292.1 L284.4,310.1 L292.8,318.5 L301.2,321.4 L309.6,326.5 L318.0,328.4 L326.4,330.2 L334.8,328.3 L343.2,332.1 L351.6,336.0 L358.3,333.5 L360.0,334.4 L361.7,335.3 L363.4,335.7 L365.0,336.3 L366.7,336.2 L368.4,336.9 L370.1,337.3 L371.8,337.8 L373.4,337.8 L375.1,338.0 L376.8,338.5 L378.5,338.7 L380.2,339.0 L381.8,339.2 L383.5,339.4 L385.2,339.7 L386.9,339.8 L388.6,340.2 L390.2,340.2 L391.9,340.4 L393.6,340.6 L395.3,340.7 L397.0,340.7 L398.6,340.8 L400.3,340.6 L402.0,340.6 L403.7,340.2 L405.4,340.0 L407.0,339.5 L408.7,339.2 L410.4,337.9 L412.1,337.6 L413.8,337.1 L415.4,336.5 L417.1,337.0 L418.8,337.0 L420.5,337.4 L422.2,338.0 L423.8,338.0 L425.5,337.9 L427.2,339.3 L428.9,339.3 L430.6,339.1 L432.2,339.4 L433.9,339.3 L435.6,339.3 L437.3,339.3 L439.0,339.6 L440.6,340.1 L442.3,340.1 L444.0,340.2 L445.7,340.7 L447.4,340.8 L449.0,340.8 L450.7,340.6 L452.4,340.6 L454.1,340.6 L455.8,340.7 L457.4,340.7 L459.1,340.7 L460.8,340.2 L462.5,340.1 L464.2,340.1 L465.8,339.8 L467.5,339.7 L469.2,339.9 L470.9,340.1 L472.6,340.2 L474.2,340.2 L475.9,340.2 L477.6,340.5 L479.3,340.7 L481.0,340.4 L482.6,340.8 L484.3,341.0 L486.0,341.0 L486.0,346.0 L484.3,346.0 L482.6,346.0 L481.0,346.0 L479.3,346.0 L477.6,346.0 L475.9,346.0 L474.2,346.0 L472.6,346.0 L470.9,346.0 L469.2,346.0 L467.5,346.0 L465.8,346.0 L464.2,346.0 L462.5,346.0 L460.8,346.0 L459.1,346.0 L457.4,346.0 L455.8,346.0 L454.1,346.0 L452.4,346.0 L450.7,346.0 L449.0,346.0 L447.4,346.0 L445.7,346.0 L444.0,346.0 L442.3,346.0 L440.6,346.0 L439.0,346.0 L437.3,346.0 L435.6,346.0 L433.9,346.0 L432.2,346.0 L430.6,346.0 L428.9,346.0 L427.2,346.0 L425.5,346.0 L423.8,346.0 L422.2,346.0 L420.5,346.0 L418.8,346.0 L417.1,346.0 L415.4,346.0 L413.8,346.0 L412.1,346.0 L410.4,346.0 L408.7,346.0 L407.0,346.0 L405.4,346.0 L403.7,346.0 L402.0,346.0 L400.3,346.0 L398.6,346.0 L397.0,346.0 L395.3,346.0 L393.6,346.0 L391.9,346.0 L390.2,346.0 L388.6,346.0 L386.9,346.0 L385.2,346.0 L383.5,346.0 L381.8,346.0 L380.2,346.0 L378.5,346.0 L376.8,346.0 L375.1,346.0 L373.4,346.0 L371.8,346.0 L370.1,346.0 L368.4,346.0 L366.7,346.0 L365.0,346.0 L363.4,346.0 L361.7,346.0 L360.0,346.0 L358.3,346.0 L351.6,346.0 L343.2,346.0 L334.8,346.0 L326.4,346.0 L318.0,346.0 L309.6,346.0 L301.2,346.0 L292.8,346.0 L284.4,346.0 L276.0,346.0 L267.6,346.0 L259.2,346.0 L250.8,346.0 L242.4,346.0 L234.0,346.0 L225.6,346.0 L217.2,346.0 L208.8,346.0 L200.4,346.0 L192.0,346.0 L183.6,346.0 L166.8,346.0 L150.0,346.0 L133.2,346.0 L116.4,346.0 L99.6,346.0 L82.8,346.0 L66.0,346.0 Z" fill="#9c7346" opacity=".86"/></g><g filter="url(#phsw)"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.2 L217.2,96.7 L225.6,96.7 L234.0,96.6 L242.4,100.8 L250.8,101.4 L259.2,110.8 L267.6,106.5 L276.0,109.1 L284.4,115.4 L292.8,120.5 L301.2,127.2 L309.6,139.0 L318.0,159.8 L326.4,182.3 L334.8,193.9 L343.2,204.2 L351.6,209.3 L358.3,236.4 L360.0,242.3 L361.7,247.9 L363.4,256.3 L365.0,258.6 L366.7,268.1 L368.4,265.7 L370.1,267.6 L371.8,271.3 L373.4,279.0 L375.1,281.8 L376.8,282.5 L378.5,284.7 L380.2,285.8 L381.8,285.4 L383.5,285.1 L385.2,284.6 L386.9,285.2 L388.6,288.2 L390.2,289.5 L391.9,291.8 L393.6,294.2 L395.3,297.6 L397.0,298.0 L398.6,296.8 L400.3,296.5 L402.0,295.3 L403.7,294.3 L405.4,294.4 L407.0,295.3 L408.7,291.5 L410.4,287.2 L412.1,284.0 L413.8,283.0 L415.4,280.1 L417.1,279.5 L418.8,278.1 L420.5,279.4 L422.2,279.7 L423.8,279.9 L425.5,280.3 L427.2,281.0 L428.9,281.5 L430.6,282.1 L432.2,281.2 L433.9,282.2 L435.6,282.7 L437.3,281.9 L439.0,281.3 L440.6,281.6 L442.3,282.8 L444.0,281.8 L445.7,282.7 L447.4,283.5 L449.0,282.5 L450.7,283.3 L452.4,282.5 L454.1,282.9 L455.8,283.3 L457.4,282.8 L459.1,287.0 L460.8,285.4 L462.5,287.8 L464.2,292.7 L465.8,292.0 L467.5,292.5 L469.2,298.8 L470.9,302.3 L472.6,303.4 L474.2,306.2 L475.9,310.9 L477.6,314.7 L479.3,312.4 L481.0,314.3 L482.6,319.0 L484.3,320.0 L486.0,318.6 L486.0,341.0 L484.3,341.0 L482.6,340.8 L481.0,340.4 L479.3,340.7 L477.6,340.5 L475.9,340.2 L474.2,340.2 L472.6,340.2 L470.9,340.1 L469.2,339.9 L467.5,339.7 L465.8,339.8 L464.2,340.1 L462.5,340.1 L460.8,340.2 L459.1,340.7 L457.4,340.7 L455.8,340.7 L454.1,340.6 L452.4,340.6 L450.7,340.6 L449.0,340.8 L447.4,340.8 L445.7,340.7 L444.0,340.2 L442.3,340.1 L440.6,340.1 L439.0,339.6 L437.3,339.3 L435.6,339.3 L433.9,339.3 L432.2,339.4 L430.6,339.1 L428.9,339.3 L427.2,339.3 L425.5,337.9 L423.8,338.0 L422.2,338.0 L420.5,337.4 L418.8,337.0 L417.1,337.0 L415.4,336.5 L413.8,337.1 L412.1,337.6 L410.4,337.9 L408.7,339.2 L407.0,339.5 L405.4,340.0 L403.7,340.2 L402.0,340.6 L400.3,340.6 L398.6,340.8 L397.0,340.7 L395.3,340.7 L393.6,340.6 L391.9,340.4 L390.2,340.2 L388.6,340.2 L386.9,339.8 L385.2,339.7 L383.5,339.4 L381.8,339.2 L380.2,339.0 L378.5,338.7 L376.8,338.5 L375.1,338.0 L373.4,337.8 L371.8,337.8 L370.1,337.3 L368.4,336.9 L366.7,336.2 L365.0,336.3 L363.4,335.7 L361.7,335.3 L360.0,334.4 L358.3,333.5 L351.6,336.0 L343.2,332.1 L334.8,328.3 L326.4,330.2 L318.0,328.4 L309.6,326.5 L301.2,321.4 L292.8,318.5 L284.4,310.1 L276.0,292.1 L267.6,269.9 L259.2,256.1 L250.8,227.2 L242.4,203.5 L234.0,179.9 L225.6,163.0 L217.2,143.1 L208.8,137.2 L200.4,133.5 L192.0,119.2 L183.6,96.0 L166.8,96.0 L150.0,96.0 L133.2,96.0 L116.4,96.0 L99.6,96.0 L82.8,96.0 L66.0,96.0 Z" fill="#4a443d" opacity=".86"/></g><g filter="url(#phsw)"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.0 L217.2,96.0 L225.6,96.0 L234.0,96.0 L242.4,96.0 L250.8,99.6 L259.2,105.2 L267.6,101.0 L276.0,103.0 L284.4,103.6 L292.8,104.9 L301.2,106.5 L309.6,106.6 L318.0,110.7 L326.4,118.3 L334.8,122.2 L343.2,125.0 L351.6,129.1 L358.3,140.3 L360.0,143.1 L361.7,147.5 L363.4,151.6 L365.0,152.5 L366.7,157.1 L368.4,155.9 L370.1,157.7 L371.8,161.4 L373.4,164.9 L375.1,168.0 L376.8,169.5 L378.5,171.6 L380.2,173.0 L381.8,173.5 L383.5,174.9 L385.2,174.3 L386.9,175.7 L388.6,177.9 L390.2,178.6 L391.9,180.9 L393.6,182.5 L395.3,184.3 L397.0,181.6 L398.6,178.8 L400.3,180.1 L402.0,178.1 L403.7,175.4 L405.4,172.9 L407.0,173.6 L408.7,173.9 L410.4,174.8 L412.1,176.5 L413.8,176.5 L415.4,173.7 L417.1,175.1 L418.8,174.2 L420.5,171.5 L422.2,173.3 L423.8,174.5 L425.5,177.0 L427.2,179.2 L428.9,181.8 L430.6,182.3 L432.2,182.6 L433.9,183.2 L435.6,185.9 L437.3,184.6 L439.0,183.2 L440.6,182.5 L442.3,182.7 L444.0,183.1 L445.7,181.8 L447.4,183.8 L449.0,181.5 L450.7,180.9 L452.4,180.0 L454.1,180.7 L455.8,183.8 L457.4,187.7 L459.1,192.1 L460.8,192.6 L462.5,195.7 L464.2,200.5 L465.8,200.7 L467.5,201.6 L469.2,205.2 L470.9,207.4 L472.6,207.4 L474.2,211.5 L475.9,215.5 L477.6,223.7 L479.3,218.1 L481.0,221.4 L482.6,224.4 L484.3,226.0 L486.0,225.0 L486.0,318.6 L484.3,320.0 L482.6,319.0 L481.0,314.3 L479.3,312.4 L477.6,314.7 L475.9,310.9 L474.2,306.2 L472.6,303.4 L470.9,302.3 L469.2,298.8 L467.5,292.5 L465.8,292.0 L464.2,292.7 L462.5,287.8 L460.8,285.4 L459.1,287.0 L457.4,282.8 L455.8,283.3 L454.1,282.9 L452.4,282.5 L450.7,283.3 L449.0,282.5 L447.4,283.5 L445.7,282.7 L444.0,281.8 L442.3,282.8 L440.6,281.6 L439.0,281.3 L437.3,281.9 L435.6,282.7 L433.9,282.2 L432.2,281.2 L430.6,282.1 L428.9,281.5 L427.2,281.0 L425.5,280.3 L423.8,279.9 L422.2,279.7 L420.5,279.4 L418.8,278.1 L417.1,279.5 L415.4,280.1 L413.8,283.0 L412.1,284.0 L410.4,287.2 L408.7,291.5 L407.0,295.3 L405.4,294.4 L403.7,294.3 L402.0,295.3 L400.3,296.5 L398.6,296.8 L397.0,298.0 L395.3,297.6 L393.6,294.2 L391.9,291.8 L390.2,289.5 L388.6,288.2 L386.9,285.2 L385.2,284.6 L383.5,285.1 L381.8,285.4 L380.2,285.8 L378.5,284.7 L376.8,282.5 L375.1,281.8 L373.4,279.0 L371.8,271.3 L370.1,267.6 L368.4,265.7 L366.7,268.1 L365.0,258.6 L363.4,256.3 L361.7,247.9 L360.0,242.3 L358.3,236.4 L351.6,209.3 L343.2,204.2 L334.8,193.9 L326.4,182.3 L318.0,159.8 L309.6,139.0 L301.2,127.2 L292.8,120.5 L284.4,115.4 L276.0,109.1 L267.6,106.5 L259.2,110.8 L250.8,101.4 L242.4,100.8 L234.0,96.6 L225.6,96.7 L217.2,96.7 L208.8,96.2 L200.4,96.0 L192.0,96.0 L183.6,96.0 L166.8,96.0 L150.0,96.0 L133.2,96.0 L116.4,96.0 L99.6,96.0 L82.8,96.0 L66.0,96.0 Z" fill="#a24a2c" opacity=".86"/></g><g filter="url(#phsw)"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.0 L217.2,96.0 L225.6,96.0 L234.0,96.0 L242.4,96.0 L250.8,96.0 L259.2,96.0 L267.6,96.1 L276.0,96.3 L284.4,96.3 L292.8,96.5 L301.2,96.7 L309.6,96.8 L318.0,97.0 L326.4,97.4 L334.8,97.9 L343.2,97.8 L351.6,98.4 L358.3,98.6 L360.0,98.6 L361.7,98.4 L363.4,98.6 L365.0,98.5 L366.7,98.7 L368.4,98.6 L370.1,98.6 L371.8,98.8 L373.4,99.1 L375.1,98.9 L376.8,99.0 L378.5,99.1 L380.2,99.3 L381.8,99.1 L383.5,99.2 L385.2,99.3 L386.9,99.2 L388.6,99.7 L390.2,99.7 L391.9,99.9 L393.6,100.0 L395.3,100.9 L397.0,101.4 L398.6,102.4 L400.3,104.4 L402.0,106.7 L403.7,106.6 L405.4,107.6 L407.0,109.5 L408.7,108.3 L410.4,108.3 L412.1,109.9 L413.8,111.7 L415.4,112.6 L417.1,113.2 L418.8,114.6 L420.5,115.8 L422.2,116.2 L423.8,117.5 L425.5,117.8 L427.2,119.6 L428.9,120.9 L430.6,120.5 L432.2,120.3 L433.9,120.8 L435.6,121.9 L437.3,121.4 L439.0,120.1 L440.6,120.9 L442.3,121.9 L444.0,121.5 L445.7,121.5 L447.4,122.3 L449.0,122.0 L450.7,122.5 L452.4,122.5 L454.1,123.6 L455.8,124.0 L457.4,126.0 L459.1,128.2 L460.8,128.0 L462.5,129.3 L464.2,129.3 L465.8,129.6 L467.5,129.8 L469.2,130.6 L470.9,131.9 L472.6,132.7 L474.2,131.5 L475.9,132.0 L477.6,134.6 L479.3,133.2 L481.0,133.5 L482.6,134.6 L484.3,135.6 L486.0,135.2 L486.0,225.0 L484.3,226.0 L482.6,224.4 L481.0,221.4 L479.3,218.1 L477.6,223.7 L475.9,215.5 L474.2,211.5 L472.6,207.4 L470.9,207.4 L469.2,205.2 L467.5,201.6 L465.8,200.7 L464.2,200.5 L462.5,195.7 L460.8,192.6 L459.1,192.1 L457.4,187.7 L455.8,183.8 L454.1,180.7 L452.4,180.0 L450.7,180.9 L449.0,181.5 L447.4,183.8 L445.7,181.8 L444.0,183.1 L442.3,182.7 L440.6,182.5 L439.0,183.2 L437.3,184.6 L435.6,185.9 L433.9,183.2 L432.2,182.6 L430.6,182.3 L428.9,181.8 L427.2,179.2 L425.5,177.0 L423.8,174.5 L422.2,173.3 L420.5,171.5 L418.8,174.2 L417.1,175.1 L415.4,173.7 L413.8,176.5 L412.1,176.5 L410.4,174.8 L408.7,173.9 L407.0,173.6 L405.4,172.9 L403.7,175.4 L402.0,178.1 L400.3,180.1 L398.6,178.8 L397.0,181.6 L395.3,184.3 L393.6,182.5 L391.9,180.9 L390.2,178.6 L388.6,177.9 L386.9,175.7 L385.2,174.3 L383.5,174.9 L381.8,173.5 L380.2,173.0 L378.5,171.6 L376.8,169.5 L375.1,168.0 L373.4,164.9 L371.8,161.4 L370.1,157.7 L368.4,155.9 L366.7,157.1 L365.0,152.5 L363.4,151.6 L361.7,147.5 L360.0,143.1 L358.3,140.3 L351.6,129.1 L343.2,125.0 L334.8,122.2 L326.4,118.3 L318.0,110.7 L309.6,106.6 L301.2,106.5 L292.8,104.9 L284.4,103.6 L276.0,103.0 L267.6,101.0 L259.2,105.2 L250.8,99.6 L242.4,96.0 L234.0,96.0 L225.6,96.0 L217.2,96.0 L208.8,96.0 L200.4,96.0 L192.0,96.0 L183.6,96.0 L166.8,96.0 L150.0,96.0 L133.2,96.0 L116.4,96.0 L99.6,96.0 L82.8,96.0 L66.0,96.0 Z" fill="#4f7fa6" opacity=".86"/></g><g filter="url(#phsw)"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.0 L217.2,96.0 L225.6,96.0 L234.0,96.0 L242.4,96.0 L250.8,96.0 L259.2,96.0 L267.6,96.0 L276.0,96.0 L284.4,96.0 L292.8,96.0 L301.2,96.0 L309.6,96.0 L318.0,96.0 L326.4,96.0 L334.8,96.0 L343.2,96.0 L351.6,96.0 L358.3,96.0 L360.0,96.0 L361.7,96.0 L363.4,96.0 L365.0,96.0 L366.7,96.0 L368.4,96.0 L370.1,96.0 L371.8,96.0 L373.4,96.0 L375.1,96.0 L376.8,96.0 L378.5,96.0 L380.2,96.0 L381.8,96.0 L383.5,96.0 L385.2,96.0 L386.9,96.0 L388.6,96.0 L390.2,96.0 L391.9,96.0 L393.6,96.0 L395.3,96.0 L397.0,96.0 L398.6,96.0 L400.3,96.0 L402.0,96.0 L403.7,96.0 L405.4,96.0 L407.0,96.0 L408.7,96.0 L410.4,96.0 L412.1,96.0 L413.8,96.0 L415.4,96.0 L417.1,96.0 L418.8,96.0 L420.5,96.0 L422.2,96.0 L423.8,96.0 L425.5,96.0 L427.2,96.0 L428.9,96.0 L430.6,96.0 L432.2,96.0 L433.9,96.0 L435.6,96.0 L437.3,96.0 L439.0,96.0 L440.6,96.0 L442.3,96.0 L444.0,96.0 L445.7,96.0 L447.4,96.0 L449.0,96.0 L450.7,96.0 L452.4,96.0 L454.1,96.0 L455.8,96.0 L457.4,96.0 L459.1,96.0 L460.8,96.0 L462.5,96.0 L464.2,96.0 L465.8,96.0 L467.5,96.0 L469.2,96.0 L470.9,96.0 L472.6,96.0 L474.2,96.0 L475.9,96.0 L477.6,96.0 L479.3,96.0 L481.0,96.0 L482.6,96.0 L484.3,96.0 L486.0,96.0 L486.0,135.2 L484.3,135.6 L482.6,134.6 L481.0,133.5 L479.3,133.2 L477.6,134.6 L475.9,132.0 L474.2,131.5 L472.6,132.7 L470.9,131.9 L469.2,130.6 L467.5,129.8 L465.8,129.6 L464.2,129.3 L462.5,129.3 L460.8,128.0 L459.1,128.2 L457.4,126.0 L455.8,124.0 L454.1,123.6 L452.4,122.5 L450.7,122.5 L449.0,122.0 L447.4,122.3 L445.7,121.5 L444.0,121.5 L442.3,121.9 L440.6,120.9 L439.0,120.1 L437.3,121.4 L435.6,121.9 L433.9,120.8 L432.2,120.3 L430.6,120.5 L428.9,120.9 L427.2,119.6 L425.5,117.8 L423.8,117.5 L422.2,116.2 L420.5,115.8 L418.8,114.6 L417.1,113.2 L415.4,112.6 L413.8,111.7 L412.1,109.9 L410.4,108.3 L408.7,108.3 L407.0,109.5 L405.4,107.6 L403.7,106.6 L402.0,106.7 L400.3,104.4 L398.6,102.4 L397.0,101.4 L395.3,100.9 L393.6,100.0 L391.9,99.9 L390.2,99.7 L388.6,99.7 L386.9,99.2 L385.2,99.3 L383.5,99.2 L381.8,99.1 L380.2,99.3 L378.5,99.1 L376.8,99.0 L375.1,98.9 L373.4,99.1 L371.8,98.8 L370.1,98.6 L368.4,98.6 L366.7,98.7 L365.0,98.5 L363.4,98.6 L361.7,98.4 L360.0,98.6 L358.3,98.6 L351.6,98.4 L343.2,97.8 L334.8,97.9 L326.4,97.4 L318.0,97.0 L309.6,96.8 L301.2,96.7 L292.8,96.5 L284.4,96.3 L276.0,96.3 L267.6,96.1 L259.2,96.0 L250.8,96.0 L242.4,96.0 L234.0,96.0 L225.6,96.0 L217.2,96.0 L208.8,96.0 L200.4,96.0 L192.0,96.0 L183.6,96.0 L166.8,96.0 L150.0,96.0 L133.2,96.0 L116.4,96.0 L99.6,96.0 L82.8,96.0 L66.0,96.0 Z" fill="#7f9a6a" opacity=".86"/></g><g filter="url(#phsr)" fill="none" stroke="#2b2418" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,119.2 L200.4,133.5 L208.8,137.2 L217.2,143.1 L225.6,163.0 L234.0,179.9 L242.4,203.5 L250.8,227.2 L259.2,256.1 L267.6,269.9 L276.0,292.1 L284.4,310.1 L292.8,318.5 L301.2,321.4 L309.6,326.5 L318.0,328.4 L326.4,330.2 L334.8,328.3 L343.2,332.1 L351.6,336.0 L358.3,333.5 L360.0,334.4 L361.7,335.3 L363.4,335.7 L365.0,336.3 L366.7,336.2 L368.4,336.9 L370.1,337.3 L371.8,337.8 L373.4,337.8 L375.1,338.0 L376.8,338.5 L378.5,338.7 L380.2,339.0 L381.8,339.2 L383.5,339.4 L385.2,339.7 L386.9,339.8 L388.6,340.2 L390.2,340.2 L391.9,340.4 L393.6,340.6 L395.3,340.7 L397.0,340.7 L398.6,340.8 L400.3,340.6 L402.0,340.6 L403.7,340.2 L405.4,340.0 L407.0,339.5 L408.7,339.2 L410.4,337.9 L412.1,337.6 L413.8,337.1 L415.4,336.5 L417.1,337.0 L418.8,337.0 L420.5,337.4 L422.2,338.0 L423.8,338.0 L425.5,337.9 L427.2,339.3 L428.9,339.3 L430.6,339.1 L432.2,339.4 L433.9,339.3 L435.6,339.3 L437.3,339.3 L439.0,339.6 L440.6,340.1 L442.3,340.1 L444.0,340.2 L445.7,340.7 L447.4,340.8 L449.0,340.8 L450.7,340.6 L452.4,340.6 L454.1,340.6 L455.8,340.7 L457.4,340.7 L459.1,340.7 L460.8,340.2 L462.5,340.1 L464.2,340.1 L465.8,339.8 L467.5,339.7 L469.2,339.9 L470.9,340.1 L472.6,340.2 L474.2,340.2 L475.9,340.2 L477.6,340.5 L479.3,340.7 L481.0,340.4 L482.6,340.8 L484.3,341.0 L486.0,341.0"/></g><g filter="url(#phsr)" fill="none" stroke="#2b2418" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.2 L217.2,96.7 L225.6,96.7 L234.0,96.6 L242.4,100.8 L250.8,101.4 L259.2,110.8 L267.6,106.5 L276.0,109.1 L284.4,115.4 L292.8,120.5 L301.2,127.2 L309.6,139.0 L318.0,159.8 L326.4,182.3 L334.8,193.9 L343.2,204.2 L351.6,209.3 L358.3,236.4 L360.0,242.3 L361.7,247.9 L363.4,256.3 L365.0,258.6 L366.7,268.1 L368.4,265.7 L370.1,267.6 L371.8,271.3 L373.4,279.0 L375.1,281.8 L376.8,282.5 L378.5,284.7 L380.2,285.8 L381.8,285.4 L383.5,285.1 L385.2,284.6 L386.9,285.2 L388.6,288.2 L390.2,289.5 L391.9,291.8 L393.6,294.2 L395.3,297.6 L397.0,298.0 L398.6,296.8 L400.3,296.5 L402.0,295.3 L403.7,294.3 L405.4,294.4 L407.0,295.3 L408.7,291.5 L410.4,287.2 L412.1,284.0 L413.8,283.0 L415.4,280.1 L417.1,279.5 L418.8,278.1 L420.5,279.4 L422.2,279.7 L423.8,279.9 L425.5,280.3 L427.2,281.0 L428.9,281.5 L430.6,282.1 L432.2,281.2 L433.9,282.2 L435.6,282.7 L437.3,281.9 L439.0,281.3 L440.6,281.6 L442.3,282.8 L444.0,281.8 L445.7,282.7 L447.4,283.5 L449.0,282.5 L450.7,283.3 L452.4,282.5 L454.1,282.9 L455.8,283.3 L457.4,282.8 L459.1,287.0 L460.8,285.4 L462.5,287.8 L464.2,292.7 L465.8,292.0 L467.5,292.5 L469.2,298.8 L470.9,302.3 L472.6,303.4 L474.2,306.2 L475.9,310.9 L477.6,314.7 L479.3,312.4 L481.0,314.3 L482.6,319.0 L484.3,320.0 L486.0,318.6"/></g><g filter="url(#phsr)" fill="none" stroke="#2b2418" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.0 L217.2,96.0 L225.6,96.0 L234.0,96.0 L242.4,96.0 L250.8,99.6 L259.2,105.2 L267.6,101.0 L276.0,103.0 L284.4,103.6 L292.8,104.9 L301.2,106.5 L309.6,106.6 L318.0,110.7 L326.4,118.3 L334.8,122.2 L343.2,125.0 L351.6,129.1 L358.3,140.3 L360.0,143.1 L361.7,147.5 L363.4,151.6 L365.0,152.5 L366.7,157.1 L368.4,155.9 L370.1,157.7 L371.8,161.4 L373.4,164.9 L375.1,168.0 L376.8,169.5 L378.5,171.6 L380.2,173.0 L381.8,173.5 L383.5,174.9 L385.2,174.3 L386.9,175.7 L388.6,177.9 L390.2,178.6 L391.9,180.9 L393.6,182.5 L395.3,184.3 L397.0,181.6 L398.6,178.8 L400.3,180.1 L402.0,178.1 L403.7,175.4 L405.4,172.9 L407.0,173.6 L408.7,173.9 L410.4,174.8 L412.1,176.5 L413.8,176.5 L415.4,173.7 L417.1,175.1 L418.8,174.2 L420.5,171.5 L422.2,173.3 L423.8,174.5 L425.5,177.0 L427.2,179.2 L428.9,181.8 L430.6,182.3 L432.2,182.6 L433.9,183.2 L435.6,185.9 L437.3,184.6 L439.0,183.2 L440.6,182.5 L442.3,182.7 L444.0,183.1 L445.7,181.8 L447.4,183.8 L449.0,181.5 L450.7,180.9 L452.4,180.0 L454.1,180.7 L455.8,183.8 L457.4,187.7 L459.1,192.1 L460.8,192.6 L462.5,195.7 L464.2,200.5 L465.8,200.7 L467.5,201.6 L469.2,205.2 L470.9,207.4 L472.6,207.4 L474.2,211.5 L475.9,215.5 L477.6,223.7 L479.3,218.1 L481.0,221.4 L482.6,224.4 L484.3,226.0 L486.0,225.0"/></g><g filter="url(#phsr)" fill="none" stroke="#2b2418" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M66.0,96.0 L82.8,96.0 L99.6,96.0 L116.4,96.0 L133.2,96.0 L150.0,96.0 L166.8,96.0 L183.6,96.0 L192.0,96.0 L200.4,96.0 L208.8,96.0 L217.2,96.0 L225.6,96.0 L234.0,96.0 L242.4,96.0 L250.8,96.0 L259.2,96.0 L267.6,96.1 L276.0,96.3 L284.4,96.3 L292.8,96.5 L301.2,96.7 L309.6,96.8 L318.0,97.0 L326.4,97.4 L334.8,97.9 L343.2,97.8 L351.6,98.4 L358.3,98.6 L360.0,98.6 L361.7,98.4 L363.4,98.6 L365.0,98.5 L366.7,98.7 L368.4,98.6 L370.1,98.6 L371.8,98.8 L373.4,99.1 L375.1,98.9 L376.8,99.0 L378.5,99.1 L380.2,99.3 L381.8,99.1 L383.5,99.2 L385.2,99.3 L386.9,99.2 L388.6,99.7 L390.2,99.7 L391.9,99.9 L393.6,100.0 L395.3,100.9 L397.0,101.4 L398.6,102.4 L400.3,104.4 L402.0,106.7 L403.7,106.6 L405.4,107.6 L407.0,109.5 L408.7,108.3 L410.4,108.3 L412.1,109.9 L413.8,111.7 L415.4,112.6 L417.1,113.2 L418.8,114.6 L420.5,115.8 L422.2,116.2 L423.8,117.5 L425.5,117.8 L427.2,119.6 L428.9,120.9 L430.6,120.5 L432.2,120.3 L433.9,120.8 L435.6,121.9 L437.3,121.4 L439.0,120.1 L440.6,120.9 L442.3,121.9 L444.0,121.5 L445.7,121.5 L447.4,122.3 L449.0,122.0 L450.7,122.5 L452.4,122.5 L454.1,123.6 L455.8,124.0 L457.4,126.0 L459.1,128.2 L460.8,128.0 L462.5,129.3 L464.2,129.3 L465.8,129.6 L467.5,129.8 L469.2,130.6 L470.9,131.9 L472.6,132.7 L474.2,131.5 L475.9,132.0 L477.6,134.6 L479.3,133.2 L481.0,133.5 L482.6,134.6 L484.3,135.6 L486.0,135.2"/></g><g filter="url(#phsr)" fill="none" stroke="#3b3222" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="66" y="96" width="420" height="250"/></g><path d="M108.0,346 v5" stroke="#3b3222" stroke-width="1"/><text x="108.0" y="364.0" text-anchor="middle" class="pk-sm">1800</text><path d="M192.0,346 v5" stroke="#3b3222" stroke-width="1"/><text x="192.0" y="364.0" text-anchor="middle" class="pk-sm">1850</text><path d="M276.0,346 v5" stroke="#3b3222" stroke-width="1"/><text x="276.0" y="364.0" text-anchor="middle" class="pk-sm">1900</text><path d="M360.0,346 v5" stroke="#3b3222" stroke-width="1"/><text x="360.0" y="364.0" text-anchor="middle" class="pk-sm">1950</text><path d="M444.0,346 v5" stroke="#3b3222" stroke-width="1"/><text x="444.0" y="364.0" text-anchor="middle" class="pk-sm">2000</text><text x="60.0" y="350.0" text-anchor="end" class="pk-sm">0%</text><text x="60.0" y="225.0" text-anchor="end" class="pk-sm">50%</text><text x="60.0" y="100.0" text-anchor="end" class="pk-sm">100%</text><text x="121.4" y="226.0" text-anchor="middle" class="pk-lab" style="fill:#fffaf0;stroke:#6b4f2c">Wood</text><text x="296.2" y="229.3" text-anchor="middle" class="pk-lab" style="fill:#fffaf0;stroke:#2b2723">Coal</text><text x="407.0" y="239.5" text-anchor="middle" class="pk-lab" style="fill:#fffaf0;stroke:#6b2a18">Petroleum</text><text x="437.3" y="158.0" text-anchor="middle" class="pk-lab sm" style="fill:#fffaf0;stroke:#2f4f6a">Natural gas</text><text x="449.0" y="107.2" text-anchor="middle" class="pk-sm" style="font-size:9.5px;fill:#2f3f22">nuclear &amp; renewables</text><circle cx="250.8" cy="227.2" r="5" fill="#fffaf0" stroke="#3b3222" stroke-width="1.6"/><path d="M250.8,221.2 L276.8,131.0" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="250.8" cy="221.2" r="2" fill="#3b3222"/><text x="280.8" y="129.0" text-anchor="start" class="pk-lab sm" style="fill:#fffaf0;stroke:#3b3222;stroke-width:3.5px">1885: coal passes wood</text><circle cx="360.0" cy="242.3" r="5" fill="#fffaf0" stroke="#3b3222" stroke-width="1.6"/><path d="M360.0,248.3 L330.0,313.5" stroke="#3b3222" stroke-width=".9" fill="none"/><circle cx="360.0" cy="248.3" r="2" fill="#3b3222"/><text x="326.0" y="317.5" text-anchor="end" class="pk-lab sm" style="fill:#fffaf0;stroke:#3b3222;stroke-width:3.5px">1950: oil passes coal</text><path d="M490.0,341.0 h6 V135.2 h-6" fill="none" stroke="#3b3222" stroke-width="1.2"/><text x="499.0" y="236.1" text-anchor="start" class="pk-lab sm">82%</text><text x="499.0" y="250.1" text-anchor="start" class="pk-sm">fossil</text><text x="280.0" y="404.0" text-anchor="middle" class="pk-tag">ENERGY IN ONE POUND</text><path d="M200,414 H360" stroke="#8a6a2f" stroke-width=".8"/><g filter="url(#phsw)"><path d="M70,452 A13,13 0 0 1 96,452 Z" fill="#dcb57a"/></g><g filter="url(#phsr)" fill="none" stroke="#3b3222" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M70,452 A13,13 0 0 1 96,452 Z M76,452 A7,7 0 0 1 90,452"/></g><text x="108.0" y="442.0" text-anchor="start" class="pk-lab sm">Seasoned firewood</text><g filter="url(#phsw)"><rect x="108" y="448" width="78.2" height="10" rx="2" fill="#9c7346" opacity=".85"/></g><text x="194.2" y="457.0" text-anchor="start" class="pk-chem">1.85 kWh</text><path d="M72,494 L78,478 L90,480 L96,488 L90,496 L76,497 Z" fill="#2c2a2e" stroke="#0c0b0c" stroke-width=".8"/><path d="M80,484 L88,483" stroke="#cfd6e2" stroke-width="1" opacity=".6"/><text x="108.0" y="484.0" text-anchor="start" class="pk-lab sm">House coal</text><g filter="url(#phsw)"><rect x="108" y="490" width="154.3" height="10" rx="2" fill="#4a443d" opacity=".85"/></g><text x="270.3" y="499.0" text-anchor="start" class="pk-chem">3.6 kWh</text><g filter="url(#phsw)"><path d="M83,518 C78,525 74,529 74,532 A9,9 0 0 0 92,532 C92,529 88,525 83,518 Z" fill="#c3302a"/></g><g filter="url(#phsr)" fill="none" stroke="#3b3222" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M83,518 C78,525 74,529 74,532 A9,9 0 0 0 92,532 C92,529 88,525 83,518 Z"/></g><text x="108.0" y="526.0" text-anchor="start" class="pk-lab sm">Gasoline</text><g filter="url(#phsw)"><rect x="108" y="532" width="230.0" height="10" rx="2" fill="#a24a2c" opacity=".85"/></g><text x="346.0" y="541.0" text-anchor="start" class="pk-chem">5.4 kWh</text><text x="280.0" y="574.0" text-anchor="middle" class="pk-sm" style="font-size:10.5px">A pound of gasoline holds about three times the energy of a pound of seasoned firewood.</text></g><path d="M0 0 H560 V640 H0 Z M35 26 H525 A9 9 0 0 1 534 35 V605 A9 9 0 0 1 525 614 H35 A9 9 0 0 1 26 605 V35 A9 9 0 0 1 35 26 Z" fill="#fbf5e6" fill-rule="evenodd"/><rect width="560" height="640" fill="#000" filter="url(#phsg)" pointer-events="none"/><rect x="5" y="5" width="550" height="630" rx="17" fill="none" stroke="#3b3222" stroke-width="2.2" filter="url(#phsr)"/><rect x="15" y="15" width="530" height="610" rx="12" fill="none" stroke="#8a6a2f" stroke-width="1.3"/><rect x="26" y="26" width="508" height="588" rx="9" fill="none" stroke="#8a6a2f" stroke-width=".6"/><path d="M15,9 L21,15 L15,21 L9,15 Z" fill="#8a6a2f"/><path d="M545,9 L551,15 L545,21 L539,15 Z" fill="#8a6a2f"/><path d="M15,619 L21,625 L15,631 L9,625 Z" fill="#8a6a2f"/><path d="M545,619 L551,625 L545,631 L539,625 Z" fill="#8a6a2f"/></svg></div><button class="pq-play" type="button" data-pqx-open><i></i>Watch 250 years</button></div><div class="pq-right"><ol class="pq-line hs-line"><li class="pq-step stage-item"><span class="pq-pill" style="background:#9c7346">1850</span><div><b>Wood, muscle, water and wind</b><p>In 1850, wood still supplied about 9 of every 10 units of energy Americans used. Mills sat beside rivers, and sailing ships waited on the wind.</p></div></li><li class="pq-step stage-item"><span class="pq-pill" style="background:#4a443d">1885</span><div><b>Coal and steam take over</b><p>Coal fed steam engines, railroads and factories, and passed wood as the leading U.S. energy source around 1885. The first U.S. coal-fired power plant opened in New York City in 1882.</p></div></li><li class="pq-step stage-item"><span class="pq-pill" style="background:#a24a2c">1950</span><div><b>Oil and the engine</b><p>After the Spindletop gusher in Texas (1901), oil fueled the automobile age: U.S. cars grew from 8 million to more than 50 million between 1920 and 1950, the year petroleum passed coal.</p></div></li><li class="pq-step stage-item"><span class="pq-pill" style="background:#4f7fa6">2025</span><div><b>Natural gas, and today</b><p>Pipelines carried natural gas across the country. In 2025 fossil fuels supplied 82% of U.S. energy, and petroleum and natural gas were the two largest sources.</p></div></li><li class="pq-cmp stage-item hs-why"><div class="pq-cmp-h">Why they won <span>dense and reliable</span></div><div class="hs-two"><p><b>Dense.</b> A pound of gasoline holds about 5.4 kWh, three times seasoned firewood (1.85 kWh); house coal holds about twice as much. Less to haul, store and carry.</p><p><b>Reliable.</b> Fossil fuels are stored energy: piled, piped or pumped into a tank, then burned at any hour, in any season, far from where they were found. A waterwheel needs a river; a windmill needs wind.</p></div></li></ol><div class="hs-veh"><div><b>How much wood would it take?</b><p>The firewood holding the same energy as the fuel for a car, a container ship and a jet airliner.</p></div><button class="hs-vehgo" type="button" data-hs-veh><i></i>Compare</button></div></div></div><p class="pq-src">U.S. EIA, <i>Monthly Energy Review</i> Tables D1, 1.3 and 10.1, and &#8220;The 250-year history of U.S. energy consumption&#8221; (2026). Lower heating values: Forest Research (UK) for seasoned firewood (14.7 MJ/kg) and house coal (27&#8211;31 MJ/kg); U.S. EPA, 33.7 kWh per gallon of gasoline. Vehicles: DOE AFDC (447 gallons per car per year, from FHWA 2023); Port of Hamburg on CMA CGM <i>Jacques Saad&#233;</i> (2020); Boeing 787 airport planning document D6-58333 Rev Q (2025).</p></div><div class="footer">© 2023 W. W. Norton &amp; Company, Inc.</div><script>(function(){
+  var SEC=document.currentScript.closest('section'); if(!SEC||SEC.__pqx) return; SEC.__pqx=1;
+  var NS='http://www.w3.org/2000/svg', W=1200, H=720, INK='#3b3222', GOLD='#b8892f', PAPER='#fbf5e6';
+  function E(t,a,p){ var e=document.createElementNS(NS,t); if(a) for(var k in a) e.setAttribute(k,a[k]); if(p) p.appendChild(e); return e; }
+  function T(x,y,s,cls,p,anchor){ var e=E('text',{x:x,y:y,'class':cls,'text-anchor':anchor||'middle'},p); e.textContent=s; return e; }
+  function cl(t){ return Math.max(0,Math.min(1,t)); }
+  function seg(p,a,b){ return cl((p-a)/(b-a)); }
+  function ease(t){ t=cl(t); return t<.5? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+  function eout(t){ t=cl(t); return 1-Math.pow(1-t,3); }
+  function back(t){ t=cl(t); var c=1.7; return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2); }
+  function rnd(a,b){ return a+Math.random()*(b-a); }
+  function hex(c){ var n=parseInt(c.slice(1),16); return [(n>>16)&255,(n>>8)&255,n&255]; }
+  function mix(a,b,t){ a=hex(a); b=hex(b); return 'rgb('+[0,1,2].map(function(i){ return Math.round(a[i]+(b[i]-a[i])*cl(t)); }).join(',')+')'; }
+  function D(pts){ return 'M'+pts.map(function(p){ return (+p[0]).toFixed(1)+','+(+p[1]).toFixed(1); }).join(' L'); }
+  function P(pts){ var cum=[0]; for(var i=1;i<pts.length;i++) cum.push(cum[i-1]+Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1])); return {pts:pts,cum:cum,len:cum[cum.length-1]}; }
+  function at(p,u){ var d=cl(u)*p.len, i=1; while(i<p.cum.length-1 && p.cum[i]<d) i++;
+    var s=p.cum[i]-p.cum[i-1]||1, f=(d-p.cum[i-1])/s; return [p.pts[i-1][0]+(p.pts[i][0]-p.pts[i-1][0])*f, p.pts[i-1][1]+(p.pts[i][1]-p.pts[i-1][1])*f]; }
+  function bez(a,c,b,u){ var q=1-u; return [q*q*a[0]+2*q*u*c[0]+u*u*b[0], q*q*a[1]+2*q*u*c[1]+u*u*b[1]]; }
+  function comma(n){ return Math.round(n).toLocaleString('en-US'); }
+  function frame(svg){ /* paper grain + the double rule, drawn last */
+    E('rect',{x:0,y:0,width:W,height:H,fill:'#000',filter:'url(#pqkGrain)','pointer-events':'none'},svg);
+    E('rect',{x:6,y:6,width:W-12,height:H-12,rx:16,fill:'none',stroke:INK,'stroke-width':2,'pointer-events':'none'},svg);
+    E('rect',{x:16,y:16,width:W-32,height:H-32,rx:11,fill:'none',stroke:GOLD,'stroke-width':1.2,'pointer-events':'none'},svg); }
+  var GRAIN='<filter id="pqkGrain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .36  0 0 0 0 .29  0 0 0 0 .18  0 0 0 .07 0"/></filter>'
+    +'<filter id="pqkWash" x="-5%" y="-20%" width="110%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="10"/><feGaussianBlur stdDeviation=".8"/></filter>'
+    +'<filter id="pqkGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>'
+    +'<radialGradient id="pqkZap"><stop offset="0" stop-color="#fff6c8"/><stop offset=".45" stop-color="#f2c45a"/><stop offset="1" stop-color="#f2c45a" stop-opacity="0"/></radialGradient>'
+    +'<radialGradient id="pqkHeat"><stop offset="0" stop-color="#f6b089"/><stop offset=".5" stop-color="#d9673f" stop-opacity=".7"/><stop offset="1" stop-color="#d9673f" stop-opacity="0"/></radialGradient>';
+  /* the pop-up: POP({label, aria, note, segs:[[group,[[key,label],...],default],...], extra(html), onSeg(group,key), key(k)->handled, noBind (open it yourself), build, reset, step}) */
+  var POP=function(o){
+    var ov=null, svg=null, raf=0, last=0, opened=false, paused=false, uspeed=1, api={};
+    function bar(){ ov.querySelector('[data-a=play]').textContent = paused ? 'Play' : 'Pause'; }
+    function mk(){
+      ov=document.createElement('div'); ov.className='pqx'+(o.cls?' '+o.cls:''); ov.setAttribute('role','dialog'); ov.setAttribute('aria-modal','true'); ov.setAttribute('aria-label',o.label);
+      var segs=(o.segs||[]).map(function(g){ return '<span class="pqx-seg" role="group" aria-label="'+g[0]+'">'+g[1].map(function(b){
+        return '<button type="button" data-g="'+g[0]+'" data-m="'+b[0]+'"'+(b[0]===g[2]?' class="on"':'')+'>'+b[1]+'</button>'; }).join('')+'</span>'; }).join('');
+      ov.innerHTML='<div class="pqx-panel"><button class="pqx-x" type="button" aria-label="Close the animation">&times;</button><div class="pqx-stage"></div>'
+        +'<div class="pqx-bar">'+(o.extra||'')+segs+'<button type="button" class="pqx-b" data-a="play">Pause</button><button type="button" class="pqx-b ghost" data-a="restart">Restart</button>'
+        +'<span class="pqx-sp" role="group" aria-label="Speed"><button type="button" data-s="1" class="on">1&times;</button><button type="button" data-s="2">2&times;</button></span>'
+        +'<span class="pqx-note">'+(o.note||'')+'</span></div></div>';
+      document.body.appendChild(ov);
+      svg=E('svg',{viewBox:'0 0 '+W+' '+H,'class':'pqx-svg',role:'img','aria-label':o.aria},ov.querySelector('.pqx-stage'));
+      api.svg=svg; api.ov=ov;
+      o.build(svg);
+      ov.addEventListener('click', function(e){ if(e.target===ov) api.close(); });
+      ov.querySelector('.pqx-x').addEventListener('click', function(){ api.close(); });
+      ov.querySelector('[data-a=play]').addEventListener('click', function(){ paused=!paused; bar(); });
+      ov.querySelector('[data-a=restart]').addEventListener('click', function(){ paused=false; bar(); o.reset(); });
+      [].forEach.call(ov.querySelectorAll('[data-s]'), function(b){ b.addEventListener('click', function(){
+        uspeed=+b.dataset.s; [].forEach.call(ov.querySelectorAll('[data-s]'), function(x){ x.classList.toggle('on', x===b); }); }); });
+      [].forEach.call(ov.querySelectorAll('[data-g]'), function(b){ b.addEventListener('click', function(){
+        [].forEach.call(ov.querySelectorAll('[data-g="'+b.dataset.g+'"]'), function(x){ x.classList.toggle('on', x===b); });
+        if(o.onSeg) o.onSeg(b.dataset.g, b.dataset.m); }); });
+    }
+    function loop(now){ if(!opened) return; var dt=Math.min(64, now-(last||now)); last=now; if(!paused) o.step(dt/1000*uspeed); raf=requestAnimationFrame(loop); }
+    function keys(e){
+      if(!opened) return;
+      var tag=(e.target&&e.target.tagName)||'';
+      if(e.key==='Escape'){ e.preventDefault(); e.stopPropagation(); api.close(); return; }
+      if(tag==='INPUT'){ e.stopPropagation(); return; }
+      if(e.key===' '){ e.preventDefault(); e.stopPropagation(); paused=!paused; bar(); return; }
+      if(o.key && o.key(e.key)){ e.preventDefault(); e.stopPropagation(); return; }
+      if(['ArrowRight','ArrowLeft','ArrowUp','ArrowDown','PageUp','PageDown','Home','End','Enter'].indexOf(e.key)>-1){ e.preventDefault(); e.stopPropagation(); }
+    }
+    api.open=function(e){
+      if(e){ e.preventDefault(); e.stopPropagation(); }
+      if(!ov) mk();
+      ov.classList.add('on'); opened=true; document.documentElement.classList.add('pqx-open');
+      window.addEventListener('keydown', keys, true);
+      paused=false; bar(); o.reset(); last=0; cancelAnimationFrame(raf); raf=requestAnimationFrame(loop);
+      ov.querySelector('.pqx-x').focus({preventScroll:true});
+    };
+    api.close=function(){ opened=false; cancelAnimationFrame(raf); if(ov) ov.classList.remove('on'); document.documentElement.classList.remove('pqx-open'); window.removeEventListener('keydown', keys, true); };
+    api.pause=function(v){ paused=v; if(ov) bar(); };
+    if(o.noBind) return api;
+    var btn=SEC.querySelector('[data-pqx-open]'), box=SEC.querySelector('.pq-platebox');
+    if(btn) btn.addEventListener('click', api.open);
+    if(box) box.addEventListener('click', function(e){ if(e.target.closest('input,button:not([data-pqx-open]),label,select')) return; api.open(e); });
+    return api;
+  };
+(function(){
+  var DT={"y": [1775, 1785, 1795, 1805, 1815, 1825, 1835, 1845, 1850, 1855, 1860, 1865, 1870, 1875, 1880, 1885, 1890, 1895, 1900, 1905, 1910, 1915, 1920, 1925, 1930, 1935, 1940, 1945, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "w": [0.249, 0.31, 0.402, 0.537, 0.714, 0.96, 1.305, 1.757, 2.138, 2.389, 2.641, 2.767, 2.893, 2.872, 2.851, 2.683, 2.515, 2.306, 2.015, 1.843, 1.765, 1.688, 1.61, 1.533, 1.455, 1.397, 1.358, 1.261, 1.549, 1.562, 1.535, 1.474, 1.419, 1.394, 1.424, 1.416, 1.334, 1.323, 1.353, 1.32, 1.295, 1.3, 1.323, 1.337, 1.335, 1.369, 1.34, 1.419, 1.44, 1.429, 1.43, 1.501, 1.527, 1.538, 1.497, 1.711, 1.837, 2.036, 2.15, 2.474, 2.496, 2.51, 2.684, 2.686, 2.687, 2.562, 2.463, 2.577, 2.68, 2.216, 2.214, 2.313, 2.26, 2.324, 2.37, 2.437, 2.371, 2.184, 2.214, 2.262, 2.006, 1.995, 2.002, 2.121, 2.137, 2.099, 2.089, 2.059, 1.935, 2.217, 2.213, 2.151, 2.338, 2.398, 2.305, 2.217, 2.176, 2.253, 2.229, 1.96, 1.992, 2.135, 1.968, 1.909, 1.912], "c": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.219, 0.421, 0.518, 0.632, 1.048, 1.44, 2.054, 2.84, 4.062, 4.95, 6.841, 10.001, 12.714, 13.294, 15.504, 14.706, 13.639, 10.634, 12.535, 15.972, 11.981, 12.347, 12.553, 11.306, 11.373, 9.715, 11.167, 11.35, 10.821, 9.533, 9.518, 9.838, 9.623, 9.906, 10.413, 10.964, 11.581, 12.143, 11.914, 12.331, 12.382, 12.265, 11.598, 12.077, 12.971, 12.663, 12.663, 13.584, 13.922, 13.766, 15.04, 15.423, 15.908, 15.322, 15.894, 17.071, 17.478, 17.26, 18.008, 18.846, 19.07, 19.173, 18.992, 19.122, 19.835, 19.909, 20.089, 21.002, 21.445, 21.656, 21.623, 22.58, 21.914, 21.904, 22.321, 22.466, 22.797, 22.447, 22.749, 22.387, 19.691, 20.834, 19.658, 17.378, 18.039, 17.998, 15.549, 14.226, 13.837, 13.252, 11.316, 9.181, 10.549, 9.888, 8.171, 7.912, 8.671], "p": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.003, 0.01, 0.011, 0.011, 0.096, 0.04, 0.156, 0.168, 0.229, 0.61, 1.007, 1.418, 2.676, 4.28, 5.897, 5.675, 7.76, 10.11, 11.869, 13.298, 14.408, 14.934, 15.532, 15.813, 17.225, 17.905, 17.898, 18.491, 19.28, 19.874, 20.169, 20.998, 21.645, 22.242, 23.184, 24.335, 25.274, 26.966, 28.321, 29.499, 30.539, 32.919, 34.806, 33.421, 32.699, 35.142, 37.083, 37.919, 37.075, 34.159, 31.884, 30.179, 29.997, 30.992, 30.866, 32.15, 32.817, 34.173, 34.164, 33.5, 32.789, 33.468, 33.588, 34.453, 34.341, 35.589, 36.065, 36.72, 37.732, 38.152, 38.084, 38.117, 38.707, 40.139, 40.217, 39.731, 39.368, 36.769, 34.779, 35.321, 34.639, 33.833, 34.398, 34.658, 35.368, 35.712, 36.043, 36.892, 36.866, 32.331, 35.243, 35.319, 35.448, 35.59, 36.115], "g": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.082, 0.257, 0.147, 0.252, 0.372, 0.54, 0.673, 0.813, 1.191, 1.932, 1.919, 2.665, 3.871, 5.145, 5.968, 7.049, 7.55, 7.907, 8.33, 8.998, 9.614, 10.191, 10.663, 11.717, 12.385, 12.926, 13.731, 14.403, 15.288, 15.769, 16.995, 17.945, 19.21, 20.678, 21.795, 22.469, 22.698, 22.512, 21.732, 19.948, 20.345, 19.931, 20.0, 20.666, 20.235, 19.747, 18.356, 17.221, 18.394, 17.703, 16.591, 17.64, 18.448, 19.602, 19.603, 20.033, 20.714, 21.229, 21.728, 22.671, 23.085, 23.223, 22.83, 22.909, 23.824, 22.773, 23.51, 22.831, 22.923, 22.565, 22.239, 23.663, 23.843, 23.416, 24.575, 24.955, 26.089, 26.805, 27.383, 28.191, 28.4, 28.049, 31.163, 32.264, 31.669, 31.711, 33.379, 33.676, 34.179, 34.631], "o": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.001, 0.003, 0.01, 0.017, 0.029, 0.047, 0.067, 0.091, 0.127, 0.151, 0.178, 0.298, 0.322, 0.351, 0.342, 0.37, 0.372, 0.382, 0.4, 0.43, 0.45, 0.497, 0.488, 0.526, 0.55, 0.61, 0.608, 0.652, 0.697, 0.719, 0.841, 0.894, 0.988, 1.049, 1.315, 1.533, 1.9, 2.42, 2.982, 3.134, 3.553, 4.195, 3.889, 3.747, 4.125, 4.445, 4.692, 5.095, 5.533, 5.894, 6.232, 6.981, 7.197, 7.764, 8.186, 8.219, 8.28, 8.638, 9.197, 9.291, 8.852, 9.212, 9.753, 9.877, 9.639, 10.049, 9.946, 10.383, 10.386, 10.719, 11.096, 11.588, 11.805, 12.196, 12.502, 12.226, 12.674, 12.896, 13.065, 13.529, 13.784, 13.841, 13.925, 13.736, 13.881, 14.244, 14.483, 14.992, 15.144]}, KEYS=['w','c','p','g','o'], NAMES=['Wood','Coal','Petroleum','Natural gas','Nuclear & renewables'];
+  var COLS=['#9c7346','#4a443d','#a24a2c','#4f7fa6','#7f9a6a'];
+  var CX0=86, CX1=852, CY0=96, CY1=430, mode='share', L={}, S=null;
+  var MS=[[1776,'1776','Wood heats, cooks and lights the young nation.'],
+          [1830,'1830','The steam train Tom Thumb shows off a coal-burning steam engine.'],
+          [1850,'1850','Coal reaches 9% of U.S. energy use; wood supplies the rest.'],
+          [1870,'1870','Railroads now link the coasts, and coal is 27% of U.S. energy.'],
+          [1882,'1882','The first U.S. coal-fired power plant opens in New York City.'],
+          [1885,'c. 1885','Coal passes wood as the largest U.S. energy source.'],
+          [1901,'1901','The Spindletop gusher in Texas starts the first U.S. oil boom.'],
+          [1925,'1925','The first all-welded natural gas pipeline, about 200 miles, links Louisiana and Texas.'],
+          [1935,'1920-1950','U.S. cars grow from 8 million to more than 50 million.'],
+          [1950,'1950','Petroleum passes coal as the most-used U.S. energy source.'],
+          [1957,'1957','The first full-scale commercial U.S. nuclear power plant opens, in Pennsylvania.'],
+          [1975,'1970s','Two oil crises; total energy use keeps climbing until 2007.'],
+          [2015,'2011-2020','More than 100 coal plants are replaced by or converted to natural gas.'],
+          [2025,'2025','Fossil fuels still supply 82% of the energy Americans use.']];
+  function val(k,yr){ var ys=DT.y, a=DT[k]; if(yr<=ys[0]) return a[0]; for(var i=1;i<ys.length;i++){ if(ys[i]>=yr){ var u=(yr-ys[i-1])/(ys[i]-ys[i-1]); return a[i-1]+(a[i]-a[i-1])*u; } } return a[a.length-1]; }
+  function tot(yr){ var t=0; KEYS.forEach(function(k){ t+=val(k,yr); }); return t; }
+  function X(yr){ return CX0+(yr-1775)/250*(CX1-CX0); }
+  function Y(v){ return mode==='share'? CY1-v*(CY1-CY0) : CY1-v/100*(CY1-CY0); }
+  /* time: 1775-1850 in 4 s, 1850-1950 in 11 s, 1950-2025 in 8 s */
+  function yearAt(t){ if(t<4) return 1775+t/4*75; if(t<15) return 1850+(t-4)/11*100; return Math.min(2025,1950+(t-15)/8*75); }
+  function tAt(yr){ if(yr<=1850) return (yr-1775)/75*4; if(yr<=1950) return 4+(yr-1850)/100*11; return 15+(yr-1950)/75*8; }
+  function bands(){
+    var yrs=[]; for(var yy=1775;yy<=2025;yy++) yrs.push(yy);
+    var cum=yrs.map(function(yr){ var t=tot(yr)||1, c=[0], acc=0; KEYS.forEach(function(k){ acc+= mode==='share'? val(k,yr)/t : val(k,yr); c.push(acc); }); return c; });
+    for(var b=0;b<5;b++){ var d='M'; yrs.forEach(function(yr,i){ d+=(i?' L':'')+X(yr).toFixed(1)+','+Y(cum[i][b+1]).toFixed(1); });
+      for(var i=yrs.length-1;i>=0;i--) d+=' L'+X(yrs[i]).toFixed(1)+','+Y(cum[i][b]).toFixed(1); L.band[b].setAttribute('d',d+' Z'); }
+    L.ytk.innerHTML=''; var tk= mode==='share'? [[0,'0%'],[.25,'25%'],[.5,'50%'],[.75,'75%'],[1,'100%']] : [[0,'0'],[25,'25'],[50,'50'],[75,'75'],[100,'100']];
+    tk.forEach(function(q){ E('path',{d:'M'+CX0+','+Y(q[0]).toFixed(1)+' H'+CX1,stroke:'#d8ccb2','stroke-width':.8},L.ytk); T(CX0-10,Y(q[0])+4,q[1],'hs-ax',L.ytk,'end'); });
+    L.yunit.textContent = mode==='share'? 'share of total U.S. energy use' : 'quadrillion Btu per year';
+  }
+  function build(svg){
+    var d=E('defs',null,svg); d.innerHTML=GRAIN+'<clipPath id="hsTlClip"><rect x="'+CX0+'" y="'+(CY0-4)+'" width="0" height="'+(CY1-CY0+8)+'"/></clipPath>';
+    E('rect',{x:0,y:0,width:W,height:H,fill:PAPER},svg);
+    T(44,52,'250 years of American energy','pqx-title',svg,'start');
+    L.yunit=T(CX0,82,'','hs-unit',svg,'start');
+    E('rect',{x:CX0,y:CY0,width:CX1-CX0,height:CY1-CY0,fill:'#fffaf0',stroke:'#cdbf9f','stroke-width':1},svg);
+    L.ytk=E('g',null,svg);
+    var g=E('g',{'clip-path':'url(#hsTlClip)'},svg); L.clip=d.querySelector('#hsTlClip rect');
+    L.band=COLS.map(function(c){ return E('path',{fill:c,opacity:.88,stroke:'#2b2418','stroke-width':.8,'stroke-linejoin':'round'},g); });
+    [1800,1850,1900,1950,2000].forEach(function(yr){ E('path',{d:'M'+X(yr)+','+CY1+' v6',stroke:INK,'stroke-width':1},svg); T(X(yr),CY1+22,String(yr),'hs-ax',svg); });
+    E('rect',{x:CX0,y:CY0,width:CX1-CX0,height:CY1-CY0,fill:'none',stroke:INK,'stroke-width':1.4},svg);
+    L.marks=E('g',null,svg);
+    L.cur=E('path',{stroke:'#a24a2c','stroke-width':2},svg);
+    /* the year and the shares */
+    E('rect',{x:880,y:CY0,width:286,height:CY1-CY0,rx:12,fill:'#fffaf0',stroke:GOLD,'stroke-width':1},svg);
+    L.year=T(1023,170,'1775','hs-year',svg);
+    L.tot=T(1023,198,'','hs-tot',svg);
+    L.rows=NAMES.map(function(n,i){ var y=236+i*38; var r=E('g',null,svg);
+      E('rect',{x:902,y:y-13,width:16,height:16,rx:3,fill:COLS[i]},r); T(928,y,n,'hs-rn',r,'start'); return {v:T(1146,y,'','hs-rv',r,'end'), g:r}; });
+    /* milestone caption */
+    E('rect',{x:30,y:474,width:1140,height:96,rx:12,fill:'#fffaf0',stroke:GOLD,'stroke-width':1},svg);
+    L.capK=T(54,510,'','pqx-ck',svg,'start'); L.capT=T(54,542,'','pqx-ct',svg,'start');
+    /* a timeline of the milestones, clickable */
+    E('path',{d:'M'+CX0+',624 H'+CX1,stroke:INK,'stroke-width':1.2},svg);
+    T(CX0,660,'1775','hs-ax',svg,'start'); T(CX1,660,'2025','hs-ax',svg,'end');
+    L.dots=MS.map(function(m,i){ var c=E('circle',{cx:X(m[0]),cy:624,r:7,fill:'#fffaf0',stroke:INK,'stroke-width':1.5,'class':'hs-dot'},svg);
+      c.addEventListener('click',function(){ S.t=tAt(m[0])+.01; S.hold=1.2; }); return c; });
+    T(1166,630,'click a dot to jump','hs-ax i',svg,'end');
+    frame(svg); bands();
+  }
+  function reset(){ S={t:0,hold:0,last:-1}; L.marks.innerHTML=''; draw(); }
+  function draw(){
+    var yr=yearAt(S.t), x=X(yr);
+    L.clip.setAttribute('width',Math.max(0,x-CX0).toFixed(1)); L.cur.setAttribute('d','M'+x.toFixed(1)+','+(CY0-6)+' V'+(CY1+6));
+    L.year.textContent=Math.round(yr); var t=tot(yr);
+    L.tot.textContent=(t<1? t.toFixed(2) : t<10? t.toFixed(1) : Math.round(t))+' quadrillion Btu';
+    KEYS.forEach(function(k,i){ var v=val(k,yr); L.rows[i].v.textContent= mode==='share'? (t? Math.round(v/t*100):0)+'%' : (v<1? v.toFixed(2) : v.toFixed(1)); });
+    var mi=-1; MS.forEach(function(m,i){ if(yr>=m[0]-.01) mi=i; });
+    L.dots.forEach(function(c,i){ c.setAttribute('fill', i<=mi? '#a24a2c':'#fffaf0'); c.setAttribute('r', i===mi? 9:7); });
+    if(mi!==S.last){ S.last=mi; if(mi>=0){ L.capK.textContent=MS[mi][1]+'.'; L.capT.textContent=MS[mi][2]; } else { L.capK.textContent='1775.'; L.capT.textContent='Nearly every unit of energy comes from wood, muscle, water and wind.'; } }
+  }
+  function step(s){ if(S.hold>0){ S.hold-=s; draw(); return; }
+    var before=yearAt(S.t); S.t=Math.min(tAt(2025), S.t+s); var after=yearAt(S.t);
+    [1885,1950].forEach(function(m){ if(before<m && after>=m) S.hold=1.6; });
+    draw(); }
+  function jump(dir){ var yr=yearAt(S.t), tgt=null;
+    if(dir>0){ for(var i=0;i<MS.length;i++) if(MS[i][0]>yr+.5){ tgt=MS[i][0]; break; } }
+    else { for(var j=MS.length-1;j>=0;j--) if(MS[j][0]<yr-.5){ tgt=MS[j][0]; break; } }
+    if(tgt==null) return false; S.t=tAt(tgt)+.01; S.hold=1.5; draw(); return true; }
+  POP({label:'Animation: 250 years of U.S. energy by source', aria:'A stacked area chart draws itself from 1775 to 2025: wood alone, then coal, petroleum and natural gas take over, with milestones as captions',
+    note:'U.S. EIA, Monthly Energy Review Tables D1, 1.3 and 10.1. Before 1850 EIA estimates wood only.',
+    segs:[['View',[['share','Share of total'],['total','Total energy']],'share']],
+    onSeg:function(g,m){ mode=m; bands(); draw(); },
+    key:function(k){ if(k==='ArrowRight'||k==='PageDown') return jump(1); if(k==='ArrowLeft'||k==='PageUp') return jump(-1); return false; },
+    build:build, reset:reset, step:step});
+
+})();(function(){
+  var mode='car', L={}, S=null, GY=418;
+  var WOODC='#9c7346';
+  var SC={
+    car:{title:'A car: one fill-up, then a year of driving', k:85, ox:120},
+    ship:{title:'A container ship: one tank of fuel, Asia to Europe and back', k:2.55, ox:92},
+    plane:{title:'A jet airliner: one full load of fuel', k:8.6, ox:80}
+  };
+  function cap(k,t){ L.capK.textContent=k; L.capT.textContent=t; }
+  function ledger(i,a,b,c){ L.led[i][0].textContent=a; L.led[i][1].textContent=b; L.led[i][2].textContent=c; L.led[i].g.setAttribute('opacity',1); }
+  function cord(g,x,len,hgt,dep,cls){ /* a stacked woodpile seen from the front (x, len, height in metres) */
+    var r=E('g',{'class':cls||''},g);
+    r.front=E('rect',{x:x,y:-hgt,width:len,height:hgt,fill:'url(#hsLogEnds)',stroke:'#3b2a18','stroke-width':1.2},r);
+    r.top=E('path',{d:'',fill:'#7a5634',stroke:'#3b2a18','stroke-width':1},r);
+    r.seams=E('path',{d:'',stroke:'#4a3220','stroke-width':.8,fill:'none',opacity:.8},r);
+    r.set=function(L2,H2){ r.front.setAttribute('width',Math.max(0,L2).toFixed(3)); r.front.setAttribute('height',Math.max(0,H2).toFixed(3)); r.front.setAttribute('y',(-H2).toFixed(3));
+      var dx=dep*.38, dy=dep*.26, ok=H2>0&&L2>0, sd='';
+      r.top.setAttribute('d', ok? 'M'+x+','+(-H2)+' l'+dx+','+(-dy)+' h'+L2.toFixed(3)+' l'+(-dx)+','+dy+' Z' : '');
+      if(ok) for(var u=.13;u<L2;u+=.17) sd+='M'+(x+u).toFixed(3)+','+(-H2).toFixed(3)+' l'+dx.toFixed(3)+','+(-dy).toFixed(3);
+      r.seams.setAttribute('d',sd); };
+    r.set(0,0); return r; }
+  function person(g,x){ G('<g transform="translate('+x+',0)"><circle cx="0" cy="-1.62" r=".12" fill="#3b3222"/><path d="M-.17,-1.46 L.17,-1.46 L.2,-.86 L.12,-.86 L.1,0 L.01,0 L0,-.8 L-.01,0 L-.1,0 L-.12,-.86 L-.2,-.86 Z" fill="#3b3222"/></g>',g); }
+  function G(s,p,a){ var g=E('g',a||null,p); g.innerHTML=s; return g; }
+  function car(g){
+    G('<ellipse cx="2.45" cy="0" rx="2.6" ry=".08" fill="#3b3222" opacity=".25"/>'
+      +'<path d="M.05,-.40 L.02,-.82 Q.05,-.98 .3,-1.0 L1.0,-1.02 L1.55,-1.42 Q1.7,-1.47 1.9,-1.47 L2.85,-1.46 Q3.05,-1.45 3.15,-1.38 L3.7,-1.04 L4.55,-.95 Q4.85,-.9 4.9,-.7 L4.9,-.42 Q4.88,-.32 4.7,-.3 L.25,-.3 Q.08,-.32 .05,-.40 Z" fill="url(#hsCar)" stroke="#2b2723" stroke-width="1.6"/>'
+      +'<path d="M1.15,-1.03 L1.6,-1.37 L2.2,-1.38 L2.2,-1.03 Z M2.3,-1.03 L2.3,-1.38 L2.85,-1.37 Q3.0,-1.36 3.08,-1.3 L3.45,-1.03 Z" fill="#c9d6dd" stroke="#2b2723" stroke-width="1.2"/>'
+      +'<path d="M1.25,-1.06 L1.55,-1.3" stroke="#fff" stroke-width="1.4" opacity=".6"/>'
+      +'<path d="M2.25,-1.0 V-.36 M3.42,-1.0 Q3.5,-.7 3.42,-.4 M1.12,-1.0 Q1.05,-.7 1.12,-.4" fill="none" stroke="#2b2723" stroke-width="1" opacity=".55"/>'
+      +'<path d="M1.85,-.88 h.22 M2.9,-.88 h.22" stroke="#d9dde0" stroke-width="2.2" stroke-linecap="round"/>'
+      +'<path d="M.05,-.72 h.2 v.18 h-.2 Z" fill="#b23a2a"/><path d="M4.72,-.82 q.16,0 .17,.12 h-.28 Z" fill="#f3e3a8" stroke="#2b2723" stroke-width=".8"/>'
+      +'<path d="M3.55,-1.05 l.12,-.06 l.08,.1 Z" fill="#2b2723"/>'
+      +'<rect x=".62" y="-.92" width=".16" height=".12" rx=".02" fill="none" stroke="#2b2723" stroke-width=".9"/>',g);
+    S.tank=E('ellipse',{cx:1.2,cy:-.42,rx:.55,ry:.1,fill:'url(#hsGlow)',opacity:0},g);
+    [1.0,3.95].forEach(function(x){ G('<circle cx="'+x+'" cy="-.33" r=".33" fill="#2b2723"/><circle cx="'+x+'" cy="-.33" r=".2" fill="#b8b2a4" stroke="#5e584c" stroke-width="1"/><circle cx="'+x+'" cy="-.33" r=".05" fill="#5e584c"/>',g); });
+  }
+  function ship(g){
+    G('<path d="M-40,0 H460" stroke="none"/>',g);
+    var hull='<path d="M0,-2 L2,-14 L360,-14 Q392,-14 400,-8 L404,-2 Q402,6 396,8 L12,8 Q2,6 0,-2 Z" fill="#26323f" stroke="#141a21" stroke-width="1.2"/>'
+      +'<path d="M2,2 L398,2 L396,8 L12,8 Z" fill="#8f2a22"/><text x="300" y="-5" class="hs-hull">CMA CGM</text>';
+    G(hull,g);
+    /* deckhouse forward of midships and the funnel aft */
+    G('<rect x="236" y="-58" width="18" height="44" fill="#ece6d8" stroke="#3b3222" stroke-width="1"/><rect x="232" y="-62" width="26" height="6" fill="#ece6d8" stroke="#3b3222" stroke-width="1"/>'
+      +'<path d="M234,-58 h22 M234,-50 h22 M234,-42 h22 M234,-34 h22" stroke="#5f86a6" stroke-width="1.5"/>'
+      +'<rect x="34" y="-40" width="14" height="26" fill="#ece6d8" stroke="#3b3222" stroke-width="1"/><rect x="36" y="-50" width="10" height="10" fill="#1c4e8a" stroke="#3b3222" stroke-width="1"/>',g);
+    S.tank=E('rect',{x:222,y:-12,width:46,height:18,rx:3,fill:'url(#hsGlowB)',opacity:0},g);
+    S.boxes=[]; var pal=['#2f5f8a','#a8483f','#6f7f88','#3f6f5a','#2b4f7a','#4a5560','#8c2f2a','#d9dde0','#1f6f78','#5a6a9a'];
+    var R=0; function rnd(){ R=(R*9301+49297)%233280; return R/233280; }
+    var bx=[]; for(var x=52;x<386;x+=12.4){ if(x>226 && x<262) continue; bx.push(x); }
+    bx.forEach(function(x,i){ var tiers= x<60||x>370? 6 : 9; for(var t=0;t<tiers;t++){
+      var b=E('rect',{x:x,y:-14-(t+1)*2.6,width:12,height:2.5,fill:pal[Math.floor(rnd()*pal.length)],stroke:'#1b2027','stroke-width':.5},g); S.boxes.push(b); } });
+    S.wood=[]; var idx=S.boxes.map(function(b,i){ return i; }); idx.sort(function(a,b){ return ((a*7919)%101)-((b*7919)%101); });
+    var nW=Math.round(S.boxes.length*1937/23112); S.woodIdx=idx.slice(0,nW);
+  }
+  function plane(g){
+    G('<ellipse cx="32" cy="0" rx="34" ry=".6" fill="#3b3222" opacity=".22"/>'
+      +'<path d="M10.5,-7 L3.5,-17 L8.8,-17 L19,-8 Z" fill="#dfe4ea" stroke="#2b2723" stroke-width="1.2"/>'
+      +'<path d="M3.8,-16.6 L8.6,-16.6 L7.6,-15.6 L4.4,-15.6 Z" fill="#a24a2c"/>'
+      +'<path d="M1,-7.6 Q2,-9.6 6,-9.9 L52,-10.1 Q58,-10 61.5,-8.2 Q63.2,-6.9 62.8,-5.9 Q61.8,-4.6 58,-4.2 L10,-4 Q3,-4.6 1,-7.6 Z" fill="url(#hsFus)" stroke="#2b2723" stroke-width="1.4"/>'
+      +'<path d="M6,-8.6 L14,-7.6 L12,-6.8 L4.5,-7.6 Z" fill="#c9d0d8" stroke="#2b2723" stroke-width=".9"/>'
+      +'<path d="M58.6,-8.7 q1.6,.2 2.6,1.1 l-2.4,-.1 Z" fill="#2b3440"/>',g);
+    var w=''; for(var x=14;x<56;x+=1.05){ if(x>23 && x<25.2) continue; w+='<rect x="'+x.toFixed(2)+'" y="-8.6" width=".42" height=".55" rx=".18" fill="#3f4a58"/>'; }
+    G(w+'<path d="M12,-6.4 L58,-6.5" stroke="#a24a2c" stroke-width="2.2" opacity=".85"/>'
+      +'<rect x="23.4" y="-9.3" width="1.05" height="2.2" rx=".2" fill="none" stroke="#2b2723" stroke-width=".9"/><rect x="51.2" y="-9.3" width="1.05" height="2.2" rx=".2" fill="none" stroke="#2b2723" stroke-width=".9"/>',g);
+    S.tank=E('path',{d:'M22,-5.2 L44,-5.4 L41,-4.1 L24,-4.0 Z',fill:'url(#hsGlow)',opacity:0},g);
+    G('<path d="M21,-5.4 L45,-5.6 L39,-4.2 L25,-4.1 Z" fill="#c9d0d8" stroke="#2b2723" stroke-width="1.1"/>'
+      +'<path d="M31,-4.4 Q31,-6 33.4,-6 L39.6,-6 Q41.4,-5.4 41.2,-4.1 Q40.8,-2.4 39,-2.2 L33.4,-2.2 Q31,-2.4 31,-4.4 Z" fill="#e6eaef" stroke="#2b2723" stroke-width="1.2"/>'
+      +'<path d="M39.5,-5.8 Q40.4,-4.2 39.5,-2.4" fill="none" stroke="#2b2723" stroke-width="1" opacity=".6"/><path d="M31.6,-4.2 h-1.2" stroke="#2b2723" stroke-width="1"/>'
+      +'<path d="M29,-4 V-.7 M56,-4.3 V-.7" stroke="#3b3222" stroke-width="2.2"/>'
+      +'<circle cx="28.4" cy="-.55" r=".55" fill="#2b2723"/><circle cx="29.8" cy="-.55" r=".55" fill="#2b2723"/><circle cx="56" cy="-.5" r=".5" fill="#2b2723"/>',g);
+  }
+  function build(svg){
+    var d=E('defs',null,svg);
+    d.innerHTML=GRAIN
+      +'<linearGradient id="hsSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe7d2"/><stop offset="1" stop-color="#e9e3cf"/></linearGradient>'
+      +'<linearGradient id="hsSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7f9fb4"/><stop offset="1" stop-color="#4f6f86"/></linearGradient>'
+      +'<linearGradient id="hsCar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f8aa3"/><stop offset=".5" stop-color="#4f6a84"/><stop offset="1" stop-color="#34495d"/></linearGradient>'
+      +'<linearGradient id="hsFus" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e5e9ee"/><stop offset="1" stop-color="#b9c1cb"/></linearGradient>'
+      +'<radialGradient id="hsGlow"><stop offset="0" stop-color="#ffd76a"/><stop offset=".6" stop-color="#f2a23a" stop-opacity=".8"/><stop offset="1" stop-color="#f2a23a" stop-opacity="0"/></radialGradient>'
+      +'<radialGradient id="hsGlowB"><stop offset="0" stop-color="#bfe6ff"/><stop offset=".6" stop-color="#5aa3d8" stop-opacity=".85"/><stop offset="1" stop-color="#5aa3d8" stop-opacity=".1"/></radialGradient>'
+      +'<pattern id="hsLogEnds" width=".84" height=".62" patternUnits="userSpaceOnUse"><rect width=".84" height=".62" fill="#4a3220"/>'
+      +(function(){ var P=[[.09,.1,.085,'r'],[.27,.09,.07,'w1'],[.44,.11,.09,'r'],[.63,.08,.075,'w2'],[.78,.12,.065,'r'],
+          [.14,.3,.075,'w2'],[.33,.28,.095,'r'],[.53,.3,.07,'w1'],[.71,.31,.09,'r'],
+          [.06,.5,.06,'w1'],[.22,.5,.085,'r'],[.42,.5,.07,'w2'],[.6,.51,.09,'r'],[.79,.5,.075,'w1']], o='';
+        P.forEach(function(q,i){ var x=q[0], y=q[1], r=q[2], c=['#dcb57a','#d2a96e','#e3c088','#c99d62'][i%4];
+          if(q[3]==='r') o+='<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+c+'" stroke="#5a3d22" stroke-width=".02"/><circle cx="'+x+'" cy="'+y+'" r="'+(r*.55).toFixed(3)+'" fill="none" stroke="#a5743d" stroke-width=".008"/><circle cx="'+x+'" cy="'+y+'" r="'+(r*.25).toFixed(3)+'" fill="none" stroke="#a5743d" stroke-width=".008"/>';
+          else { var a=q[3]==='w1'? 0 : 1.6; o+='<path d="M'+x+','+y+' L'+(x+Math.cos(a)*r*1.25).toFixed(3)+','+(y-Math.sin(a)*r*1.25).toFixed(3)+' A'+(r*1.25).toFixed(3)+','+(r*1.25).toFixed(3)+' 0 0 0 '+(x+Math.cos(a+1.75)*r*1.25).toFixed(3)+','+(y-Math.sin(a+1.75)*r*1.25).toFixed(3)+' Z" fill="'+c+'" stroke="#5a3d22" stroke-width=".02"/>'; } });
+        return o; })()+'</pattern>'
+      +'<pattern id="hsLogBox" width="1" height="1" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox"><rect width="1" height="1" fill="#7a5230"/>'
+      +'<circle cx=".12" cy=".5" r=".11" fill="#f2d39a"/><circle cx=".3" cy=".45" r=".1" fill="#ecc887"/><circle cx=".5" cy=".55" r=".11" fill="#f2d39a"/><circle cx=".7" cy=".45" r=".1" fill="#ecc887"/><circle cx=".88" cy=".52" r=".1" fill="#f2d39a"/></pattern>';
+    E('rect',{x:0,y:0,width:W,height:H,fill:PAPER},svg);
+    L.title=T(44,52,'','pqx-title',svg,'start');
+    E('rect',{x:30,y:72,width:1140,height:380,rx:10,fill:'url(#hsSky)',stroke:'#cdbf9f','stroke-width':1},svg);
+    L.ground=E('g',null,svg);
+    L.world=E('g',{'class':'hsv-w'},svg);
+    L.over=E('g',null,svg);
+    L.ctr=E('g',{opacity:0},svg); T(58,112,'FIREWOOD WITH THE SAME ENERGY','pqx-tag',L.ctr,'start');
+    L.ctrN=T(56,166,'','hs-cn',L.ctr,'start'); L.ctrS=T(58,194,'','hs-cs',L.ctr,'start');
+    L.leg=E('g',{opacity:0},svg); E('rect',{x:58,y:214,width:30,height:9,fill:'url(#hsLogBox)',stroke:'#3b2a18','stroke-width':1},L.leg); T(98,223,'= a container slot filled with firewood','hs-ls',L.leg,'start');
+    E('rect',{x:30,y:462,width:1140,height:72,rx:12,fill:'#fffaf0',stroke:GOLD,'stroke-width':1},svg);
+    L.capK=T(54,492,'','pqx-ck',svg,'start'); L.capT=T(54,520,'','pqx-ct',svg,'start');
+    L.led=[['THE FUEL',30],['THE SAME ENERGY AS FIREWOOD',414],['TO PICTURE IT',798]].map(function(c){ var g=E('g',{opacity:.35},svg);
+      E('rect',{x:c[1],y:546,width:372,height:146,rx:12,fill:'#fffaf0',stroke:GOLD,'stroke-width':1},g);
+      T(c[1]+20,572,c[0],'pqx-tag',g,'start'); var a=T(c[1]+20,610,'','hs-lv',g,'start'), b=T(c[1]+20,640,'','hs-ls',g,'start'), cc=T(c[1]+20,664,'','hs-ls i',g,'start');
+      var o=[a,b,cc]; o.g=g; return o; });
+    frame(svg);
+  }
+  function counter(n,sub){ L.ctr.setAttribute('opacity',1); L.ctrN.textContent=n; L.ctrS.textContent=sub; }
+  function reset(){
+    var cfg=SC[mode]; L.world.innerHTML=''; L.ground.innerHTML=''; L.over.innerHTML=''; L.ctr.setAttribute('opacity',0); L.leg.setAttribute('opacity',0);
+    S={t:0, k:cfg.k, ox:cfg.ox, done:false};
+    L.title.textContent=cfg.title;
+    L.led.forEach(function(r){ r[0].textContent=''; r[1].textContent=''; r[2].textContent=''; r.g.setAttribute('opacity',.35); });
+    if(mode==='ship'){ E('rect',{x:30,y:GY,width:1140,height:34,fill:'url(#hsSea)'},L.ground); E('path',{d:'M30,'+GY+' H1170',stroke:'#2f4f66','stroke-width':1.2},L.ground);
+      for(var x=40;x<1170;x+=36) E('path',{d:'M'+x+','+(GY+12)+' q9,-4 18,0',stroke:'#cfe0ea','stroke-width':1.2,fill:'none',opacity:.6},L.ground); }
+    else if(mode==='plane'){ E('rect',{x:30,y:GY,width:1140,height:34,fill:'#8c8a84'},L.ground); E('path',{d:'M30,'+(GY+17)+' H1170',stroke:'#f4f0e4','stroke-width':3,'stroke-dasharray':'26 22'},L.ground); E('path',{d:'M30,'+GY+' H1170',stroke:'#5e5c56','stroke-width':1.4},L.ground); }
+    else { E('rect',{x:30,y:GY,width:1140,height:34,fill:'#b7ab90'},L.ground); E('path',{d:'M30,'+GY+' H1170',stroke:'#6f6450','stroke-width':1.4},L.ground); }
+    var g=E('g',null,L.world); S.g=g;
+    if(mode==='car'){ person(g,-.75); car(g); S.pile1=cord(g,5.35,0,0,.6); S.pile2=cord(g,5.35,0,0,1.22); }
+    else if(mode==='ship'){ ship(g); }
+    else { plane(g); S.cube=E('g',null,g); }
+    if(mode==='ship'){ E('rect',{x:30,y:GY,width:1140,height:34,fill:'#4f6f86',opacity:.72},L.over); E('path',{d:'M30,'+GY+' H1170',stroke:'#cfe0ea','stroke-width':1.2,opacity:.8},L.over); }
+    place();
+    cap(mode==='car'?'One fill-up.':mode==='ship'?'One tank.':'One full load.', mode==='car'? 'A typical 15-gallon tank of gasoline holds 506 kWh of chemical energy.'
+      : mode==='ship'? 'The CMA CGM Jacques Saad\u00e9 carries one 18,600 m\u00b3 tank of liquefied natural gas, enough for a 23,372-nautical-mile round trip.'
+      : 'A Boeing 787-9 holds 33,399 gallons of jet fuel when its tanks are full.');
+  }
+  function place(){ L.world.setAttribute('transform','translate('+S.ox.toFixed(1)+','+GY+') scale('+S.k.toFixed(4)+')'); }
+  function cube(g,x,s){ /* a cube of stacked firewood, s metres on a side, seen in oblique view */
+    g.innerHTML=''; if(s<=0) return; var dx=s*.42, dy=s*.3;
+    G('<path d="M'+x+','+(-s)+' l'+dx+','+(-dy)+' h'+s+' l'+(-dx)+','+dy+' Z" fill="#8a6a40" stroke="#3b2a18" stroke-width="1.2"/>'
+      +'<path d="M'+(x+s)+',0 V'+(-s)+' l'+dx+','+(-dy)+' V'+(-dy)+' Z" fill="#5e4128" stroke="#3b2a18" stroke-width="1.2"/>'
+      +'<rect x="'+x+'" y="'+(-s)+'" width="'+s+'" height="'+s+'" fill="url(#hsLogEnds)" stroke="#3b2a18" stroke-width="1.4"/>',g); }
+  function step(s){
+    S.t+=s; var t=S.t;
+    if(mode==='car'){
+      S.tank.setAttribute('opacity', (t<2.5? Math.min(1,t/1.2) : Math.max(0,1-(t-2.5)/1)).toFixed(2));
+      if(t>1.2) ledger(0,'15 gallons of gasoline','one fill-up: 506 kWh','');
+      var u1=cl((t-2.4)/2.2); S.pile1.set(.8, .6*eout(u1));
+      if(t>2.4 && t<8.4){ cap('The same energy as firewood.', comma(273*eout(u1))+' lb of seasoned firewood, nearly three times the 93 lb of gasoline it replaces: a stack 2 ft high and 2.6 ft long.');
+        counter(comma(273*eout(u1))+' lb', 'for one 15-gallon fill-up'); }
+      if(t>4.6) ledger(1,'273 lb of firewood','124 kg; the gasoline weighs 93 lb','');
+      if(t>4.6) ledger(2,'10 cubic feet, stacked','about two-thirds of a sedan trunk','');
+      if(t>8.4){ var u2=cl((t-8.4)/4.4); S.pile1.set(.8*(1-cl((t-8.4)*3)), .6*(1-cl((t-8.4)*3))); S.pile2.set(5.83*eout(u2), 1.22*Math.min(1,u2*4));
+        if(!S.done) cap('A whole year of driving.', 'The average U.S. car burns 447 gallons a year. As firewood: '+comma(8133*eout(u2))+' lb, a 4-foot-high stack '+(19.1*eout(u2)).toFixed(0)+' feet long.');
+        counter(comma(8133*eout(u2))+' lb', (2.4*eout(u2)).toFixed(1)+' cords for a year of driving');
+        ledger(0,'447 gallons a year','15.1 MWh of energy','average U.S. car (DOE AFDC)');
+        ledger(1,comma(8133*eout(u2))+' lb of firewood',(3.69*eout(u2)).toFixed(1)+' tonnes, '+(2.4*eout(u2)).toFixed(1)+' cords','');
+        ledger(2,'a stack 19 feet long','4 ft high, 4 ft deep: longer than the car','');
+        if(u2>=1 && !S.done){ S.done=true; cap('Longer than the car itself.', 'Every year, the average American car burns fuel holding the energy of 2.4 cords of firewood.'); } }
+    } else if(mode==='ship'){
+      S.tank.setAttribute('opacity', (t<3? Math.min(1,t/1.2) : .55+.45*Math.sin(t*2)).toFixed(2));
+      if(t>1.2) ledger(0,'18,600 m³ of LNG','about 8,400 t, 112 GWh','Asia to N. Europe and back');
+      var n=S.woodIdx.length, u=cl((t-3.2)/5.2), on=Math.floor(n*u);
+      for(var i=0;i<n;i++){ var b=S.boxes[S.woodIdx[i]]; if(i<on && !b.__w){ b.__w=t; b.setAttribute('fill','url(#hsLogBox)'); b.setAttribute('stroke','#f2c45a'); b.setAttribute('stroke-width','2.2'); }
+        if(b.__w && t-b.__w>.45 && !b.__d){ b.__d=1; b.setAttribute('stroke','#e3b464'); b.setAttribute('stroke-width','1.3'); } }
+      if(t>3.2){ if(!S.done) cap('The same energy as firewood.', 'About '+comma(27300*eout(u))+' tonnes of seasoned firewood: '+comma(1940*u)+' of the ship’s 23,000 container slots, filled with nothing but wood.');
+        ledger(1,comma(27300*eout(u))+' t of firewood',comma(60*eout(u))+' million lb, '+comma(17700*eout(u))+' cords','');
+        ledger(2,'1 in 12 container slots','3.3 times the weight of the LNG','');
+        counter(comma(27300*eout(u))+' t', comma(17700*eout(u))+' cords, 3.3 times the weight of the LNG'); L.leg.setAttribute('opacity',1); }
+      if(u>=1 && !S.done){ S.done=true; cap('A twelfth of the cargo, burned as fuel.', 'Stacked 4 feet high and 4 feet deep, the wood would stretch 27 miles. Dense fuel leaves the ship free to carry cargo.'); }
+    } else {
+      S.tank.setAttribute('opacity', (t<3? Math.min(1,t/1.2) : .6+.4*Math.sin(t*2)).toFixed(2));
+      if(t>1.2) ledger(0,'33,399 gallons of jet fuel','101.5 t; 1.22 GWh of energy','Boeing 787-9, full tanks');
+      var uc=cl((t-3.2)/4.4); cube(S.cube, 68, 8.9*Math.cbrt(eout(uc)));
+      if(t>3.2){ if(!S.done && t<7.8) cap('The same energy as firewood.', 'A cube of stacked firewood '+(29*Math.cbrt(eout(uc))).toFixed(0)+' feet on each side: '+comma(298*eout(uc))+' tonnes.');
+        ledger(1,comma(298*eout(uc))+' t of firewood',comma(658000*eout(uc))+' lb, '+comma(194*eout(uc))+' cords','');
+        counter(comma(298*eout(uc))+' t', comma(194*eout(uc))+' cords of seasoned firewood'); }
+      if(t>7.8){ var ub=cl((t-7.8)/1.6); weigh(ub); ledger(2,'17% over the limit','max takeoff weight: 254.7 t','');
+        if(ub>=1 && !S.done){ S.done=true; cap('It could never leave the ground.', 'The firewood alone would outweigh the 787-9’s maximum takeoff weight, which must also cover the plane and everyone on it.'); } }
+    }
+  }
+  function weigh(u){ /* two weight bars in screen space, in the sky over the runway */
+    if(!S.wb){ S.wb=E('g',null,L.over); var x0=720, w=410, y=118;
+      E('rect',{x:x0-18,y:y-32,width:w+36,height:150,rx:10,fill:'#fffaf0',stroke:GOLD,'stroke-width':1,opacity:.97},S.wb);
+      T(x0,y-10,'WEIGHT CHECK','pqx-tag',S.wb,'start');
+      T(x0,y+12,'Maximum takeoff weight','hs-ls',S.wb,'start'); S.wb.mtv=T(x0+w,y+12,'','hs-ls b',S.wb,'end');
+      S.wb.mt=E('rect',{x:x0,y:y+20,width:0,height:20,rx:3,fill:'#8c97a3'},S.wb);
+      T(x0,y+64,'The firewood alone','hs-ls',S.wb,'start'); S.wb.wdv=T(x0+w,y+64,'','hs-ls b r',S.wb,'end');
+      S.wb.wd=E('rect',{x:x0,y:y+72,width:0,height:20,rx:3,fill:WOODC},S.wb); S.wb.over=E('rect',{x:x0,y:y+72,width:0,height:20,rx:3,fill:'#a8483f'},S.wb);
+      S.wb.line=E('path',{d:'',stroke:INK,'stroke-width':1.4,'stroke-dasharray':'4 3'},S.wb);
+      S.wb.k=w/298.4; S.wb.x0=x0; S.wb.y=y; }
+    var k=S.wb.k, e=eout(u), mt=254.7*k*e, wd=298.4*k*e, lim=S.wb.x0+254.7*k;
+    S.wb.mt.setAttribute('width',mt.toFixed(1)); S.wb.wd.setAttribute('width',Math.min(wd,254.7*k).toFixed(1));
+    S.wb.over.setAttribute('x',lim.toFixed(1)); S.wb.over.setAttribute('width',Math.max(0,wd-254.7*k).toFixed(1));
+    S.wb.line.setAttribute('d', u>0? 'M'+lim.toFixed(1)+','+(S.wb.y+16)+' V'+(S.wb.y+98) : '');
+    S.wb.mtv.textContent=(254.7*e).toFixed(1)+' t'; S.wb.wdv.textContent=(298.4*e).toFixed(0)+' t';
+  }
+  var vpop=POP({label:'Animation: how much firewood it would take to fuel a car, a container ship and a jet airliner', aria:'A car, a container ship and a Boeing 787 are drawn to scale; each one’s fuel lights up, and then the firewood holding the same energy appears beside it',
+    note:'Same energy, not same work: a wood-fired engine would be less efficient, so the real pile would be bigger.', noBind:true,
+    segs:[['Vehicle',[['car','Car'],['ship','Container ship'],['plane','Jet airliner']],'car']],
+    onSeg:function(g,m){ mode=m; reset(); },
+    build:build, reset:reset, step:step});
+  var vgo=SEC.querySelector('[data-hs-veh]'); if(vgo) vgo.addEventListener('click', vpop.open);
+
+})();
+})();</script></section>
 <section class="slide" data-type="content" style="--accent:#9a4632">
   <div class="slide-inner col intro-kwh">
     <div class="eyebrow">13.4  ·  Introduction</div>
@@ -3255,7 +4417,7 @@ body{background:#1d1b18;}
 
 <div class="hud">
   <button onclick="prev()" title="Previous (left arrow)">&#8249;</button>
-  <span class="counter" id="counter">1 / 32</span>
+  <span class="counter" id="counter">1 / 35</span>
   <button onclick="next()" title="Next (right arrow)">&#8250;</button>
   <button onclick="toggleMenu()" title="Slide menu (O)">&#9776;</button>
   <button onclick="toggleFs()" title="Fullscreen (F)">&#9974;</button>
@@ -3264,7 +4426,7 @@ body{background:#1d1b18;}
 <div class="menu" id="menu">
   <button class="menu-close" onclick="toggleMenu(false)" aria-label="Close menu">&times;</button>
   <h3>Chapter 13 &middot; Jump to a slide</h3>
-  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Objectives</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Introduction · kWh</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>13.4 ▶ Watts You Could Ride At</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>13.4 ▶ Pedal Power Demo</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>13.1 Three Fuels</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>13.1 Consumed per Second</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>13.1 ▶ How a Power Plant Works</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>13.1 ▶ Where the Energy Goes</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>13.2 Energy Timeline</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>13.3 Economics &amp; Policy</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>13.3 Policy as Driver</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>13.3 ▶ Economics (3 graphs)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>13.3 Clean Coal?</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>13.4 Environmental Impacts</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>13.4 ▶ Coal CO₂/kWh</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>13.4 True Cost of Coal</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>13.4 Oil</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>13.4 ▶ Oil Years-Left Calculator</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>13.4 Natural Gas</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>13.4 ▶ Natural Gas Explorer (OWID)</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>13.4 ▶ Fracking (animated)</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>13.4 Disasters</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>13.5 Shrinking Market Share</button><button class="menu-item" data-go="25"><span class="menu-num">26</span>13.5 ▶ Social Cost of Carbon Tool</button><button class="menu-item" data-go="26"><span class="menu-num">27</span>13.5 ▶ SCC Across Studies</button><button class="menu-item" data-go="27"><span class="menu-num">28</span>13.5 Carbon Tax</button><button class="menu-item" data-go="28"><span class="menu-num">29</span>13.5 Cap-and-Trade</button><button class="menu-item" data-go="29"><span class="menu-num">30</span>13.5 CCS</button><button class="menu-item" data-go="30"><span class="menu-num">31</span>13.6 What Can I Do?</button><button class="menu-item" data-go="31"><span class="menu-num">32</span>Key Concepts</button></div>
+  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Objectives</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Announcements</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>Intro ▶ How Much Wood? (live)</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>Intro ▶ From Wood to Fossil Fuels</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>Introduction · kWh</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>13.4 ▶ Watts You Could Ride At</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>13.4 ▶ Pedal Power Demo</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>13.1 Three Fuels</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>13.1 Consumed per Second</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>13.1 ▶ How a Power Plant Works</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>13.1 ▶ Where the Energy Goes</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>13.2 Energy Timeline</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>13.3 Economics &amp; Policy</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>13.3 Policy as Driver</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>13.3 ▶ Economics (3 graphs)</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>13.3 Clean Coal?</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>13.4 Environmental Impacts</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>13.4 ▶ Coal CO₂/kWh</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>13.4 True Cost of Coal</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>13.4 Oil</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>13.4 ▶ Oil Years-Left Calculator</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>13.4 Natural Gas</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>13.4 ▶ Natural Gas Explorer (OWID)</button><button class="menu-item" data-go="25"><span class="menu-num">26</span>13.4 ▶ Fracking (animated)</button><button class="menu-item" data-go="26"><span class="menu-num">27</span>13.4 Disasters</button><button class="menu-item" data-go="27"><span class="menu-num">28</span>13.5 Shrinking Market Share</button><button class="menu-item" data-go="28"><span class="menu-num">29</span>13.5 ▶ Social Cost of Carbon Tool</button><button class="menu-item" data-go="29"><span class="menu-num">30</span>13.5 ▶ SCC Across Studies</button><button class="menu-item" data-go="30"><span class="menu-num">31</span>13.5 Carbon Tax</button><button class="menu-item" data-go="31"><span class="menu-num">32</span>13.5 Cap-and-Trade</button><button class="menu-item" data-go="32"><span class="menu-num">33</span>13.5 CCS</button><button class="menu-item" data-go="33"><span class="menu-num">34</span>13.6 What Can I Do?</button><button class="menu-item" data-go="34"><span class="menu-num">35</span>Key Concepts</button></div>
 </div>
 
 <script>
@@ -3355,7 +4517,7 @@ const start = m ? (+m[1]-1) : 0;
 slides.forEach(s=>s.classList.remove('active'));
 show(start);
 </script>
-<script src="firebase-config.js?v=e1671c74ba"></script>
+<script src="firebase-config.js?v=b3db562771"></script>
 <script>if(new URLSearchParams(location.search).has("demo"))window.FIREBASE_CONFIG={apiKey:"YOUR_API_KEY"};</script>
 <script type="module">
 (async function(){
